@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/easydigitaldownloads/SHD-Site.git"
+    "url": "git://github.com/sandhillsdevelopment/SHD-Site.git"
   },
   "author": "The Sandhills Development Theme",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/easydigitaldownloads/SHD-Site/issues"
+    "url": "https://github.com/sandhillsdevelopment/SHD-Site/issues"
   },
-  "homepage": "https://github.com/easydigitaldownloads/SHD-Site",
+  "homepage": "https://github.com/sandhillsdevelopment/SHD-Site",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^1.0.1",
