@@ -1,0 +1,6 @@
+*~
+*.lock
+*.DS_Store
+*.idea
+.ftppass
+/node_modules/

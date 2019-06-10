@@ -1,0 +1,27 @@
+{
+  "name": "SHD-Site",
+  "version": "1.0.0",
+  "description": "Version 1.X.X of Sandhills Development Site",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/easydigitaldownloads/SHD-Site.git"
+  },
+  "author": "The Sandhills Development Theme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easydigitaldownloads/SHD-Site/issues"
+  },
+  "homepage": "https://github.com/easydigitaldownloads/SHD-Site",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-svgstore": "^1.0.0"
+  }
+}
