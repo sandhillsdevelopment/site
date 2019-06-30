@@ -1,0 +1,204 @@
+.front-page {
+
+	& #masthead {
+	}
+
+	& .site-tagline {
+		display: block;
+		text-align: center;
+		padding-top: 11.5rem;
+		padding-bottom: 15rem;
+
+		& .tagline {
+			color: #97a1ae;
+			.ptsans;
+			font-size: 1.5rem;
+			line-height: 1.6;
+			font-weight: 700;
+			margin-bottom: 0;
+
+			& span {
+				color: @body_color;
+				font-size: 140%;
+			}
+
+			& .ingenuity {
+				position: relative;
+				font-size: 5rem;
+				right: -10px;
+
+				& .small-period {
+					color: #97a1ae;
+					font-size: 3.5rem;
+				}
+			}
+		}
+
+		& .tagline-heading {
+			.opensans;
+			font-size: 1.2rem;
+			display: block;
+		}
+	}
+
+	& .our-people {
+		background-color: #4b87d9;
+		background-image: url( 'includes/assets/images/shapes/dark-blue-zigzag.svg' ),
+		linear-gradient( 90deg, #325686 25%, #4b87d9 25% );
+		background-repeat: repeat-y, no-repeat;
+		background-position: 22% 0, 0 0;
+		background-size: 460px auto, 100% auto;
+		color: #fff;
+
+		& > .container {
+			position: relative;
+		}
+
+		& .humans-subtext {
+			position: absolute;
+			color: #b7cff0;
+			.ptsans;
+			font-size: 1.8rem;
+			line-height: 1.2;
+			font-weight: 700;
+
+			& a {
+				color: #b7cff0;
+				text-decoration: none;
+				border-bottom: 3px dotted #4b87d9;
+
+				&:hover {
+					border-bottom-style: solid;
+				}
+			}
+
+			& .subtext-highlight {
+				color: #fff;
+				font-size: 200%;
+
+				& .small-period {
+					color: #b7cff0;
+					font-size: 2.6rem;
+				}
+			}
+		}
+
+		& .get-to-know-us {
+			top: 7.5rem;
+			right: 9rem;
+		}
+
+		& .join-our-team {
+			bottom: 9.5rem;
+			left: 9rem;
+		}
+
+		& .humans {
+			padding: 6rem 0;
+
+			& .row {
+				margin-bottom: 2rem;
+			}
+
+			& img {
+				max-width: 160px;
+				border-radius: 50%;
+				box-shadow: 0 16px 20px 0 rgba(50, 86, 134, .35);
+				border-width: 3px;
+				border-style: solid;
+
+				&.year-2013 {
+					border-color: #fcdd23;
+				}
+
+				&.year-2014 {
+					border-color: #4cb7d0;
+				}
+
+				&.year-2015 {
+					border-color: #ff7762;
+				}
+
+				&.year-2016 {
+					border-color: #b8a2d0;
+				}
+
+				&.year-2017 {
+					border-color: #ffb64a;
+				}
+
+				&.year-2018 {
+					border-color: #68e2c7;
+				}
+
+				&.year-2019 {
+					border-color: #ffacba;
+				}
+			}
+
+			& .new-year {
+				position: relative;
+				/* background: rgba(255,255,255,.1); */
+				text-align: right;
+				height: 100%;
+
+				&[class*="year-20"] {
+					background-color: transparent;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: 40px 40px;
+
+					& span {
+						position: relative;
+						top: 4rem;
+						.ptsans;
+						font-size: 1rem;
+						font-weight: 700;
+					}
+				}
+
+				&.year-2013 {
+					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
+				}
+
+				&.year-2014 {
+					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
+				}
+
+				&.year-2015 {
+					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
+				}
+
+				&.year-2016 {
+					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
+				}
+
+				&.year-2017 {
+					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
+				}
+
+				&.year-2018 {
+					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
+				}
+
+				&.year-2019 {
+					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
+				}
+			}
+
+			& .careers {
+				position: relative;
+				top: 3rem;
+				color: #b7cff0;
+				.ptsans;
+				font-size: 1rem;
+				font-weight: 700;
+			}
+		}
+	}
+
+	& .our-projects {
+		background: #f4f6f7;
+		padding: 6rem 0;
+	}
+}

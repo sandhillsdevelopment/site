@@ -1,0 +1,24 @@
+#masthead {
+	position: relative;
+
+	& .site-title {
+		text-align: center;
+	}
+
+	& .shd-logo {
+		position: relative;
+		top: -4px;
+		width: 200px;
+		height: auto;
+
+		&:hover {
+			opacity: .8;
+			transition: opacity .2s ease-in-out;
+		}
+	}
+
+	& [class*="secondary-menu-container-"] {
+		position: relative;
+		top: -10px;
+	}
+}

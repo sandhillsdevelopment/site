@@ -1,0 +1,44 @@
+nav[id*="nav-secondary"] {
+	position: relative;
+
+	& .nav-item {
+		.ptsans;
+
+		&.menu-highlight {
+
+			& .nav-link {
+
+				&:hover {
+				}
+			}
+		}
+
+		& .nav-link {
+			color: #97a1ae;
+			font-size: 1rem;
+			font-weight: 700;
+			text-transform: lowercase;
+			padding: .75rem;
+			transition: color .2s ease-in-out;
+
+			& .icon {
+				color: #97a1ae;
+			}
+
+			&:hover {
+				color: @body_color;
+			}
+		}
+
+		&.active {
+
+			& > .nav-link {
+				color: @body_color;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
+}
