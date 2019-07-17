@@ -35,7 +35,7 @@ function shd_site_header() {
 
 					<div class="col-md-4 secondary-menu-container-left">
 
-						<nav id="nav-secondary" class="navbar-collapse collapse justify-content-start">
+						<nav id="nav-secondary" class="navbar-collapse collapse">
 							<?php echo themedd_secondary_navigation( array( 'menu_classes' => array( 'navbar-left' ) ) ); ?>
 						</nav>
 
@@ -59,6 +59,12 @@ function shd_site_header() {
 
 			</div>
 		</div>
+
+		<?php
+		if ( is_front_page() ) {
+			get_template_part( 'template-parts/content', 'front-page-hero' );
+		}
+		?>
 
 	</header>
 

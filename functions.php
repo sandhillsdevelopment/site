@@ -70,6 +70,9 @@ function shd_styles_scripts() {
 	// Register Google Fonts dependency
 	wp_register_style( $google_fonts, '//fonts.googleapis.com/css?family=Open+Sans|PT+Serif&display=swap' );
 
+	// Enqueue Bootstrap scripts
+	wp_enqueue_script( 'bootstrap-js', SHD_ASSETS . 'js/bootstrap' . $suffix . '.js', array( 'jquery' ), SHD_SITE_VERSION );
+
 	// Enqueue child theme scripts
 	wp_enqueue_script( $child_js, SHD_ASSETS . 'js/theme' . $suffix . '.js', array( 'jquery' ), SHD_SITE_VERSION );
 

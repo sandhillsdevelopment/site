@@ -2,7 +2,6 @@ nav[id*="nav-secondary"] {
 	position: relative;
 
 	& .nav-item {
-		.ptsans;
 
 		&.menu-highlight {
 
@@ -14,19 +13,19 @@ nav[id*="nav-secondary"] {
 		}
 
 		& .nav-link {
-			color: #97a1ae;
-			font-size: 1rem;
+			color: @body_color;
+			font-size: 14px;
 			font-weight: 700;
-			text-transform: lowercase;
+			text-transform: uppercase;
 			padding: .75rem;
 			transition: color .2s ease-in-out;
 
 			& .icon {
-				color: #97a1ae;
+				color: @body_color_light;
 			}
 
 			&:hover {
-				color: @body_color;
+				color: @body_color_light;
 			}
 		}
 
@@ -39,6 +38,36 @@ nav[id*="nav-secondary"] {
 
 		&:not(:last-child) {
 			margin-right: 1rem;
+		}
+	}
+
+	&:not(.justify-content-end) {
+
+		& .nav-item:first-of-type {
+
+			& .nav-link {
+				color: @body_color_light;
+				transition: opacity .2s;
+
+				&:hover {
+					opacity: .7;
+				}
+			}
+		}
+	}
+
+	&.justify-content-end {
+
+		& .nav-item:last-of-type {
+
+			& .nav-link {
+				color: @body_color_light;
+
+				&:hover {
+					opacity: .7;
+					transition: opacity .2s;
+				}
+			}
 		}
 	}
 }

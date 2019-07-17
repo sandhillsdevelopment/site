@@ -23,5 +23,6 @@
     "grunt-contrib-uglify": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-svgstore": "^1.0.0"
-  }
+  },
+  "dependencies": {}
 }

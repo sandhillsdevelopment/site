@@ -1,57 +1,159 @@
 .front-page {
 
 	& #masthead {
-	}
 
-	& .site-tagline {
-		display: block;
-		text-align: center;
-		padding-top: 11.5rem;
-		padding-bottom: 15rem;
+		& .site-tagline {
+			display: block;
+			padding-top: 4rem;
+			padding-bottom: 10rem;
 
-		& .tagline {
-			color: #97a1ae;
-			.ptsans;
-			font-size: 1.5rem;
-			line-height: 1.6;
-			font-weight: 700;
-			margin-bottom: 0;
-
-			& span {
-				color: @body_color;
-				font-size: 140%;
+			& .tagline-heading {
+				display: inline-block;
+				.ptsans;
+				font-size: 5rem;
+				font-weight: 700;
+				margin-bottom: .2em;
 			}
 
-			& .ingenuity {
-				position: relative;
-				font-size: 5rem;
-				right: -10px;
+			& .tagline {
+				margin-bottom: 1rem;
+				max-width: 615px;
 
-				& .small-period {
-					color: #97a1ae;
-					font-size: 3.5rem;
+				& span {
+					color: @body_color;
+				}
+			}
+
+			& .see-our-projects {
+
+				& a {
+					color: @turquoise;
+					text-decoration: none;
+					border-bottom: 1px dotted;
+
+					&:hover {
+						border-bottom-style: solid;
+						text-decoration: none;
+					}
 				}
 			}
 		}
+	}
 
-		& .tagline-heading {
-			.opensans;
-			font-size: 1.2rem;
-			display: block;
+	& .businesses {
+		background-color: @lightgray;
+		background-image: url( 'includes/assets/images/shapes/sand-hills-blue.svg' );
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 1800px auto;
+		padding: 5rem 0 5rem;
+		margin-top: -3px; /* TODO: Find out why .site-tagline bg image doesn't reach bottom edge */
+
+		& .container {
+			margin: -10rem auto 10rem;
+		}
+	}
+
+	& .nutshell {
+		background: @blue_bg;
+		padding: 10rem 0 5rem;
+		margin-top: -3px; /* TODO: Find out why .site-tagline bg image doesn't reach bottom edge */
+
+		& .nutshell-section {
+			margin-bottom: 9rem;
+
+			& .content {
+				padding-top: 3rem;
+
+				& h4 {
+					color: #c5d7ef;
+					font-size: 1.25rem;
+
+					& span {
+						display: block;
+						color: #fff;
+						font-size: 2.75rem;
+						margin-top: 6px;
+					}
+				}
+
+				& p:first-of-type {
+					color: #fff;
+					margin: 1.5rem 0 1rem;
+				}
+
+				& a {
+					color: @turquoise;
+					border-bottom: 1px dotted @turquoise;
+
+					&:hover {
+						border-bottom-style: solid;
+						text-decoration: none;
+					}
+				}
+			}
+
+			& .media {
+				border-radius: .5rem;
+				height: 100%;
+				box-shadow: 0 20px 26px 4px rgba(151, 161, 174, .1);
+
+				& .carousel-item {
+					border-radius: .5rem;
+					width: 570px;
+					height: 370px;
+
+					& img {
+						border-radius: .5rem;
+					}
+				}
+
+				&.solutions {
+					background-color: #fff;
+					background-image: url( 'includes/assets/images/carousel/solutions/branded-circuit-board.svg' );
+					background-size: 608px 304px;
+					background-position-y: -15px;
+					border: 1px solid #e0e6ed;
+				}
+			}
 		}
 	}
 
 	& .our-people {
-		background-color: #4b87d9;
+		background-color: @blue;
 		background-image: url( 'includes/assets/images/shapes/dark-blue-zigzag.svg' ),
-		linear-gradient( 90deg, #325686 25%, #4b87d9 25% );
+		linear-gradient( 90deg, #325686 25%, @blue 25% );
 		background-repeat: repeat-y, no-repeat;
-		background-position: 22% 0, 0 0;
+		background-position: 14.5% 0, 0 0;
 		background-size: 460px auto, 100% auto;
 		color: #fff;
 
 		& > .container {
 			position: relative;
+		}
+
+		& .get-to-know-us {
+			text-align: center;
+			margin-bottom: 4rem;
+
+			& .section-title {
+				color: #b7cff0;
+				font-size: 1.8rem;
+				text-align: left;
+				margin-bottom: 3rem;
+
+				& span {
+					color: #fff;
+					font-size: 200%;
+				}
+			}
+
+			& .section-description {
+				.ptsans;
+				font-size: 1.3rem;
+				text-align: left;
+				margin-bottom: 0;
+			}
 		}
 
 		& .humans-subtext {
@@ -65,7 +167,7 @@
 			& a {
 				color: #b7cff0;
 				text-decoration: none;
-				border-bottom: 3px dotted #4b87d9;
+				border-bottom: 3px dotted #74a3e4;
 
 				&:hover {
 					border-bottom-style: solid;
@@ -81,124 +183,92 @@
 					font-size: 2.6rem;
 				}
 			}
-		}
 
-		& .get-to-know-us {
-			top: 7.5rem;
-			right: 9rem;
-		}
-
-		& .join-our-team {
-			bottom: 9.5rem;
-			left: 9rem;
+			&.join-our-team {
+				bottom: 11rem;
+				right: 10rem;
+			}
 		}
 
 		& .humans {
-			padding: 6rem 0;
+			padding: 8rem 0;
 
 			& .row {
+				text-align: center;
 				margin-bottom: 2rem;
 			}
 
+			& [class*="year-"] {
+
+				& .the-year {
+					position: absolute;
+					top: 22px;
+					left: 10px;
+					color: #fff;
+					opacity: .3;
+					.ptsans;
+					font-size: 12px;
+					font-weight: 700;
+					transform: rotate(-60deg);
+				}
+			}
+
 			& img {
-				max-width: 160px;
+				max-width: 155px;
+				border: 4px solid rgba(255, 255, 255, 0.1);
 				border-radius: 50%;
-				box-shadow: 0 16px 20px 0 rgba(50, 86, 134, .35);
-				border-width: 3px;
-				border-style: solid;
-
-				&.year-2013 {
-					border-color: #fcdd23;
-				}
-
-				&.year-2014 {
-					border-color: #4cb7d0;
-				}
-
-				&.year-2015 {
-					border-color: #ff7762;
-				}
-
-				&.year-2016 {
-					border-color: #b8a2d0;
-				}
-
-				&.year-2017 {
-					border-color: #ffb64a;
-				}
-
-				&.year-2018 {
-					border-color: #68e2c7;
-				}
-
-				&.year-2019 {
-					border-color: #ffacba;
-				}
-			}
-
-			& .new-year {
-				position: relative;
-				/* background: rgba(255,255,255,.1); */
-				text-align: right;
-				height: 100%;
-
-				&[class*="year-20"] {
-					background-color: transparent;
-					background-repeat: no-repeat;
-					background-position: center center;
-					background-size: 40px 40px;
-
-					& span {
-						position: relative;
-						top: 4rem;
-						.ptsans;
-						font-size: 1rem;
-						font-weight: 700;
-					}
-				}
-
-				&.year-2013 {
-					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
-				}
-
-				&.year-2014 {
-					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
-				}
-
-				&.year-2015 {
-					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
-				}
-
-				&.year-2016 {
-					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
-				}
-
-				&.year-2017 {
-					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
-				}
-
-				&.year-2018 {
-					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
-				}
-
-				&.year-2019 {
-					background-image: url( 'includes/assets/images/shapes/yellow-circle.svg' );
-				}
-			}
-
-			& .careers {
-				position: relative;
-				top: 3rem;
-				color: #b7cff0;
-				.ptsans;
-				font-size: 1rem;
-				font-weight: 700;
+				box-shadow: 0 16px 20px 0 rgba(50, 86, 134, .15);
 			}
 		}
 	}
 
 	& .our-projects {
-		background: #f4f6f7;
-		padding: 6rem 0;
+		background-color: #fff;
+		background-image: url( 'includes/assets/images/carousel/solutions/branded-circuit-board.svg' );
+		background-size: 608px 304px;
+		background-position-y: -30px;
+		border: 1px solid #e0e6ed;
+		border-width: 1px 0;
+		padding: 1.6rem 0 2rem;
+
+		& .mascot {
+
+			&.sellbird {
+				position: relative;
+				left: -45px;
+				max-width: 132px;
+			}
+
+			&.edd {
+				position: relative;
+				top: -2px;
+				margin-right: 3rem;
+				max-width: 82px;
+			}
+
+			&.alf {
+				margin-right: 3rem;
+				max-width: 110px;
+			}
+
+			&.rex {
+				position: relative;
+				top: -6px;
+				margin-right: 3rem;
+				max-width: 78px;
+			}
+
+			&.sugarcalendar {
+				margin-right: 3rem;
+				max-width: 117px;
+			}
+
+			&.rhino {
+				position: relative;
+				top: -6px;
+				margin-right: 3rem;
+				max-width: 78px;
+			}
+		}
 	}
 }
