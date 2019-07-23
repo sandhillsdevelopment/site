@@ -1,12 +1,99 @@
 .section-header {
-	text-align: center;
+	margin-bottom: 4rem;
+}
 
-	& .section-title {
-		font-size: 3rem;
-		line-height: 1.1;
+.section-title {
+	display: block;
+	color: @body_color;
+	.branding;
+	font-size: 2rem;
+	line-height: 1.1;
+	margin-bottom: .8rem;
+}
+
+.title-highlight {
+	color: @turquoise;
+}
+
+.title-emoji {
+	position: relative;
+	top: -2px;
+	display: inline-block;
+	font-size: 20px;
+	line-height: 1;
+}
+
+.multi-color-border {
+
+	& .container {
+		max-width: 100% !important;
+	}
+
+	& [class*="col"] {
+		min-height: 3px;
+
+		&:nth-child(1) {
+			background: @blue;
+		}
+
+		&:nth-child(2) {
+			background: @turquoise;
+		}
+
+		&:nth-child(3) {
+			background: @sand;
+		}
+
+		&:nth-child(4) {
+			background: @orange;
+		}
+
+		&:nth-child(5) {
+			background: @coral;
+		}
+
+		&:nth-child(6) {
+			background: @blue;
+		}
 	}
 }
 
-.link-arrow {
+.color-blue {
+	color: @blue;
+}
+
+.bg-blue {
+	background: @blue;
+}
+
+.color-turquoise {
 	color: @turquoise;
+}
+
+.bg-turquoise {
+	background: @turquoise;
+}
+
+.color-sand {
+	color: @sand;
+}
+
+.bg-sand {
+	background: @sand;
+}
+
+.color-orange {
+	color: @orange;
+}
+
+.bg-orange {
+	background: @orange;
+}
+
+.color-coral {
+	color: @coral;
+}
+
+.bg-coral {
+	background: @coral;
 }

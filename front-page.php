@@ -5,74 +5,97 @@
 get_header();
 ?>
 
-	<div class="businesses">
+	<div class="hero">
 
 		<div class="container">
 
-			<div id="passions-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
-				<ol class="carousel-indicators">
-					<li data-target="#passions-carousel" data-slide-to="0" class="active"></li>
-					<li data-target="#passions-carousel" data-slide-to="1"></li>
-					<li data-target="#passions-carousel" data-slide-to="2"></li>
-					<li data-target="#passions-carousel" data-slide-to="3"></li>
-					<li data-target="#passions-carousel" data-slide-to="4"></li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="<?php echo SHD_IMAGES . 'carousel/passions/sandhills-brewing-pippin-jonathan-brewery.jpg'; ?>">
-					</div>
-					<div class="carousel-item">
-						<img src="<?php echo SHD_IMAGES . 'carousel/passions/sandhills-brewing-taproom-beer.jpg'; ?>">
-					</div>
-					<div class="carousel-item">
-						<img src="<?php echo SHD_IMAGES . 'carousel/passions/sandhills-brewing-mission-taproom.jpg'; ?>">
-					</div>
-					<div class="carousel-item">
-						<img src="<?php echo SHD_IMAGES . 'carousel/passions/sandhills-brewing-enjoying-beer.jpg'; ?>">
-					</div>
-					<div class="carousel-item">
-						<img src="<?php echo SHD_IMAGES . 'carousel/passions/sandhills-brewing-taproom.jpg'; ?>">
+			<section class="row justify-content-between">
+				<div class="tagline-container col-6">
+					<h1 class="tagline-heading">Crafting Ingenuity</h1>
+					<div class="tagline">
+						<p>Founded in 2009 by CEO Pippin Williamson, Sandhills Development, LLC is a self-funded, globally distributed company with team members in seven different countries. 🌍</p>
+						<p>With <a class="commitments" href="<?php echo home_url( '/commitments/' ); ?>">commitment</a> and a deep appreciation for the human element, we aim to craft superior experiences through ingenuity.</p>
 					</div>
 				</div>
-				<a class="carousel-control-prev" href="#passions-carousel" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#passions-carousel" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
+			</section>
+
+		</div>
+
+	</div>
+
+	<div class="meet-the-team">
+
+		<div class="container">
+
+			<div class="section-header our-people-header row">
+				<div class="col-6">
+					<span class="section-title">Greetings from <span class="title-highlight">Team Sandhills</span> <span class="title-emoji">👋</span></span>
+					<p class="section-description">We're a team of humans who believe in creating powerful products that make a positive impact on the lives of our customers.</p>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="our-people col-10">
+					<?php get_template_part( 'template-parts/content', 'our-humans' ); ?>
+				</div>
+
+				<div class="our-facts col-2">
+					<div class="fact-group row no-gutters">
+						<div class="col offset-2">
+							<span class="fact-title"><?php echo count( shd_get_our_people() ); ?></span>
+							<p class="fact-description">Team members</p>
+						</div>
+					</div>
+					<div class="fact-group row no-gutters">
+						<div class="col offset-2">
+							<span class="fact-title">7</span>
+							<p class="fact-description">Countries</p>
+						</div>
+					</div>
+					<div class="fact-group row no-gutters">
+						<div class="col offset-2">
+							<span class="fact-title"><?php echo shd_get_years_in_business(); ?></span>
+							<p class="fact-description">Years in business</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="global-footprint row justify-content-between">
+
+				<div class="col-7">
+					<span class="section-title">Our <span class="title-highlight">global</span> footprint</span>
+					<p class="section-description">Freedom is important to us. Our team works from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize having a healthy workplace.</p>
+					<p>Furthermore, given that we are spread across the globe in multiple timezones, it also gives us the ability to better serve our customers, wherever they may reside.</p>
+				</div>
+
+				<div class="join-our-team-container col-3">
+					<span class="join-our-team"><a href="<?php echo home_url( '/careers/' ); ?>">Join our team</a></span>
+				</div>
+
 			</div>
 
 		</div>
 
 	</div>
 
-	<div class="nutshell">
+	<div class="what-we-do">
 
 		<div class="container">
 
-			<section class="nutshell-section row justify-content-between">
-				<div class="col-6">
-					<div class="media passions">
-						<?php get_template_part( 'template-parts/carousel', 'passions' ); ?>
-					</div>
-				</div>
-				<div class="col-5">
-					<div class="content">
-						<h4>Passion projects that <span>bring people together</span></h4>
-						<p>At Sandhills Development, we are real humans with real passions. One of our passions happens to be beer. Our Kansas-based microbrewery, Sandhills Brewing, attracts those who love our barrel aged wild ales.</p>
-						<p><a href="https://sandhillsbrewing.com/">Check out Sandhills Brewing</a> <span class="link-arrow">&rarr;</span></p>
-					</div>
-				</div>
-			</section>
+			<header class="section-header">
+				<span class="section-title">About that ingenuity...</span>
+				<p class="section-description">We are the humans behind Easy Digital Downloads, Restrict Content Pro, AffiliateWP, Sugar Event Calendar, SellBird, WP Simple Pay, Pippin's Plugins, and more. We love to create software that empowers small business owners.</p>
+			</header>
 
 			<section class="nutshell-section row justify-content-between">
 				<div class="col-5">
 					<div class="content">
-						<h4>Community efforts that <span>build relationships</span></h4>
+						<h3>building relationships</h3>
 						<p>We take pride in improving the human experience. Through various charities, land development, and property management, our aim is to leave the world around us better than how we found it.</p>
-						<p><a href="<?php echo home_url( '/projects/' ); ?>">See our commitments</a> <span class="link-arrow">&rarr;</span></p>
+						<p><a href="<?php echo home_url( '/projects/' ); ?>">See our commitments &rarr;</a></p>
 					</div>
 				</div>
 				<div class="col-6">
@@ -84,15 +107,30 @@ get_header();
 
 			<section class="nutshell-section row justify-content-between">
 				<div class="col-6">
-					<div class="media solutions">
-						<?php get_template_part( 'template-parts/carousel', 'solutions' ); ?>
+					<div class="media passions">
+						<?php get_template_part( 'template-parts/carousel', 'passions' ); ?>
 					</div>
 				</div>
 				<div class="col-5">
 					<div class="content">
-						<h4>Technical solutions that <span>empower businesses</span></h4>
+						<h3>bringing people together</h3>
+						<p>At Sandhills Development, we are real humans with real passions. One of our passions happens to be beer. Our Kansas-based microbrewery, Sandhills Brewing, attracts those who love our barrel aged wild ales.</p>
+						<p><a href="https://sandhillsbrewing.com/">Check out Sandhills Brewing &rarr;</a></p>
+					</div>
+				</div>
+			</section>
+
+			<section class="nutshell-section row justify-content-between">
+				<div class="col-5">
+					<div class="content">
+						<h3>empowering businesses</h3>
 						<p>We are the humans behind Easy Digital Downloads, Restrict Content Pro, AffiliateWP, Sugar Event Calendar, SellBird, WP Simple Pay, Pippin's Plugins, and more.</p>
-						<p><a href="<?php echo home_url( '/projects/' ); ?>">See our projects</a> <span class="link-arrow">&rarr;</span></p>
+						<p><a href="<?php echo home_url( '/projects/' ); ?>">See our projects &rarr;</a></p>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="media solutions">
+						<?php get_template_part( 'template-parts/carousel', 'solutions' ); ?>
 					</div>
 				</div>
 			</section>
@@ -101,7 +139,7 @@ get_header();
 
 	</div>
 
-<?php get_template_part( 'template-parts/content', 'our-humans' ); ?>
+	<!--
 
 	<div class="our-projects">
 		<div class="container">
@@ -109,7 +147,7 @@ get_header();
 				<h3 class="section-title"></h3>
 			</div>
 			<div class="row">
-				<div class="col">
+				<div class="mascots col-9">
 					<img class="mascot sellbird" src="<?php echo SHD_IMAGES . 'mascots/sellbird.png'; ?>">
 					<img class="mascot edd" src="<?php echo SHD_IMAGES . 'mascots/edd.png'; ?>">
 					<img class="mascot alf" src="<?php echo SHD_IMAGES . 'mascots/alf.png'; ?>">
@@ -120,6 +158,8 @@ get_header();
 			</div>
 		</div>
 	</div>
+
+	-->
 
 <?php
 get_footer();

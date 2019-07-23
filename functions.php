@@ -32,11 +32,6 @@ function shd_theme_setup() {
 	// Site structure functions
 	include( SHD_STRUCTURE . 'header.php' );
 	include( SHD_STRUCTURE . 'navigation.php' );
-
-	// Register additional menus
-	register_nav_menus( array(
-		'secondary_alt' => 'Secondary Menu - Alt',
-	) );
 }
 add_action( 'after_setup_theme', 'shd_theme_setup' );
 

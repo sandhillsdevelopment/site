@@ -1,63 +1,175 @@
 .front-page {
 
 	& #masthead {
+	}
 
-		& .site-tagline {
-			display: block;
-			padding-top: 4rem;
-			padding-bottom: 10rem;
+	& .hero {
+		position: relative;
+		background: transparent;
+		background-image: url( 'includes/assets/images/shapes/sand-hills-sharp-left.svg' );
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: left bottom;
+		padding: 2rem 0 12rem;
 
-			& .tagline-heading {
-				display: inline-block;
-				.ptsans;
-				font-size: 5rem;
-				font-weight: 700;
-				margin-bottom: .2em;
+		& .container {
+
+			& .tagline-container {
+
+				& .tagline-heading {
+					display: inline-block;
+					.branding;
+					font-size: 3.8rem;
+					margin-bottom: .4em;
+				}
+
+				& .tagline {
+					margin-bottom: 1rem;
+					max-width: 660px;
+				}
+			}
+		}
+	}
+
+	& .meet-the-team {
+		background: @lightgray;
+		background-image: url( 'includes/assets/images/shapes/world-map.svg' );
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center bottom;
+		padding: 5.5rem 0;
+		border-bottom: 2px solid #e1ebf2;
+		margin-top: -3px; /* TODO: Find out why .site-tagline bg image doesn't reach bottom edge */
+
+		& .container {
+
+			& .row:not(.section-header) {
+				margin: 0;
 			}
 
-			& .tagline {
-				margin-bottom: 1rem;
-				max-width: 615px;
+			& > .row:not(.our-people-header) > [class*="col"] {
+				padding: 0;
+			}
 
-				& span {
-					color: @body_color;
+			& .our-people {
+				padding: 0;
+
+				& .our-people-row {
+					padding-bottom: 39.5%;
+
+					& [class*="col"] {
+						padding: 0 0 1.5rem;
+						margin: 0;
+
+						& img {
+							border-radius: 50%;
+							width: 140px;
+
+							&:hover {
+							}
+						}
+
+						& .year {
+							display: none;
+							/*
+							position: absolute;
+							top: 0;
+							left: -10px;
+							color: #c4cfd7;
+							.branding;
+							font-size: 12px;
+							line-height: 1;
+							*/
+						}
+
+						& .person {
+							position: absolute;
+							bottom: 19px;
+							left: 17px;
+							display: inline-block;
+							background: @turquoise;
+							color: #fff;
+							.branding;
+							font-size: 12px;
+							line-height: 1;
+							padding: 3px 6px;
+							border-radius: 10px;
+						}
+					}
 				}
 			}
 
-			& .see-our-projects {
+			& .our-facts {
 
-				& a {
-					color: @turquoise;
-					text-decoration: none;
-					border-bottom: 1px dotted;
+				& .fact-group {
+					text-align: center;
 
-					&:hover {
-						border-bottom-style: solid;
-						text-decoration: none;
+					& .col {
+						padding-top: 20px;
+						min-height: 164px;
+
+						&:after {
+							position: absolute;
+							left: 50%;
+							bottom: 1.25em;
+							background-color: #e1ebf2;
+							content: "";
+							margin-left: -30px;
+							height: 2px;
+							width: 60px;
+						}
+					}
+
+					& .fact-title {
+						color: @turquoise;
+						.branding;
+						font-size: 3.8rem;
+						line-height: 1;
+					}
+
+					& .fact-description {
+						color: @body_color_light;
+						font-size: 20px;
+					}
+				}
+			}
+
+			& .row.global-footprint {
+				margin-bottom: 2rem;
+			}
+
+			& .join-our-team-container {
+				position: relative;
+
+				& .join-our-team {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					.branding;
+
+					& a {
+						color: @coral;
+						font-size: 14px;
 					}
 				}
 			}
 		}
 	}
 
-	& .businesses {
-		background-color: @lightgray;
-		background-image: url( 'includes/assets/images/shapes/sand-hills-blue.svg' );
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: 1800px auto;
-		padding: 5rem 0 5rem;
-		margin-top: -3px; /* TODO: Find out why .site-tagline bg image doesn't reach bottom edge */
+	& .what-we-do {
+		padding: 6rem 0 8rem;
 
-		& .container {
-			margin: -10rem auto 10rem;
+		& .section-header {
+			text-align: center;
+
+			& .section-title {
+			}
+
+			& .section-description {
+				max-width: 660px;
+				margin: 0 auto;
+			}
 		}
-	}
-
-	& .nutshell {
-		background: @blue_bg;
-		padding: 10rem 0 5rem;
-		margin-top: -3px; /* TODO: Find out why .site-tagline bg image doesn't reach bottom edge */
 
 		& .nutshell-section {
 			margin-bottom: 9rem;
@@ -66,208 +178,77 @@
 				padding-top: 3rem;
 
 				& h4 {
-					color: #c5d7ef;
-					font-size: 1.25rem;
-
-					& span {
-						display: block;
-						color: #fff;
-						font-size: 2.75rem;
-						margin-top: 6px;
-					}
+					font-size: 2.5rem;
 				}
 
 				& p:first-of-type {
-					color: #fff;
 					margin: 1.5rem 0 1rem;
-				}
-
-				& a {
-					color: @turquoise;
-					border-bottom: 1px dotted @turquoise;
-
-					&:hover {
-						border-bottom-style: solid;
-						text-decoration: none;
-					}
 				}
 			}
 
 			& .media {
-				border-radius: .5rem;
 				height: 100%;
 				box-shadow: 0 20px 26px 4px rgba(151, 161, 174, .1);
 
 				& .carousel-item {
-					border-radius: .5rem;
 					width: 570px;
 					height: 370px;
 
 					& img {
-						border-radius: .5rem;
 					}
 				}
 
 				&.solutions {
-					background-color: #fff;
-					background-image: url( 'includes/assets/images/carousel/solutions/branded-circuit-board.svg' );
-					background-size: 608px 304px;
-					background-position-y: -15px;
 					border: 1px solid #e0e6ed;
 				}
 			}
 		}
 	}
 
-	& .our-people {
-		background-color: @blue;
-		background-image: url( 'includes/assets/images/shapes/dark-blue-zigzag.svg' ),
-		linear-gradient( 90deg, #325686 25%, @blue 25% );
-		background-repeat: repeat-y, no-repeat;
-		background-position: 14.5% 0, 0 0;
-		background-size: 460px auto, 100% auto;
-		color: #fff;
-
-		& > .container {
-			position: relative;
-		}
-
-		& .get-to-know-us {
-			text-align: center;
-			margin-bottom: 4rem;
-
-			& .section-title {
-				color: #b7cff0;
-				font-size: 1.8rem;
-				text-align: left;
-				margin-bottom: 3rem;
-
-				& span {
-					color: #fff;
-					font-size: 200%;
-				}
-			}
-
-			& .section-description {
-				.ptsans;
-				font-size: 1.3rem;
-				text-align: left;
-				margin-bottom: 0;
-			}
-		}
-
-		& .humans-subtext {
-			position: absolute;
-			color: #b7cff0;
-			.ptsans;
-			font-size: 1.8rem;
-			line-height: 1.2;
-			font-weight: 700;
-
-			& a {
-				color: #b7cff0;
-				text-decoration: none;
-				border-bottom: 3px dotted #74a3e4;
-
-				&:hover {
-					border-bottom-style: solid;
-				}
-			}
-
-			& .subtext-highlight {
-				color: #fff;
-				font-size: 200%;
-
-				& .small-period {
-					color: #b7cff0;
-					font-size: 2.6rem;
-				}
-			}
-
-			&.join-our-team {
-				bottom: 11rem;
-				right: 10rem;
-			}
-		}
-
-		& .humans {
-			padding: 8rem 0;
-
-			& .row {
-				text-align: center;
-				margin-bottom: 2rem;
-			}
-
-			& [class*="year-"] {
-
-				& .the-year {
-					position: absolute;
-					top: 22px;
-					left: 10px;
-					color: #fff;
-					opacity: .3;
-					.ptsans;
-					font-size: 12px;
-					font-weight: 700;
-					transform: rotate(-60deg);
-				}
-			}
-
-			& img {
-				max-width: 155px;
-				border: 4px solid rgba(255, 255, 255, 0.1);
-				border-radius: 50%;
-				box-shadow: 0 16px 20px 0 rgba(50, 86, 134, .15);
-			}
-		}
-	}
-
 	& .our-projects {
-		background-color: #fff;
-		background-image: url( 'includes/assets/images/carousel/solutions/branded-circuit-board.svg' );
-		background-size: 608px 304px;
-		background-position-y: -30px;
-		border: 1px solid #e0e6ed;
-		border-width: 1px 0;
-		padding: 1.6rem 0 2rem;
+		background: @lightgray;
+		padding: 6rem 0 2rem;
 
-		& .mascot {
+		& .mascots {
+			text-align: right;
 
-			&.sellbird {
-				position: relative;
-				left: -45px;
-				max-width: 132px;
-			}
+			& .mascot {
 
-			&.edd {
-				position: relative;
-				top: -2px;
-				margin-right: 3rem;
-				max-width: 82px;
-			}
+				&.sellbird {
+					position: relative;
+					left: -45px;
+					max-width: 132px;
+				}
 
-			&.alf {
-				margin-right: 3rem;
-				max-width: 110px;
-			}
+				&.edd {
+					position: relative;
+					top: -2px;
+					margin-right: 3rem;
+					max-width: 82px;
+				}
 
-			&.rex {
-				position: relative;
-				top: -6px;
-				margin-right: 3rem;
-				max-width: 78px;
-			}
+				&.alf {
+					margin-right: 3rem;
+					max-width: 110px;
+				}
 
-			&.sugarcalendar {
-				margin-right: 3rem;
-				max-width: 117px;
-			}
+				&.rex {
+					position: relative;
+					top: -6px;
+					margin-right: 3rem;
+					max-width: 78px;
+				}
 
-			&.rhino {
-				position: relative;
-				top: -6px;
-				margin-right: 3rem;
-				max-width: 78px;
+				&.sugarcalendar {
+					margin-right: 3rem;
+					max-width: 117px;
+				}
+
+				&.rhino {
+					position: relative;
+					top: -6px;
+					max-width: 78px;
+				}
 			}
 		}
 	}

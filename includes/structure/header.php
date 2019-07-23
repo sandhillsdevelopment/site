@@ -12,6 +12,8 @@ function shd_site_header() {
 	$container_classes = array( 'container py-5 justify-content-center' );
 	?>
 
+	<?php get_template_part( 'template-parts/element', 'multi-color-border' ); ?>
+
 	<header id="masthead" class="site-header" role="banner">
 
 		<div class="navbar navbar-expand-md px-0 py-0">
@@ -28,29 +30,21 @@ function shd_site_header() {
 			</div>
 		</div>
 
-		<div class="navbar-expand-md px-0 py-0">
+		<div class="navbar-header navbar-expand-md px-0 py-0">
 			<div class="<?php echo themedd_output_classes( $container_classes ); ?>">
 
 				<div class="row">
 
-					<div class="col-md-4 secondary-menu-container-left">
-
-						<nav id="nav-secondary" class="navbar-collapse collapse">
-							<?php echo themedd_secondary_navigation( array( 'menu_classes' => array( 'navbar-left' ) ) ); ?>
-						</nav>
-
-					</div>
-
-					<div class="col-md-4">
+					<div class="col-md-3">
 
 						<?php echo shd_site_branding(); ?>
 
 					</div>
 
-					<div class="col-md-4 secondary-menu-container-right">
+					<div class="col-md-9 secondary-menu-container-right">
 
-						<nav id="nav-secondary-alt" class="navbar-collapse collapse justify-content-end">
-							<?php echo shd_secondary_navigation_alt( array( 'menu_classes' => array( 'navbar-right' ) ) ); ?>
+						<nav id="nav-secondary" class="navbar-collapse collapse justify-content-end">
+							<?php echo themedd_secondary_navigation( array( 'menu_classes' => array( 'navbar-=right' ) ) ); ?>
 						</nav>
 
 					</div>
@@ -59,12 +53,6 @@ function shd_site_header() {
 
 			</div>
 		</div>
-
-		<?php
-		if ( is_front_page() ) {
-			get_template_part( 'template-parts/content', 'front-page-hero' );
-		}
-		?>
 
 	</header>
 
@@ -88,7 +76,7 @@ function shd_site_branding() {
 
 		<<?php echo $tag; ?> class="<?php echo themedd_output_classes( $classes ); ?>">
 			<a class="shd-logo-anchor navbar-brand mr-0" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logo/shd-logo-dark.svg'; ?>" alt="Sandhills Development" data-fallback="<?php echo SHD_IMAGES . 'logo/edd-logo-dark.png'; ?>">
+				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logo/shd-site-logo-orange-blue.svg'; ?>" alt="Sandhills Development" data-fallback="<?php echo SHD_IMAGES . 'logo/shd-site-logo-orange-blue.png'; ?>">
 			</a>
 		</<?php echo $tag; ?>>
 

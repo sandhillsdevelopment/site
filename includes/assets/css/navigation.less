@@ -2,6 +2,7 @@ nav[id*="nav-secondary"] {
 	position: relative;
 
 	& .nav-item {
+		padding: 0 .75rem;
 
 		&.menu-highlight {
 
@@ -13,61 +14,29 @@ nav[id*="nav-secondary"] {
 		}
 
 		& .nav-link {
-			color: @body_color;
-			font-size: 14px;
-			font-weight: 700;
-			text-transform: uppercase;
-			padding: .75rem;
-			transition: color .2s ease-in-out;
+			color: @body_color_light;
+			.branding;
+			font-size: 16px;
+			padding: 0 0 2px;
 
 			& .icon {
-				color: @body_color_light;
+				opacity: .7;
 			}
 
 			&:hover {
-				color: @body_color_light;
+				border-bottom: 3px solid @body_bg;
 			}
 		}
 
 		&.active {
 
 			& > .nav-link {
-				color: @body_color;
+				border-bottom: 3px solid @body_bg;
 			}
 		}
 
 		&:not(:last-child) {
 			margin-right: 1rem;
-		}
-	}
-
-	&:not(.justify-content-end) {
-
-		& .nav-item:first-of-type {
-
-			& .nav-link {
-				color: @body_color_light;
-				transition: opacity .2s;
-
-				&:hover {
-					opacity: .7;
-				}
-			}
-		}
-	}
-
-	&.justify-content-end {
-
-		& .nav-item:last-of-type {
-
-			& .nav-link {
-				color: @body_color_light;
-
-				&:hover {
-					opacity: .7;
-					transition: opacity .2s;
-				}
-			}
 		}
 	}
 }
