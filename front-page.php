@@ -15,7 +15,11 @@ get_header();
 					<div class="tagline">
 						<p>Founded in 2009 by CEO Pippin Williamson, Sandhills Development, LLC is a self-funded, globally distributed company with team members in seven different countries. 🌍</p>
 						<p>With <a class="commitments" href="<?php echo home_url( '/commitments/' ); ?>">commitment</a> and a deep appreciation for the human element, we aim to craft superior experiences through ingenuity.</p>
+						<p>We are the humans behind Easy Digital Downloads, Restrict Content Pro, AffiliateWP, Sugar Event Calendar, SellBird, WP Simple Pay, Pippin's Plugins, and more.</p>
 					</div>
+				</div>
+				<div class="tagline-container col-6">
+					<a class="button" href="<?php echo home_url( '/project/' ); ?>">Projects</a>
 				</div>
 			</section>
 
@@ -67,7 +71,7 @@ get_header();
 
 				<div class="col-7">
 					<span class="section-title">Our <span class="title-highlight">global</span> footprint</span>
-					<p class="section-description">Freedom is important to us. Our team works from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize having a healthy workplace.</p>
+					<p class="section-description">Freedom is important to us. Our team works from the comfort of our own homes, or wherever we find ourselves <strong>happy</strong> and <strong>productive</strong>. We do our best work when we prioritize having a healthy workplace.</p>
 					<p>Furthermore, given that we are spread across the globe in multiple timezones, it also gives us the ability to better serve our customers, wherever they may reside.</p>
 				</div>
 
@@ -81,14 +85,36 @@ get_header();
 
 	</div>
 
-	<div class="what-we-do">
+	<div class="headquarters">
 
 		<div class="container">
 
-			<header class="section-header">
-				<span class="section-title">About that ingenuity...</span>
-				<p class="section-description">We are the humans behind Easy Digital Downloads, Restrict Content Pro, AffiliateWP, Sugar Event Calendar, SellBird, WP Simple Pay, Pippin's Plugins, and more. We love to create software that empowers small business owners.</p>
-			</header>
+			<div class="row">
+
+				<div class="col-3">
+					<h4>Sandhills Headquarters</h4>
+					<p class="section-description">Hutchinson, Kansas, USA</p>
+				</div>
+				<div class="col-3">
+					<h4>Send us a friendly tweet</h4>
+					<p class="section-description">Twitter: <a href="https://twitter.com/sandhillsdev" target="_blank">@sandhillsdev</a></p>
+				</div>
+				<div class="col-3">
+					<h4>Share your success story with us</h4>
+					<p class="section-description">Email: <a href="mailto:success@sandhillsdev.com">success@sandhillsdev.com</a></p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<?php get_template_part( 'template-parts/element', 'multi-color-border' ); ?>
+
+	<div class="what-we-do">
+
+		<div class="container">
 
 			<section class="nutshell-section row justify-content-between">
 				<div class="col-5">
@@ -139,8 +165,6 @@ get_header();
 
 	</div>
 
-	<!--
-
 	<div class="our-projects">
 		<div class="container">
 			<div class="section-heading">
@@ -158,8 +182,6 @@ get_header();
 			</div>
 		</div>
 	</div>
-
-	-->
 
 <?php
 get_footer();

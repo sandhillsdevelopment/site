@@ -10,7 +10,7 @@
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 		background-position: left bottom;
-		padding: 2rem 0 12rem;
+		padding: 2rem 0 10rem;
 
 		& .container {
 
@@ -37,7 +37,7 @@
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 		background-position: center bottom;
-		padding: 5.5rem 0;
+		padding: 5.5rem 0 4rem;
 		border-bottom: 2px solid #e1ebf2;
 		margin-top: -3px; /* TODO: Find out why .site-tagline bg image doesn't reach bottom edge */
 
@@ -156,6 +156,24 @@
 		}
 	}
 
+	& .headquarters {
+
+		& [class*="col"] {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+
+			& h4 {
+				font-size: 1rem;
+				margin: 0;
+			}
+
+			& p {
+				font-size: 1rem;
+			}
+
+		}
+	}
+
 	& .what-we-do {
 		padding: 6rem 0 8rem;
 
@@ -222,7 +240,7 @@
 
 				&.edd {
 					position: relative;
-					top: -2px;
+					top: -3px;
 					margin-right: 3rem;
 					max-width: 82px;
 				}

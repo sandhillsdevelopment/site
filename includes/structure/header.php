@@ -10,9 +10,9 @@ function shd_site_header() {
 
 	// Set up default container classes.
 	$container_classes = array( 'container py-5 justify-content-center' );
-	?>
 
-	<?php get_template_part( 'template-parts/element', 'multi-color-border' ); ?>
+	get_template_part( 'template-parts/element', 'multi-color-border' );
+	?>
 
 	<header id="masthead" class="site-header" role="banner">
 
