@@ -20,6 +20,57 @@ function shd_body_classes_front_end( $classes ) {
 }
 add_action( 'body_class', 'shd_body_classes_front_end' );
 
+/**
+ * Get all of our projects.
+ */
+function shd_get_our_projects() {
+
+	$our_projects = array(
+		'edd'  => array(
+			'name' => 'Easy Digital Downloads',
+			'desc' => 'An eCommerce solution for selling digital products on WordPress.',
+			'url'  => 'https://easydigitaldownloads.com/'
+		),
+		'awp'  => array(
+			'name' => 'AffiliateWP',
+			'desc' => 'A full-featured affiliate program solution for WordPress sites.',
+			'url'  => 'https://affiliatewp.com/'
+		),
+		'rcp'  => array(
+			'name' => 'Restrict Content Pro',
+			'desc' => 'A full-featured, powerful membership solution for WordPress.',
+			'url'  => 'https://restrictcontentpro.com/'
+		),
+		'sc'   => array(
+			'name' => 'Sugar Calendar',
+			'desc' => 'A sweet, simple event calendar plugin for WordPress.',
+			'url'  => 'https://sugarcalendar.com/'
+		),
+		'pp'   => array(
+			'name' => 'Pippin\'s Plugins',
+			'desc' => 'Finely crafted WordPress plugins, tutorials, reviews and more.',
+			'url'  => 'https://pippinsplugins.com/'
+		),
+		'sb'   => array(
+			'name' => 'Sellbird',
+			'desc' => 'Helping your digital product and media sales take flight.',
+			'url'  => 'http://sellbird.com/'
+		),
+		'wpsp' => array(
+			'name' => 'WP Simple Pay',
+			'desc' => 'The #1 Stripe Payments Plugin for WordPress.',
+			'url'  => 'https://wpsimplepay.com/'
+		),
+		'beer' => array(
+			'name' => 'Sandhills Brewing',
+			'desc' => 'Central Kansas brewery focusing on barrel aged wild ales.',
+			'url'  => 'https://sandhillsbrewing.com/'
+		),
+	);
+
+	return (array) $our_projects;
+}
+
 
 /**
  * Get all of the team members. If they go by a specific name, say so. Also indicate if

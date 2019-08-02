@@ -5,29 +5,111 @@
 
 	& .hero {
 		position: relative;
-		background: transparent;
-		background-image: url( 'includes/assets/images/shapes/sand-hills-sharp-left.svg' );
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		background-position: left bottom;
-		padding: 2rem 0 10rem;
+		padding: 4rem 0;
 
-		& .container {
+		& .tagline-container {
+			text-align: center;
+			margin: 0 auto;
+			max-width: 800px;
 
-			& .tagline-container {
+			& .tagline-heading {
+				display: inline-block;
+				.branding;
+				font-size: 3.8rem;
+				margin-bottom: .2em;
 
-				& .tagline-heading {
-					display: inline-block;
-					.branding;
-					font-size: 3.8rem;
-					margin-bottom: .4em;
-				}
-
-				& .tagline {
-					margin-bottom: 1rem;
-					max-width: 660px;
+				& .tagline-highlight {
+					color: @blue;
 				}
 			}
+
+			& .tagline {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	& .quick-projects {
+		text-align: center;
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: #e1ebf2;
+		margin-bottom: 600px;
+
+		& .container {
+			max-width: 100%;
+		}
+
+		& [class*="col"] {
+			padding: 0;
+
+			& [class*="-url"] {
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+				}
+
+				& .quick-project {
+					background-color: #fff;
+					padding: 2.4rem 3rem;
+					border: 1px solid #e1ebf2;
+					height: 100%;
+
+					&.edd-col {
+						border-width: 0 1px 1px 0;
+					}
+
+					&.awp-col {
+						border-width: 0 1px 1px 0;
+					}
+
+					&.rcp-col {
+						border-width: 0 1px 1px 0;
+					}
+
+					&.sc-col {
+						border-width: 0 0 1px 0;
+					}
+
+					&.pp-col {
+						border-width: 0 1px 0 0;
+					}
+
+					&.sb-col {
+						border-width: 0 1px 0 0;
+					}
+
+					&.wpsp-col {
+						border-width: 0 1px 0 0;
+					}
+
+					&.beer-col {
+						border: none;
+					}
+
+					& .quick-project-description {
+						color: @body_color_light;
+					}
+				}
+			}
+		}
+
+		& .mascot {
+			height: 80px;
+			width: auto;
+		}
+
+		& .quick-project-title {
+			display: inline-block;
+			color: @body_color;
+			.branding;
+			font-size: 1rem;
+			margin-bottom: .4em;
+		}
+
+		& p {
+			font-size: 1rem;
 		}
 	}
 
@@ -35,11 +117,10 @@
 		background: @lightgray;
 		background-image: url( 'includes/assets/images/shapes/world-map.svg' );
 		background-repeat: no-repeat;
-		background-size: 100% auto;
+		background-size: 1400px auto;
 		background-position: center bottom;
-		padding: 5.5rem 0 4rem;
-		border-bottom: 2px solid #e1ebf2;
-		margin-top: -3px; /* TODO: Find out why .site-tagline bg image doesn't reach bottom edge */
+		padding: 7rem 0 4rem;
+		border-width: 1px 0;
 
 		& .container {
 
@@ -51,6 +132,10 @@
 				padding: 0;
 			}
 
+			& .title-highlight {
+				color: @blue;
+			}
+
 			& .our-people {
 				padding: 0;
 
@@ -58,12 +143,12 @@
 					padding-bottom: 39.5%;
 
 					& [class*="col"] {
-						padding: 0 0 1.5rem;
+						padding: 0 0 2.5rem;
 						margin: 0;
 
 						& img {
 							border-radius: 50%;
-							width: 140px;
+							width: 125px;
 
 							&:hover {
 							}
@@ -84,10 +169,10 @@
 
 						& .person {
 							position: absolute;
-							bottom: 19px;
+							bottom: 34px;
 							left: 17px;
 							display: inline-block;
-							background: @turquoise;
+							background: @blue;
 							color: #fff;
 							.branding;
 							font-size: 12px;
@@ -105,31 +190,32 @@
 					text-align: center;
 
 					& .col {
-						padding-top: 20px;
-						min-height: 164px;
+						padding-top: 10px;
+						margin-bottom: 1.5rem;
+						min-height: 133px;
 
 						&:after {
 							position: absolute;
 							left: 50%;
-							bottom: 1.25em;
+							bottom: 10px;
 							background-color: #e1ebf2;
 							content: "";
 							margin-left: -30px;
 							height: 2px;
 							width: 60px;
 						}
-					}
 
-					& .fact-title {
-						color: @turquoise;
-						.branding;
-						font-size: 3.8rem;
-						line-height: 1;
-					}
+						& .fact-title {
+							color: @blue;
+							.branding;
+							font-size: 4rem;
+							line-height: 1;
+						}
 
-					& .fact-description {
-						color: @body_color_light;
-						font-size: 20px;
+						& .fact-description {
+							color: @body_color_light;
+							font-size: 20px;
+						}
 					}
 				}
 			}
@@ -224,48 +310,61 @@
 	}
 
 	& .our-projects {
-		background: @lightgray;
-		padding: 6rem 0 2rem;
 
-		& .mascots {
-			text-align: right;
+		& .container {
+		}
+
+		& .project-logos {
+			text-align: center;
+
+			& [class*="col"] {
+
+				& [class*="col-"] {
+					padding: 2rem;
+				}
+			}
 
 			& .mascot {
 
-				&.sellbird {
-					position: relative;
-					left: -45px;
-					max-width: 132px;
+				& img {
+					max-width: 100px;
+				}
+
+				&.pippins-plugins {
+					max-width: 80px;
 				}
 
 				&.edd {
 					position: relative;
 					top: -3px;
-					margin-right: 3rem;
 					max-width: 82px;
 				}
 
 				&.alf {
-					margin-right: 3rem;
 					max-width: 110px;
 				}
 
 				&.rex {
 					position: relative;
 					top: -6px;
-					margin-right: 3rem;
-					max-width: 78px;
+					max-width: 74px;
 				}
 
 				&.sugarcalendar {
-					margin-right: 3rem;
 					max-width: 117px;
+				}
+
+				&.sellbird {
+					max-width: 132px;
 				}
 
 				&.rhino {
 					position: relative;
 					top: -6px;
-					max-width: 78px;
+					max-width: 76px;
+				}
+
+				&.sandhills-brewing {
 				}
 			}
 		}

@@ -5,7 +5,7 @@ body {
 	line-height: 1.6;
 
 	@media all and ( min-width: 1440px ) {
-		padding: 3rem 0;
+		/*padding: 3rem 0;*/
 	}
 
 	@media all and ( min-width: 1200px ) {
@@ -13,13 +13,14 @@ body {
 	}
 
 	& #page {
-		/*box-shadow: 0 0 30px rgba(216,224,230,0.8);*/
+		border: 1px solid #e1ebf2;
+		border-width: 0 1px;
+		box-shadow: 0 0 30px rgba(216,224,230,0.8);
 	}
 }
 
-@media ( min-width: 1440px ) {
+@media all and ( min-width: 1440px ) {
 
 	.container {
-		max-width: 1280px;
 	}
 }
