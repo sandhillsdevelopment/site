@@ -5,6 +5,7 @@
 get_header();
 ?>
 
+<!--
 	<div class="quick-projects">
 
 		<div class="container">
@@ -16,7 +17,7 @@ get_header();
 		</div>
 
 	</div>
-
+-->
 	<div class="meet-the-team">
 
 		<div class="container">

@@ -38,7 +38,7 @@ function shd_get_our_projects() {
 		),
 		'rcp'  => array(
 			'name' => 'Restrict Content Pro',
-			'desc' => 'A full-featured, powerful membership solution for WordPress.',
+			'desc' => 'A powerful membership solution for WordPress.',
 			'url'  => 'https://restrictcontentpro.com/'
 		),
 		'sc'   => array(
