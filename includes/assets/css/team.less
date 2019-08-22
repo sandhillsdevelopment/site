@@ -1,0 +1,112 @@
+.meet-the-team {
+	background: @gray;
+	background-image: url( 'includes/assets/images/shapes/world-map.svg' );
+	background-repeat: no-repeat;
+	background-size: 1400px auto;
+	background-position: center bottom;
+	padding: 7rem 0 4rem;
+	border: 1px solid #e1ebf2;
+	border-width: 1px 0;
+	margin-top: 8rem;
+
+	& .container {
+
+		& .row:not(.section-header) {
+			margin: 0;
+		}
+
+		& > .row:not(.our-people-header) > [class*="col"] {
+			padding: 0;
+		}
+
+		& .team-sandhills {
+			margin-bottom: 2rem;
+		}
+
+		& .our-facts {
+			margin-bottom: 2rem;
+
+			& .fact-group {
+				text-align: center;
+
+				& .col {
+					padding-top: 10px;
+					margin-bottom: 1.5rem;
+					min-height: 120px;
+
+					& .fact-title {
+						color: @blue;
+						.branding;
+						font-size: 4rem;
+						line-height: 1;
+					}
+
+					& .fact-description {
+						color: @night_light;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+
+		& .our-people {
+			padding: 0;
+
+			& .our-people-row {
+				text-align: center;
+				padding-bottom: 39.5%;
+
+				& [class*="col"] {
+					padding: 0 0 2.5rem;
+					margin: 0;
+
+					& img {
+						border-radius: 50%;
+						width: 125px;
+
+						&:hover {
+						}
+					}
+
+					& .year {
+						display: none;
+					}
+
+					& .person {
+						position: absolute;
+						bottom: 34px;
+						left: 35px;
+						display: inline-block;
+						background: @blue;
+						color: #fff;
+						.branding;
+						font-size: 12px;
+						line-height: 1;
+						padding: 3px 6px;
+						border-radius: 10px;
+					}
+				}
+			}
+		}
+
+		& .row.global-footprint {
+			margin-bottom: 2rem;
+		}
+
+		& .join-our-team-container {
+			position: relative;
+
+			& .join-our-team {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				.branding;
+
+				& a {
+					color: @blue;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

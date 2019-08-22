@@ -1,14 +1,85 @@
+section[class*="-section"] {
+	padding: 8rem 0;
+}
+
 .section-header {
-	margin-bottom: 4rem;
+	text-align: center;
+	margin: 0 auto 4rem;
+	max-width: 800px;
 }
 
 .section-title {
 	display: block;
-	color: @body_color;
-	.branding;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	line-height: 1.1;
 	margin-bottom: .4em;
+}
+
+.bold-title {
+	display: block;
+	font-size: 2.75rem;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+
+	@media all and ( min-width: 768px ) {
+		font-size: 3.4rem;
+	}
+
+	@media all and ( min-width: 992px ) {
+		font-size: 4.4rem;
+	}
+
+	& .title-highlight {
+	}
+}
+
+.bold-description {
+	font-size: 22px;
+	margin-bottom: 1.5rem;
+}
+
+.bold-link-wrap {
+
+	& a {
+		.branding;
+		font-size:  1rem;
+	}
+}
+
+& .shd-button {
+	display: inline-block;
+	background: @blue;
+	color: #fff !important;
+	.branding;
+	font-size: 1rem;
+	line-height: 1;
+	text-decoration: none;
+	padding: .5rem 1rem;
+	border-radius: 1rem;
+	transition: background-color .2s ease-in-out;
+
+	&:hover {
+		background: @blue_hover;
+		color: #fff !important;
+		text-decoration: none;
+	}
+}
+
+.title-border {
+	position: relative;
+	display: block;
+	margin-bottom: 4rem;
+
+	&:after {
+		position: absolute;
+		left: 50%;
+		bottom: -2rem;
+		background: @blue;
+		content: "";
+		height: 2px;
+		width: 100px;
+		margin-left: -50px;
+	}
 }
 
 .title-emoji {
@@ -19,77 +90,12 @@
 	line-height: 1;
 }
 
-.multi-color-border {
+.stars {
+	background: @night url( 'includes/assets/images/shapes/stars.svg' ) repeat left top;
+	background-size: 1440px auto;
+	color: #fff;
 
-	& .container {
-		max-width: 100% !important;
+	& .generic-heading {
+		color: #fff;
 	}
-
-	& [class*="col"] {
-		min-height: 3px;
-
-		&:nth-child(1) {
-			background: @blue;
-		}
-
-		&:nth-child(2) {
-			background: @turquoise;
-		}
-
-		&:nth-child(3) {
-			background: @sand;
-		}
-
-		&:nth-child(4) {
-			background: @orange;
-		}
-
-		&:nth-child(5) {
-			background: @coral;
-		}
-
-		&:nth-child(6) {
-			background: @body_color;
-		}
-	}
-}
-
-.color-blue {
-	color: @blue;
-}
-
-.bg-blue {
-	background: @blue;
-}
-
-.color-turquoise {
-	color: @turquoise;
-}
-
-.bg-turquoise {
-	background: @turquoise;
-}
-
-.color-sand {
-	color: @sand;
-}
-
-.bg-sand {
-	background: @sand;
-}
-
-.color-orange {
-	color: @orange;
-}
-
-.bg-orange {
-	background: @orange;
-}
-
-.color-coral {
-	color: @coral;
-}
-
-.bg-coral {
-	background: @coral;
 }

@@ -1,0 +1,50 @@
+input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+	color: @night_light;
+	background-color: #fff;
+	padding: 8px 14px;
+	border: none;
+	height: unset;
+	border: 1px solid @input_border;
+	border-radius: 3px;
+}
+
+button,
+.button,
+input[type="submit"] {
+	display: inline-block;
+	background: @blue;
+	color: #fff;
+	.branding;
+	font-size: 16px;
+	line-height: 1;
+	padding: 10px 14px;
+	border: none;
+	border-radius: 16px;
+	margin-top: 2rem;
+
+	&:hover {
+		background: @blue_hover;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+.wpforms-container {
+
+	& .wpforms-field {
+		padding: 0;
+		min-height: 125px;
+
+		& .wpforms-field-sublabel {
+			color: #bec6ce;
+		}
+	}
+
+	& .wpforms-submit {
+		font-size: 1.25rem;
+		padding: 12px 24px;
+		border-radius: 24px;
+	}
+}

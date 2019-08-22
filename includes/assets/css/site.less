@@ -1,23 +1,15 @@
 body {
 	background: @body_bg;
-	color: @body_color_light;
+	color: @night_light;
 	font-size: unset;
 	line-height: 1.6;
-
-	@media all and ( min-width: 1440px ) {
-		/*padding: 3rem 0;*/
-	}
 
 	@media all and ( min-width: 1200px ) {
 		font-size: 20px;
 	}
 
 	& #page {
-		border: 1px solid #e1ebf2;
-		border-width: 0 1px;
-		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
-		box-shadow: 0 0 30px rgba(216,224,230,0.3);
+		box-shadow: 0 0 15px rgba(216,224,230,0.2);
 	}
 }
 

@@ -11,15 +11,33 @@ themedd_header();
 		<div id="primary" class="content-area<?php echo themedd_primary_classes(); ?>">
 			<main id="main" class="site-main" role="main">
 
-				<?php
-				do_action( 'themedd_main_start' );
+				<?php while ( have_posts() ) : the_post(); ?>
 
-				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content', 'page' );
-				endwhile;
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				do_action( 'themedd_main_end' );
+						<?php
+						do_action( 'themedd_entry_article_start' );
+						themedd_post_thumbnail();
+						?>
+
+						<div class="entry-content content-wrapper">
+							<?php
+							do_action( 'themedd_entry_content_start' );
+							the_content();
+							do_action( 'themedd_entry_content_end' );
+							?>
+						</div>
+
+						<?php do_action( 'themedd_entry_article_end' ); ?>
+
+					</article>
+
+				<?php endwhile;
+
+				get_template_part( 'template-parts/content', 'our-humans' );
+
 				?>
+
 			</main>
 		</div>
 	</div>

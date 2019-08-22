@@ -1,246 +1,286 @@
 .front-page {
 
 	& #masthead {
+		background-color: @night;
+		background-image: url( 'includes/assets/images/shapes/sandhills.svg' ),
+		url( 'includes/assets/images/shapes/stars.svg' ),
+		url( 'includes/assets/images/shapes/moon-light.svg' );
+		background-repeat: no-repeat, repeat, no-repeat;
+		background-size: 102% auto, 1440px auto, 800px auto;
+		background-position: center bottom, left top, -300px -190px;
+		color: #fff;
+		padding-bottom: 18rem;
+
+		& nav[id*="nav-secondary"] {
+
+			& .nav-item {
+
+				& .nav-link {
+					color: @night_text;
+
+					&:hover {
+						color: #fff;
+						opacity: 1 !important;
+					}
+				}
+			}
+		}
 	}
 
 	& .hero {
 		position: relative;
-		padding: 6rem 0 10rem;
+		padding: 3rem 0 11rem;
 
 		& .tagline-container {
 			margin: 0 auto;
 
 			& .tagline-heading {
-				display: inline-block;
-				.branding;
-				font-size: 3.8rem;
-				margin-bottom: .2em;
+				color: #fff;
 			}
 
 			& .tagline {
 				margin-bottom: 1rem;
+
+				& .bold-description {
+					color: @night_text;
+					max-width: 660px;
+					margin: 0 auto 2rem;
+				}
 			}
 		}
 	}
 
-	& .quick-projects {
-		text-align: center;
-		margin-bottom: 700px;
+	& .sandhills-goals {
 
-		& .container {
+		& .sandhills-goal {
+			position: relative;
+			background: rgba(255, 255, 255, .05);
+			color: #fff;
+			text-align: center;
+			padding: 5rem 3rem 2.5rem;
+			border-radius: 10px;
+			height: 100%;
+
+			& .goal-icon {
+				position: absolute;
+				top: -50px;
+				left: 50%;
+				width: 100px;
+				height: auto;
+				margin-left: -50px;
+			}
+
+			& .goal-title {
+				color: #fff;
+				font-size: 22px;
+			}
+
+			& .goal-description {
+				color: @night_text;
+				font-size: 18px;
+
+				& a {
+					color: #fff;
+					text-decoration: none;
+					border-bottom: 2px dotted rgba(255,255,255,.3);
+					transition: border-bottom-color .2s;
+
+					&:hover {
+						border-bottom-color: rgba(255,255,255,.7);
+					}
+				}
+			}
+		}
+	}
+
+	& [class*="-section"] {
+
+		&[class*="content-"] {
+
+			& .bold-description {
+				font-size: 20px;
+				max-width: 700px;
+			}
 		}
 
-		& [class*="col"] {
-			padding: 0;
+		&.content-right {
 
-			& [class*="-url"] {
-				text-decoration: none;
+			& .bold-description {
+				margin-left: auto;
+			}
+		}
+
+		&.content-left {
+
+			& .bold-description {
+				margin-right: auto;
+			}
+		}
+
+		& .bold-title {
+			font-size: 3.6rem;
+		}
+	}
+
+	& .us-section {
+		background: @sand;
+		border-bottom: 1px solid @dark_gray;
+		margin-top: -1px;
+	}
+
+	& .projects-section {
+
+		& .title-border {
+			position: relative;
+			font-size: 2rem;
+
+			&:after {
+				background: @dark_gray;
+			}
+		}
+
+		& .projects-header {
+			margin-bottom: 6rem;
+		}
+
+		& .projects-wrapper {
+			text-align: center;
+			border: 1px solid @dark_gray;
+			margin-bottom: 3rem;
+
+			& .project-col {
+				background: #fff;
+				padding: 0;
+				border-style: solid;
+				border-color: @dark_gray;
+				transition: background-color .1s ease-in-out;
 
 				&:hover {
+					background: @gray;
+				}
+
+				&.awp-col {
+					border-width: 0 1px 1px 0;
+				}
+
+				&.edd-col {
+					border-width: 0 0 1px 0;
+				}
+
+				&.rcp-col {
+					border-width: 0 1px 1px 0;
+				}
+
+				&.sc-col {
+					border-width: 0 0 1px 0;
+				}
+
+				&.wpsp-col {
+					border-width: 0 1px 1px 0;
+				}
+
+				&.sb-col {
+					border-width: 0 0 1px 0;
+				}
+
+				&.pp-col {
+					border-width: 0 1px 0 0;
+				}
+
+				&.beer-col {
+					border: none;
+				}
+
+				& [class*="-url"] {
+					display: block;
 					text-decoration: none;
-				}
+					padding: 2.5rem 3rem;
 
-				& .quick-project {
-					background-color: #fff;
-					padding: 2.4rem 3rem;
-					height: 100%;
+					&:hover {
+						text-decoration: none;
 
-					&.edd-col {
-						border-width: 0 1px 1px 0;
+						& .view-project {
+							background: @blue_hover;
+						}
 					}
 
-					&.awp-col {
-					}
-
-					&.rcp-col {
-					}
-
-					&.sc-col {
-					}
-
-					&.pp-col {
-					}
-
-					&.sb-col {
-					}
-
-					&.wpsp-col {
-					}
-
-					&.beer-col {
-					}
-
-					& .quick-project-description {
-						color: @body_color_light;
-					}
-				}
-			}
-		}
-
-		& .mascot {
-			height: 80px;
-			width: auto;
-		}
-
-		& .quick-project-title {
-			display: inline-block;
-			color: @body_color;
-			.branding;
-			font-size: 1rem;
-			margin-bottom: .4em;
-		}
-
-		& p {
-			font-size: 1rem;
-		}
-	}
-
-	& .meet-the-team {
-		background: @lightgray;
-		background-image: url( 'includes/assets/images/shapes/world-map.svg' );
-		background-repeat: no-repeat;
-		background-size: 1400px auto;
-		background-position: center bottom;
-		padding: 7rem 0 4rem;
-		border: 1px solid #e1ebf2;
-		border-width: 1px 0;
-
-		& .container {
-
-			& .row:not(.section-header) {
-				margin: 0;
-			}
-
-			& > .row:not(.our-people-header) > [class*="col"] {
-				padding: 0;
-			}
-
-			& .our-people {
-				padding: 0;
-
-				& .our-people-row {
-					padding-bottom: 39.5%;
-
-					& [class*="col"] {
-						padding: 0 0 2.5rem;
-						margin: 0;
+					& .project {
+						padding: 0;
 
 						& img {
-							border-radius: 50%;
-							width: 125px;
-
-							&:hover {
-							}
-						}
-
-						& .year {
 							display: none;
-							/*
-							position: absolute;
-							top: 0;
-							left: -10px;
-							color: #c4cfd7;
-							.branding;
-							font-size: 12px;
-							line-height: 1;
-							*/
 						}
 
-						& .person {
-							position: absolute;
-							bottom: 34px;
-							left: 17px;
+						& .project-title {
 							display: inline-block;
-							background: @blue;
-							color: #fff;
-							.branding;
-							font-size: 12px;
-							line-height: 1;
-							padding: 3px 6px;
-							border-radius: 10px;
+							font-size: 1.5rem;
+							margin-bottom: .4em;
+						}
+
+						& .project-description {
+							color: @night_light;
+							font-size: 17px;
+							max-width: 330px;
+							margin: 0 auto 1.2rem;
 						}
 					}
 				}
-			}
 
-			& .our-facts {
-
-				& .fact-group {
-					text-align: center;
-
-					& .col {
-						padding-top: 10px;
-						margin-bottom: 1.5rem;
-						min-height: 133px;
-
-						&:after {
-							position: absolute;
-							left: 50%;
-							bottom: 10px;
-							background-color: #e1ebf2;
-							content: "";
-							margin-left: -30px;
-							height: 2px;
-							width: 60px;
-						}
-
-						& .fact-title {
-							color: @blue;
-							.branding;
-							font-size: 4rem;
-							line-height: 1;
-						}
-
-						& .fact-description {
-							color: @body_color_light;
-							font-size: 20px;
-						}
-					}
-				}
-			}
-
-			& .row.global-footprint {
-				margin-bottom: 2rem;
-			}
-
-			& .join-our-team-container {
-				position: relative;
-
-				& .join-our-team {
-					position: absolute;
-					right: 0;
-					bottom: 0;
+				& .view-project {
+					display: inline-block;
+					background: @blue;
+					color: #fff;
 					.branding;
-
-					& a {
-						color: @coral;
-						font-size: 14px;
-					}
+					font-size: 16px;
+					line-height: 1;
+					padding: 8px 14px;
+					border-radius: 16px;
+					transition: background-color .1s ease-in-out;
 				}
 			}
 		}
 	}
 
-	& .headquarters {
+	& .goals-section {
 
-		& [class*="col"] {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
+		& .title-border {
+			position: relative;
+			font-size: 2rem;
 
-			& h4 {
-				font-size: 1rem;
-				margin: 0;
+			&:after {
+				background: @dark_gray;
 			}
+		}
+	}
 
-			& p {
-				font-size: 1rem;
+	& .contact-section {
+
+		& .wpforms-container {
+			padding-top: 4rem;
+
+			& input {
+				border: none !important;
 			}
+		}
 
+		& .wpforms-confirmation-container {
+			background: rgba(255,255,255,.1);
+			color: #BEC6CE;
+			font-style: italic;
+			text-align: center;
+			padding: 2rem;
+			border-radius: 4px;
+			margin-top: 4rem;
 		}
 	}
 
 	& .what-we-do {
 		padding: 6rem 0 8rem;
+
+		& .container {
+			padding: 0;
+			max-width: 1440px;
+		}
 
 		& .section-header {
 			text-align: center;
@@ -257,21 +297,9 @@
 		& .nutshell-section {
 			margin-bottom: 9rem;
 
-			& .content {
-				padding-top: 3rem;
-
-				& h4 {
-					font-size: 2.5rem;
-				}
-
-				& p:first-of-type {
-					margin: 1.5rem 0 1rem;
-				}
-			}
-
 			& .media {
 				height: 100%;
-				box-shadow: 0 20px 26px 4px rgba(151, 161, 174, .1);
+				box-shadow: 0 20px 26px 4px rgba(151, 161, 174, .05);
 
 				& .carousel-item {
 					width: 570px;
@@ -283,6 +311,18 @@
 
 				&.solutions {
 					border: 1px solid #e0e6ed;
+				}
+			}
+
+			& .content {
+				padding: 5.6rem;
+
+				& h4 {
+					font-size: 2.5rem;
+				}
+
+				& p:first-of-type {
+					margin: 1.5rem 0 1rem;
 				}
 			}
 		}

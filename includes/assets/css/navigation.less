@@ -14,7 +14,7 @@ nav[id*="nav-secondary"] {
 		}
 
 		& .nav-link {
-			color: @body_color_light;
+			color: @night;
 			.branding;
 			font-size: 16px;
 			padding: 0 0 2px;
@@ -24,14 +24,15 @@ nav[id*="nav-secondary"] {
 			}
 
 			&:hover {
-				border-bottom: 3px solid @body_bg;
+				opacity: .7;
+				transition: opacity .2s ease-in-out;
 			}
 		}
 
 		&.active {
 
 			& > .nav-link {
-				border-bottom: 3px solid @body_bg;
+				opacity: .7;
 			}
 		}
 

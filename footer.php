@@ -14,8 +14,6 @@ do_action( 'themedd_content_end' );
 	<?php do_action( 'themedd_footer' ); ?>
 </footer>
 
-<?php get_template_part( 'template-parts/element', 'multi-color-border' ); ?>
-
 </div>
 
 <?php wp_footer(); ?>

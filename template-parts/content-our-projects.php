@@ -4,16 +4,15 @@
  */
 
 $projects = shd_get_our_projects();
-
 foreach ( $projects as $key => $value ) {
 	$img_file    = str_replace( array( ' ', '\'' ), array( '-', '' ), strtolower( $value['name'] ) );
 	?>
-	<div class="<?php echo $key . '-col'; ?> col-3">
+	<div class="<?php echo $key . '-col'; ?> project-col col-6">
 		<a class="<?php echo $key . '-url'; ?>" href="<?php echo $value['url']; ?>">
-			<div class="quick-project <?php echo $key . '-col'; ?>">
-				<p class="quick-project-image"><img class="mascot <?php echo $key . '-mascot'; ?>" src="<?php echo SHD_IMAGES . 'mascots/' . $img_file . '.png'; ?>"></p>
-				<span class="quick-project-title"><?php echo $value['name']; ?></span>
-				<p class="quick-project-description"><?php echo $value['desc']; ?></p>
+			<div class="<?php echo $key . '-col'; ?> project">
+				<span class="project-title generic-heading"><?php echo $value['name']; ?></span>
+				<p class="project-description"><?php echo $value['desc']; ?></p>
+				<span class="project-button shd-button">View project</span>
 			</div>
 		</a>
 	</div>

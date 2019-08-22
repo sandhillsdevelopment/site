@@ -10,11 +10,9 @@ function shd_site_header() {
 
 	// Set up default container classes.
 	$container_classes = array( 'container py-7 justify-content-center' );
-
-	get_template_part( 'template-parts/element', 'multi-color-border' );
 	?>
 
-	<header id="masthead" class="site-header" role="banner">
+	<div id="masthead" class="site-header" role="banner">
 
 		<div class="navbar navbar-expand-md px-0 py-0">
 			<?php echo themedd_navbar_toggler(); ?>
@@ -60,29 +58,13 @@ function shd_site_header() {
 
 		</div>
 
-		<div class="container">
+		<?php
+		if ( is_front_page() ) {
+			get_template_part( 'template-parts/content', 'front-page-hero' );
+		}
+		?>
 
-			<div class="hero">
-
-				<div class="row justify-content-between">
-
-					<div class="tagline-container col">
-
-						<h1 class="tagline-heading">Crafting <span class="tagline-highlight">Ingenuity</span></h1>
-						<div class="tagline">
-							<!--<p>Founded in 2009 by CEO Pippin Williamson, Sandhills Development, LLC is a self-funded, globally distributed company with team members in seven different countries. 🌍</p>-->
-							<p>With <a class="commitments" href="<?php echo home_url( '/commitments/' ); ?>">commitment</a> and a deep appreciation for the human element, we aim to craft superior experiences through ingenuity.</p>
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</header>
+	</div>
 
 	<?php
 }
@@ -96,6 +78,7 @@ add_action( 'themedd_site_header', 'shd_site_header', 20 );
 function shd_site_branding() {
 	$tag        = is_front_page() || is_home() ? 'h1' : 'p';
 	$classes    = array( 'site-title', 'mb-0', 'h1' );
+	$logo_color = is_front_page() ? 'light' : 'dark';
 	?>
 
 	<div class="site-branding<?php if ( ! display_header_text() ) { echo ' sr-only'; } ?>">
@@ -104,7 +87,7 @@ function shd_site_branding() {
 
 		<<?php echo $tag; ?> class="<?php echo themedd_output_classes( $classes ); ?>">
 			<a class="shd-logo-anchor navbar-brand mr-0" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logo/shd-logo-color.svg'; ?>" alt="Sandhills Development" data-fallback="<?php echo SHD_IMAGES . 'logo/shd-logo-color.png'; ?>">
+				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logo/shd-logo-' . $logo_color . '.svg'; ?>" alt="Sandhills Development" data-fallback="<?php echo SHD_IMAGES . 'logo/shd-logo-' . $logo_color . '.png'; ?>">
 			</a>
 		</<?php echo $tag; ?>>
 

@@ -26,19 +26,19 @@ add_action( 'body_class', 'shd_body_classes_front_end' );
 function shd_get_our_projects() {
 
 	$our_projects = array(
-		'edd'  => array(
-			'name' => 'Easy Digital Downloads',
-			'desc' => 'An eCommerce solution for selling digital products on WordPress.',
-			'url'  => 'https://easydigitaldownloads.com/'
-		),
 		'awp'  => array(
 			'name' => 'AffiliateWP',
 			'desc' => 'A full-featured affiliate program solution for WordPress sites.',
 			'url'  => 'https://affiliatewp.com/'
 		),
+		'edd'  => array(
+			'name' => 'Easy Digital Downloads',
+			'desc' => 'A complete eCommerce solution for selling digital products on WordPress.',
+			'url'  => 'https://easydigitaldownloads.com/'
+		),
 		'rcp'  => array(
 			'name' => 'Restrict Content Pro',
-			'desc' => 'A powerful membership solution for WordPress.',
+			'desc' => 'A full-featured, powerful membership solution for WordPress.',
 			'url'  => 'https://restrictcontentpro.com/'
 		),
 		'sc'   => array(
@@ -46,20 +46,20 @@ function shd_get_our_projects() {
 			'desc' => 'A sweet, simple event calendar plugin for WordPress.',
 			'url'  => 'https://sugarcalendar.com/'
 		),
-		'pp'   => array(
-			'name' => 'Pippin\'s Plugins',
-			'desc' => 'Finely crafted WordPress plugins, tutorials, reviews and more.',
-			'url'  => 'https://pippinsplugins.com/'
+		'wpsp' => array(
+			'name' => 'WP Simple Pay',
+			'desc' => 'The #1 Stripe Payments Plugin for WordPress.',
+			'url'  => 'https://wpsimplepay.com/'
 		),
 		'sb'   => array(
 			'name' => 'Sellbird',
 			'desc' => 'Helping your digital product and media sales take flight.',
 			'url'  => 'http://sellbird.com/'
 		),
-		'wpsp' => array(
-			'name' => 'WP Simple Pay',
-			'desc' => 'The #1 Stripe Payments Plugin for WordPress.',
-			'url'  => 'https://wpsimplepay.com/'
+		'pp'   => array(
+			'name' => 'Pippin\'s Plugins',
+			'desc' => 'Finely crafted WordPress plugins, tutorials, reviews and more.',
+			'url'  => 'https://pippinsplugins.com/'
 		),
 		'beer' => array(
 			'name' => 'Sandhills Brewing',
