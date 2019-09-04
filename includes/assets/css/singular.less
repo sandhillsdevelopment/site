@@ -1,0 +1,182 @@
+/* Shared - individual singulars are below this selector set */
+.single,
+.page {
+
+	& .site-content {
+
+		& > header {
+			padding: 1rem 0 5rem !important;
+
+			@media all and ( min-width: 768px ) {
+				padding: 4rem 0 5rem !important;
+			}
+
+			& .post-title,
+			.page-title {
+				font-size: 2rem;
+
+				@media all and ( min-width: 768px ) {
+					font-size: 2.53rem;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					font-size: 3.4rem;
+				}
+			}
+		}
+
+		& #primary {
+			position: relative;
+
+			& #main {
+
+				@media all and ( min-width: 992px ) {
+
+					& > * {
+						max-width: 750px;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.single {
+
+	#masthead {
+		background: @gray;
+	}
+
+	& .site-content {
+
+		& > header {
+			background: @gray;
+			border: 2px solid @gray_border;
+			border-width: 0 0 2px;
+
+			& .entry-meta {
+				color: @grayish_blue !important;
+				.branding;
+				font-size: 1rem;
+				line-height: 1;
+
+				& .posted-on {
+					display: inline-block;
+					line-height: 1;
+				}
+
+				& a {
+					color: @grayish_blue !important;
+					cursor: text;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		& #primary {
+			padding-top: 6rem;
+
+			& .single-post-graphic {
+				position: absolute;
+				top: -50px;
+				left: 50%;
+				background-color: @alt_red;
+				margin-left: -50px;
+				width: 100px;
+				height: auto;
+				box-shadow: 0 0 0 3px @gray_border;
+				border-radius: 50%;
+			}
+
+			& #main {
+
+				& .post-thumbnail {
+					text-align: center;
+					margin: -6rem 0 4rem !important;
+
+					& img {
+						border-radius: 0 0 5px 5px;
+					}
+				}
+			}
+		}
+	}
+
+	& .cat-tags-links {
+		color: @night_light;
+		.branding;
+		font-size: 15px;
+
+		& a {
+			color: @grayish_blue;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	& .post-edit-link {
+		color: @grayish_blue;
+		.branding;
+		font-size: 15px;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	& .nav-links {
+		.branding;
+		font-size: 1rem;
+
+		& .post-title {
+			color: @grayish_blue;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.page {
+
+	& .site-content {
+
+		& > header {
+
+			& .page-title {
+				margin-bottom: 0;
+			}
+
+			& .lead {
+				color: @grayish_blue !important;
+				.branding;
+				font-size: 1rem;
+				line-height: 1;
+
+				& .posted-on {
+					display: inline-block;
+					line-height: 1;
+				}
+
+				& a {
+					color: @grayish_blue !important;
+					cursor: text;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

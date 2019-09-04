@@ -28,9 +28,12 @@ function shd_theme_setup() {
 
 	// Specialized functions
 	include( SHD_INCLUDES . 'general.php' );
+	include( SHD_INCLUDES . 'projects.php' );
+	include( SHD_INCLUDES . 'people.php' );
 
 	// Site structure functions
 	include( SHD_STRUCTURE . 'header.php' );
+	include( SHD_STRUCTURE . 'footer.php' );
 	include( SHD_STRUCTURE . 'navigation.php' );
 }
 add_action( 'after_setup_theme', 'shd_theme_setup' );
@@ -75,3 +78,14 @@ function shd_styles_scripts() {
 	wp_enqueue_style( $child_css );
 }
 add_action( 'wp_enqueue_scripts', 'shd_styles_scripts' );
+
+
+/**
+ * Add Font Awesome Kit
+ */
+function shd_load_font_awesome() {
+	?>
+	<script src="https://kit.fontawesome.com/cd9889ba01.js"></script>
+	<?php
+}
+add_action( 'wp_head', 'shd_load_font_awesome' );

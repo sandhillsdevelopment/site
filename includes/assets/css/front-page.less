@@ -9,7 +9,15 @@
 		background-size: 102% auto, 1440px auto, 800px auto;
 		background-position: center bottom, left top, -300px -190px;
 		color: #fff;
-		padding-bottom: 18rem;
+		padding-bottom: 6rem;
+
+		@media all and ( min-width: 576px ) {
+			padding-bottom: 10rem;
+		}
+
+		@media all and ( min-width: 1200px ) {
+			padding-bottom: 17rem;
+		}
 
 		& nav[id*="nav-secondary"] {
 
@@ -17,6 +25,7 @@
 
 				& .nav-link {
 					color: @night_text;
+					transition: color .2s;
 
 					&:hover {
 						color: #fff;
@@ -25,242 +34,385 @@
 				}
 			}
 		}
-	}
 
-	& .hero {
-		position: relative;
-		padding: 3rem 0 11rem;
+		& .hero {
 
-		& .tagline-container {
-			margin: 0 auto;
+			& .tagline-container {
+				margin: 0 auto;
 
-			& .tagline-heading {
-				color: #fff;
-			}
+				& .tagline-heading {
+					color: #fff;
+				}
 
-			& .tagline {
-				margin-bottom: 1rem;
+				& .tagline {
+					margin-bottom: 1rem;
 
-				& .bold-description {
-					color: @night_text;
-					max-width: 660px;
-					margin: 0 auto 2rem;
+					& .bold-description {
+						color: @night_text;
+						margin: 0 auto 2rem;
+
+						& a {
+							color: #fff;
+							text-decoration: none;
+							border-bottom: 2px dotted rgba(255,255,255,.3);
+							transition: border-bottom-color .2s;
+
+							&:hover {
+								border-bottom-color: rgba(255,255,255,.7);
+							}
+						}
+					}
 				}
 			}
 		}
-	}
 
-	& .sandhills-goals {
+		& .sandhills-goals {
 
-		& .sandhills-goal {
-			position: relative;
-			background: rgba(255, 255, 255, .05);
-			color: #fff;
-			text-align: center;
-			padding: 5rem 3rem 2.5rem;
-			border-radius: 10px;
-			height: 100%;
+			& [class*="col"] {
+				margin: 0 auto 4rem;
+				max-width: 600px;
 
-			& .goal-icon {
-				position: absolute;
-				top: -50px;
-				left: 50%;
-				width: 100px;
-				height: auto;
-				margin-left: -50px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				@media all and ( min-width: 576px ) {
+					margin-bottom: 6rem;
+				}
+
+				@media all and ( min-width: 992px ) {
+					margin-bottom: 0;
+				}
 			}
 
-			& .goal-title {
+			& .sandhills-goal {
+				position: relative;
+				background: rgba(255, 255, 255, .04);
 				color: #fff;
-				font-size: 22px;
-			}
+				text-align: center;
+				padding: 4rem 2rem 2rem;
+				border-radius: 5px;
+				height: 100%;
 
-			& .goal-description {
-				color: @night_text;
-				font-size: 18px;
+				@media all and ( min-width: 576px ) {
+					padding-top: 4.5rem;
+				}
 
-				& a {
+				@media all and ( min-width: 768px ) {
+					padding-top: 5rem;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					padding: 5rem 3rem 2.5rem;
+				}
+
+				& .goal-icon {
+					position: absolute;
+					top: -30px;
+					left: 50%;
+					width: 60px;
+					margin-left: -30px;
+					height: auto;
+
+					@media all and ( min-width: 576px ) {
+						top: -40px;
+						left: 50%;
+						width: 80px;
+						margin-left: -40px;
+					}
+
+					@media all and ( min-width: 768px ) {
+						top: -50px;
+						left: 50%;
+						width: 100px;
+						margin-left: -50px;
+					}
+				}
+
+				& .goal-title {
 					color: #fff;
-					text-decoration: none;
-					border-bottom: 2px dotted rgba(255,255,255,.3);
-					transition: border-bottom-color .2s;
+					font-size: 18px;
 
-					&:hover {
-						border-bottom-color: rgba(255,255,255,.7);
+					@media all and ( min-width: 576px ) {
+						font-size: 22px;
+					}
+
+					@media all and ( min-width: 992px ) {
+						font-size: 18px;
+					}
+
+					@media all and ( min-width: 1200px ) {
+						font-size: 22px;
+					}
+
+					&:after {
+						background: @title_border_stars;
+					}
+				}
+
+				& .goal-description {
+					color: @night_text;
+					font-size: 18px;
+
+					& a {
+						color: #fff;
+						text-decoration: none;
+						border-bottom: 2px dotted rgba(255,255,255,.3);
+						transition: border-bottom-color .2s;
+
+						&:hover {
+							border-bottom-color: rgba(255,255,255,.7);
+						}
 					}
 				}
 			}
 		}
 	}
 
-	& [class*="-section"] {
+	& .quick-info {
+		background: @gray;
+		font-size: 15px;
 
-		&[class*="content-"] {
+		&.about-info {
+			padding: 1.2rem 0 1.3rem;
+			border-bottom: 2px solid @gray_border;
+			margin-top: -1px;
 
-			& .bold-description {
-				font-size: 20px;
-				max-width: 700px;
+			& .shd-founded {
+				--fa-primary-color: silver;
+				--fa-secondary-color: #CFC13A;
+			}
+
+			& .shd-global {
+				--fa-primary-color: #50997B;
+				--fa-secondary-color: #4CBBEE;
+			}
+
+			& .shd-headquarters {
+				--fa-secondary-color: #DF4E4E;
+				--fa-primary-opacity: 0.00;
+				--fa-secondary-opacity: 1;
 			}
 		}
 
-		&.content-right {
+		&.projects-info {
+			padding: 1.3rem 0;
+			border-top: 2px solid @gray_border;
 
-			& .bold-description {
-				margin-left: auto;
+			& .email-us {
+				--fa-primary-color: #649ACE;
+				--fa-secondary-color: @sand;
+				--fa-secondary-opacity: 1;
 			}
 		}
 
-		&.content-left {
-
-			& .bold-description {
-				margin-right: auto;
-			}
-		}
-
-		& .bold-title {
-			font-size: 3.6rem;
-		}
-	}
-
-	& .us-section {
-		background: @sand;
-		border-bottom: 1px solid @dark_gray;
-		margin-top: -1px;
-	}
-
-	& .projects-section {
-
-		& .title-border {
-			position: relative;
-			font-size: 2rem;
-
-			&:after {
-				background: @dark_gray;
-			}
-		}
-
-		& .projects-header {
-			margin-bottom: 6rem;
-		}
-
-		& .projects-wrapper {
+		& .quick-detail {
+			display: block;
 			text-align: center;
-			border: 1px solid @dark_gray;
-			margin-bottom: 3rem;
+			margin-right: 1rem;
 
-			& .project-col {
-				background: #fff;
-				padding: 0;
-				border-style: solid;
-				border-color: @dark_gray;
-				transition: background-color .1s ease-in-out;
+			@media all and ( min-width: 768px ) {
+				display: inline-block;
+				text-align: left;
+			}
+
+			& [class*="fa-"] {
+				display: none;
+				font-size: 120%;
+				margin-right: 8px;
+
+				@media all and ( min-width: 768px ) {
+					display: inline;
+				}
+			}
+
+			& > .temp-hide {
+				display: inline;
+
+				@media all and ( min-width: 768px ) and ( max-width: 1199px ) {
+					display: none;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					display: inline;
+				}
+			}
+
+			& .quick-info-link {
+				text-decoration: underline;
+
+				& .temp-hide {
+					display: inline;
+
+					@media all and ( min-width: 768px ) and ( max-width: 991px ) {
+						display: none;
+					}
+				}
 
 				&:hover {
-					background: @gray;
-				}
-
-				&.awp-col {
-					border-width: 0 1px 1px 0;
-				}
-
-				&.edd-col {
-					border-width: 0 0 1px 0;
-				}
-
-				&.rcp-col {
-					border-width: 0 1px 1px 0;
-				}
-
-				&.sc-col {
-					border-width: 0 0 1px 0;
-				}
-
-				&.wpsp-col {
-					border-width: 0 1px 1px 0;
-				}
-
-				&.sb-col {
-					border-width: 0 0 1px 0;
-				}
-
-				&.pp-col {
-					border-width: 0 1px 0 0;
-				}
-
-				&.beer-col {
-					border: none;
-				}
-
-				& [class*="-url"] {
-					display: block;
 					text-decoration: none;
-					padding: 2.5rem 3rem;
-
-					&:hover {
-						text-decoration: none;
-
-						& .view-project {
-							background: @blue_hover;
-						}
-					}
-
-					& .project {
-						padding: 0;
-
-						& img {
-							display: none;
-						}
-
-						& .project-title {
-							display: inline-block;
-							font-size: 1.5rem;
-							margin-bottom: .4em;
-						}
-
-						& .project-description {
-							color: @night_light;
-							font-size: 17px;
-							max-width: 330px;
-							margin: 0 auto 1.2rem;
-						}
-					}
-				}
-
-				& .view-project {
-					display: inline-block;
-					background: @blue;
-					color: #fff;
-					.branding;
-					font-size: 16px;
-					line-height: 1;
-					padding: 8px 14px;
-					border-radius: 16px;
-					transition: background-color .1s ease-in-out;
 				}
 			}
 		}
 	}
 
-	& .goals-section {
+	/* Projects CSS in projects.less */
 
-		& .title-border {
-			position: relative;
-			font-size: 2rem;
+	& .team-commitment-section {
+		color: #fff;
+		padding: 0;
 
-			&:after {
-				background: @dark_gray;
+		@media all and ( max-width: 991px ) {
+
+			& .container {
+				max-width: 100%;
+			}
+		}
+
+		@media all and ( min-width: 992px ) {
+			background: linear-gradient( to right, @night 40%, @green 40% );
+		}
+
+		& [class*="col"] {
+
+			@media all and ( max-width: 991px ) {
+				padding: 0;
+			}
+
+			&:first-of-type {
+				padding-right: 0;
+
+				@media all and ( min-width: 992px ) {
+					background: @night url('includes/assets/images/shapes/world-map-bg.svg') no-repeat left 74px;
+					background-size: 88% auto;
+					padding-right: 0;
+				}
+
+				& + [class*="col"] {
+					padding-left: 0;
+				}
+			}
+		}
+
+		& [class*="our-"] {
+			text-align: center;
+			padding: 7% 15px 9%;
+			margin: 0 -9px;
+
+			@media all and ( min-width: 576px ) {
+				padding: 7% 14%;
+				margin: 0;
+			}
+
+			@media all and ( min-width: 992px ) {
+				text-align: left;
+			}
+
+			& .generic-heading {
+				font-size: 3.4rem;
+			}
+		}
+
+		& .our-people {
+			background: @night url('includes/assets/images/shapes/world-map-bg.svg') no-repeat center 30px;
+			background-size: 80% auto;
+
+			@media all and ( min-width: 576px ) {
+				background-size: 50% auto;
+			}
+
+			@media all and ( min-width: 992px ) {
+				background: transparent;
+				background-size: unset;
+				padding: 5rem 5rem 5rem 0;
+			}
+
+			@media all and ( min-width: 1200px ) {
+				padding: 6rem 5rem 6.5rem 0;
+			}
+		}
+
+		& .our-commitment {
+			background: @green;
+
+			@media all and ( min-width: 992px ) {
+				background: transparent;
+				padding: 5rem 0 5rem 5rem;
+			}
+
+			@media all and ( min-width: 1200px ) {
+				padding: 6rem 0 6.5rem 5rem;
+			}
+
+			& a {
+				color: #fff;
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
 
+	& .blog-section {
+
+		& .content-aside-split {
+
+			 & .content-inner {
+				 position: relative;
+
+				 & .content-title {
+
+					 @media all and ( min-width: 1200px ) {
+						 font-size: 3.4rem;
+					 }
+				 }
+
+				 & .shd-button {
+					 margin-top: 1.5rem;
+				 }
+
+				 & .link-more {
+					 display: none;
+				 }
+			 }
+
+			& .aside-split {
+
+				& .aside-inner {
+
+					& .more-posts-graphic {
+						display: none;
+						position: absolute;
+						bottom: -20px;
+						right: -5px;
+						width: 100px;
+						height: auto;
+						background-color: @alt_red;
+						box-shadow: 0 0 0 3px @gray_border;
+						border-radius: 50%;
+
+						@media all and ( min-width: 992px ) {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& #content {
+		padding-bottom: 0;
+	}
+
+	/*
 	& .contact-section {
+		background: @gray;
+		border-top: 2px solid @gray_border;
 
 		& .wpforms-container {
 			padding-top: 4rem;
-
-			& input {
-				border: none !important;
-			}
 		}
 
 		& .wpforms-confirmation-container {
@@ -273,58 +425,5 @@
 			margin-top: 4rem;
 		}
 	}
-
-	& .what-we-do {
-		padding: 6rem 0 8rem;
-
-		& .container {
-			padding: 0;
-			max-width: 1440px;
-		}
-
-		& .section-header {
-			text-align: center;
-
-			& .section-title {
-			}
-
-			& .section-description {
-				max-width: 660px;
-				margin: 0 auto;
-			}
-		}
-
-		& .nutshell-section {
-			margin-bottom: 9rem;
-
-			& .media {
-				height: 100%;
-				box-shadow: 0 20px 26px 4px rgba(151, 161, 174, .05);
-
-				& .carousel-item {
-					width: 570px;
-					height: 370px;
-
-					& img {
-					}
-				}
-
-				&.solutions {
-					border: 1px solid #e0e6ed;
-				}
-			}
-
-			& .content {
-				padding: 5.6rem;
-
-				& h4 {
-					font-size: 2.5rem;
-				}
-
-				& p:first-of-type {
-					margin: 1.5rem 0 1rem;
-				}
-			}
-		}
-	}
+	*/
 }

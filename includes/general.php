@@ -3,10 +3,11 @@
  * General theme functions
  */
 
+
 /**
  * Conditionally add body classes to the site structure
  *
- * @param $classes
+ * @param $classes Already-applied body classes
  *
  * @return array
  */
@@ -16,98 +17,19 @@ function shd_body_classes_front_end( $classes ) {
 		$classes[] = 'front-page';
 	}
 
+	$page_body_classes = array( 'projects', 'about', 'careers', 'contact' );
+
+	foreach ( $page_body_classes as $page ) {
+
+		if ( is_page( $page ) ) {
+			$classes[] = $page . '-page';
+		}
+	}
+
 	return $classes;
 }
 add_action( 'body_class', 'shd_body_classes_front_end' );
 
-/**
- * Get all of our projects.
- */
-function shd_get_our_projects() {
-
-	$our_projects = array(
-		'awp'  => array(
-			'name' => 'AffiliateWP',
-			'desc' => 'A full-featured affiliate program solution for WordPress sites.',
-			'url'  => 'https://affiliatewp.com/'
-		),
-		'edd'  => array(
-			'name' => 'Easy Digital Downloads',
-			'desc' => 'A complete eCommerce solution for selling digital products on WordPress.',
-			'url'  => 'https://easydigitaldownloads.com/'
-		),
-		'rcp'  => array(
-			'name' => 'Restrict Content Pro',
-			'desc' => 'A full-featured, powerful membership solution for WordPress.',
-			'url'  => 'https://restrictcontentpro.com/'
-		),
-		'sc'   => array(
-			'name' => 'Sugar Calendar',
-			'desc' => 'A sweet, simple event calendar plugin for WordPress.',
-			'url'  => 'https://sugarcalendar.com/'
-		),
-		'wpsp' => array(
-			'name' => 'WP Simple Pay',
-			'desc' => 'The #1 Stripe Payments Plugin for WordPress.',
-			'url'  => 'https://wpsimplepay.com/'
-		),
-		'sb'   => array(
-			'name' => 'Sellbird',
-			'desc' => 'Helping your digital product and media sales take flight.',
-			'url'  => 'http://sellbird.com/'
-		),
-		'pp'   => array(
-			'name' => 'Pippin\'s Plugins',
-			'desc' => 'Finely crafted WordPress plugins, tutorials, reviews and more.',
-			'url'  => 'https://pippinsplugins.com/'
-		),
-		'beer' => array(
-			'name' => 'Sandhills Brewing',
-			'desc' => 'Central Kansas brewery focusing on barrel aged wild ales.',
-			'url'  => 'https://sandhillsbrewing.com/'
-		),
-	);
-
-	return (array) $our_projects;
-}
-
-
-/**
- * Get all of the team members. If they go by a specific name, say so. Also indicate if
- * they were the first person to join the company in a calendar year.
- *
- * @return array All team members and information about their year joined and names
- */
-function shd_get_our_people() {
-
-	$our_people = array(
-		'pippin'   => array( 'name' => 'Pippin Williamson', 'year_joined' => '2009' ),
-		'sean'     => array( 'name' => 'Sean Davis', 'year_joined' => '2014' ),
-		'andrew'   => array( 'name' => 'Andrew Munro', 'year_joined' => '2015' ),
-		'chris'    => array( 'name' => 'Chris Klosowski' ),
-		'lisa'     => array( 'name' => 'Lisa Gibson', 'year_joined' => '2016' ),
-		'drew'     => array( 'name' => 'Drew Jaynes' ),
-		'ashley'   => array( 'name' => 'Ashley Gibson', 'year_joined' => '2017' ),
-		'kyle'     => array( 'name' => 'Kyle Maurer' ),
-		'ginger'   => array( 'name' => 'Ginger Coolidge' ),
-		'phil_j'   => array( 'name' => 'Phil Johnston', 'nickname' => 'Phil J.' ),
-		'keri'     => array( 'name' => 'Keri Jacoby' ),
-		'john'     => array( 'name' => 'John Jacoby' ),
-		'tyler'    => array( 'name' => 'Tyler Lau', 'year_joined' => '2018' ),
-		'daniel'   => array( 'name' => 'Daniel Goldak' ),
-		'joldis'   => array( 'name' => 'Joldis Mihai Alexandru', 'nickname' => 'Mihai' ),
-		'mandy'    => array( 'name' => 'Mandy Jones' ),
-		'tunbosun' => array( 'name' => 'Tunbosun Ayinla' ),
-		'phil_d'   => array( 'name' => 'Phil Derksen', 'nickname' => 'Phil D.' ),
-		'michael'  => array( 'name' => 'Michael Beil', 'year_joined' => '2019' ),
-		'spencer'  => array( 'name' => 'Spencer Finnell' ),
-		'andrea'   => array( 'name' => 'Andrea Whitmer' ),
-		'alex'     => array( 'name' => 'Alex Standiford' ),
-		'adam'     => array( 'name' => 'Adam Lea' ),
-	);
-
-	return (array) $our_people;
-}
 
 /**
  * Calculate how long SHD has been in business. Founded in 2009.
@@ -117,3 +39,90 @@ function shd_get_our_people() {
 function shd_get_years_in_business() {
 	return $years_in_business = date( 'Y' ) - 2009;
 }
+
+/**
+ * Modify queries
+ *
+ * @param $query
+ */
+function shd_modify_queries( $query ) {
+
+	if ( $query->is_main_query() && $query->is_home() ) {
+
+		$query->set( 'posts_per_page', 1 );
+		$query->set( 'ignore_sticky_posts', true );
+
+		// modify blog home queries - part 1
+		// https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
+	} elseif ( ! $query->is_main_query() && is_home() ) {
+
+		$offset        = 1;
+		$post_per_page = 15;
+
+		if ( $query->is_paged ) {
+
+			$blog_offset = $offset + ( ( $query->query_vars['paged']-1 ) * $post_per_page );
+			$query->set( 'offset', $blog_offset );
+
+		} else {
+
+			$query->set( 'offset', $offset );
+
+		}
+	}
+}
+add_action( 'pre_get_posts', 'shd_modify_queries', 99999999 );
+
+
+/**
+ * Modify blog home queries - part 2
+ * https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
+ *
+ * @param $found_posts
+ * @param $query
+ *
+ * @return int
+ */
+function shd_adjust_offset_pagination( $found_posts, $query ) {
+
+	$offset = 1;
+
+	if ( ! $query->is_main_query() && $query->is_home() ) {
+		return $found_posts - $offset;
+	}
+
+	return $found_posts;
+}
+add_filter( 'found_posts', 'shd_adjust_offset_pagination', 1, 2 );
+
+
+/**
+ * Control the blog post excerpt length
+ *
+ * @param $length
+ *
+ * @return int
+ */
+function shd_excerpt_length( $length ) {
+
+	if ( is_front_page() ) {
+		return 50;
+	}
+
+	return 30;
+}
+add_filter( 'excerpt_length', 'shd_excerpt_length', 999 );
+
+
+/**
+ * Add graphic to single blog posts
+ */
+function shd_single_post_graphic() {
+
+	if ( is_singular( 'post' ) ) {
+		?>
+		<img class="single-post-graphic" src="<?php echo SHD_IMAGES . 'icons/main-blog-graphic.svg'; ?>">
+		<?php
+	}
+}
+add_action( 'themedd_entry_article_start', 'shd_single_post_graphic' );

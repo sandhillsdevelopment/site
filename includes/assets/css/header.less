@@ -1,6 +1,11 @@
 #masthead {
 
-	& .site-title {
+	& .site-branding {
+		text-align: center;
+
+		@media all and ( min-width: 768px ) {
+			text-align: left;
+		}
 	}
 
 	& .shd-logo {
@@ -17,6 +22,19 @@
 
 	& [class*="secondary-menu-container-"] {
 		position: relative;
-		top: 12px;
+		top: 4px;
+	}
+
+	& .hero {
+		position: relative;
+		padding: 1rem 0 6rem;
+
+		@media all and ( min-width: 768px ) {
+			padding: 4rem 0 8rem;
+		}
+
+		@media all and ( min-width: 1200px ) {
+			padding-bottom: 11rem;
+		}
 	}
 }

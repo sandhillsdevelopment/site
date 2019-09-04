@@ -1,13 +1,14 @@
 input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
 textarea,
+textarea.form-control,
 select {
 	color: @night_light;
-	background-color: #fff;
+	background-color: @gray;
 	padding: 8px 14px;
 	border: none;
 	height: unset;
-	border: 1px solid @input_border;
-	border-radius: 3px;
+	border: 2px solid @gray_border;
+	border-radius: 5px;
 }
 
 button,
@@ -22,7 +23,7 @@ input[type="submit"] {
 	padding: 10px 14px;
 	border: none;
 	border-radius: 16px;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 
 	&:hover {
 		background: @blue_hover;
@@ -31,14 +32,57 @@ input[type="submit"] {
 	}
 }
 
+.entry-content {
+
+	& .wpforms-container {
+		background: @gray;
+		border-width: 2px 0;
+		border-style: solid;
+		border-color: @gray_border;
+		padding: 1.5rem 1rem;
+		margin: 1rem 0;
+
+		@media all and ( min-width: 576px ) {
+			padding: 2rem;
+			border-width: 2px;
+			border-radius: 5px;
+			margin: 2rem 0;
+		}
+
+		& input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+		textarea,
+		textarea.form-control,
+		select {
+			background-color: #fff !important;
+		}
+	}
+}
+
 .wpforms-container {
 
 	& .wpforms-field {
-		padding: 0;
-		min-height: 125px;
+		margin-bottom: 10px;
+
+		& .wpforms-field-label {
+			.branding;
+			font-size: 1.2rem;
+			line-height: 1;
+			margin-bottom: 6px;
+		}
 
 		& .wpforms-field-sublabel {
-			color: #bec6ce;
+			color: @gray_text_light;
+		}
+
+		& .wpforms-field-description {
+			color: @grayish_blue;
+		}
+
+		& ul,
+		ol {
+			padding-left: 0;
+			margin-left: 0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -46,5 +90,7 @@ input[type="submit"] {
 		font-size: 1.25rem;
 		padding: 12px 24px;
 		border-radius: 24px;
+		margin-top: 10px;
+		transition: background-color .2s;
 	}
 }

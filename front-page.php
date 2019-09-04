@@ -5,133 +5,137 @@
 get_header();
 ?>
 
-	<section class="us-section content-right">
-
+	<section class="quick-info about-info border-on-bottom">
 		<div class="container">
-
-			<div class="who-are-we row justify-content-end text-lg-right">
-				<div class="col-lg-8">
-					<span class="bold-title generic-heading">Meet <span class="title-highlight">Sandhills</span></span>
-					<p class="bold-description">Founded in 2009 by Pippin Williamson, <span>Sandhills Development, LLC</span> is a self-funded, globally distributed company based in Hutchinson, Kansas. We consist of <?php echo count( shd_get_our_people() ); ?> gifted professionals located in 7 different countries across the globe. We create software, develop land, manage property, and brew specialty beers.</p>
-					<p class="bold-link-wrap"><a class="shd-button" href="<?php echo home_url( '/about/'); ?>">About Sandhills</a></p>
+			<div class="row">
+				<div class="col">
+					<span class="quick-detail shd-founded"><i class="fad fa-lightbulb"></i><strong>Founded in 2009</strong><span class="temp-hide"> by CEO Pippin Williamson.</span></span>
+					<span class="quick-detail shd-global"><i class="fad fa-globe-americas"></i><span class="temp-hide"><?php echo count( shd_get_our_people() ); ?> </span><strong>globally-distributed team</strong><span class="temp-hide"> members.</span></span>
+					<span class="quick-detail shd-headquarters"><i class="fad fa-map-marker-alt"></i><span class="temp-hide">Headquartered in </span><strong>Hutchinson, Kansas</strong>.</span>
+					<span class="quick-detail"><a class="quick-info-link" href="<?php echo home_url( '/about/' ); ?>">More<span class="temp-hide"> about Sandhills</span> &rarr;</a></span>
 				</div>
 			</div>
-
 		</div>
-
 	</section>
 
-	<section class="projects-section content-left">
-
+	<section class="projects-section">
 		<div class="container">
-
-			<div class="projects-header row justify-content-start">
-				<div class="col-8">
-					<span class="bold-title generic-heading">Our <span class="title-highlight">projects</span></span>
-					<p class="bold-description">We believe in creating positive experiences for our customers. Whether it's software designed to take small businesses to the next level, or recipes capable of impressing the most dedicated craft beer enthusiasts, our projects are built with passion and the goal of changing our customers' lives.</p>
+			<div class="projects-header row justify-content-around text-center">
+				<div class="col-xl-8 col-lg-10">
+					<span class="bold-title">Our <span class="title-highlight">projects</span></span>
+					<p class="bold-description">Whether it's a software designed to enhance your business, or a Berliner-style Weisse perfect for sunny days outside, we create with passion and intent.</p>
 				</div>
 			</div>
-
-			<div class="projects-wrapper">
-
-				<div class="row justify-content-between no-gutters">
-					<?php get_template_part( 'template-parts/content', 'our-projects' ); ?>
-				</div>
-
-			</div>
-
-		</div>
-
-	</section>
-
-	<section class="goals-section content-right">
-
-		<div class="container">
-
-			<div class="row justify-content-end text-lg-right">
-				<div class="col-lg-8">
-					<span class="bold-title generic-heading">Our <span class="title-highlight">people</span></span>
-					<p class="bold-description">Freedom is important to us. Our team works from the comfort of our own homes, or wherever we find ourselves fulfilled and productive. Given that we are spread across the globe in multiple timezones, it also gives us the ability to better serve our customers, wherever they may reside.</p>
-					<p class="bold-link-wrap"><a class="shd-button" href="<?php echo home_url( '/team/'); ?>">Team Sandhills</a></p>
+			<div class="projects-row row justify-content-around">
+				<div class="projects-col col">
+					<div class="projects-wrapper">
+						<div class="row justify-content-between no-gutters">
+							<?php get_template_part( 'template-parts/content', 'our-projects' ); ?>
+						</div>
+					</div>
 				</div>
 			</div>
-
-		</div>
-
-	</section>
-
-	<section id="contact" class="contact-section stars">
-
-		<div class="container">
-
-			<div class="row  justify-content-around">
-				<div class="col-lg-8">
-					<span class="bold-title generic-heading text-lg-center">Get in touch</span>
-					<p class="bold-description text-lg-center">We look forward to hearing from you. If you’re in need of technical support, have a billing question or issue, please use the support page on the specific product you’re inquiring about.</p>
-					<?php while ( have_posts() ) : the_post(); the_content(); endwhile; ?>
+			<div class="more-projects-row row text-center">
+				<div class="col">
+					<a class="shd-button more-project-details" href="<?php echo home_url( '/projects/' ); ?>">Full project details</a>
 				</div>
 			</div>
-
 		</div>
-
 	</section>
 
-<!--
-
-	<section class="what-we-do">
-
+	<section class="quick-info projects-info border-on-top">
 		<div class="container">
-
-			<section class="nutshell-section row justify-content-between no-gutters">
-				<div class="col-6">
-					<div class="media solutions">
-						<?php get_template_part( 'template-parts/carousel', 'solutions' ); ?>
-					</div>
+			<div class="row">
+				<div class="col">
+					<span class="quick-detail email-us"><i class="fad fa-inbox-in"></i>Need to <strong>contact us</strong> directly, or inquire about one of our projects? <a class="quick-info-link" href="<?php echo home_url( '/contact/' ); ?>">Get in touch &rarr;</a></span>
 				</div>
-				<div class="col-6">
-					<div class="content">
-						<h3>empower businesses</h3>
-						<p>We are the humans behind Easy Digital Downloads, Restrict Content Pro, AffiliateWP, Sugar Event Calendar, SellBird, WP Simple Pay, Pippin's Plugins, and more.</p>
-						<p><a href="<?php echo home_url( '/projects/' ); ?>">See our projects &rarr;</a></p>
-					</div>
-				</div>
-			</section>
-
-			<section class="nutshell-section row justify-content-between">
-				<div class="col-6 order-2">
-					<div class="media communities">
-						<?php get_template_part( 'template-parts/carousel', 'communities' ); ?>
-					</div>
-				</div>
-				<div class="col-6 order-1">
-					<div class="content">
-						<h3>build relationships</h3>
-						<p>We take pride in improving the human experience. Through various charities, land development, and property management, our aim is to leave the world around us better than how we found it.</p>
-						<p><a href="<?php echo home_url( '/projects/' ); ?>">See our commitments &rarr;</a></p>
-					</div>
-				</div>
-			</section>
-
-			<section class="nutshell-section row justify-content-between">
-				<div class="col-6">
-					<div class="media passions">
-						<?php get_template_part( 'template-parts/carousel', 'passions' ); ?>
-					</div>
-				</div>
-				<div class="col-6">
-					<div class="content">
-						<h3>bring people together</h3>
-						<p>At Sandhills Development, we are real humans with real passions. One of our passions happens to be beer. Our Kansas-based microbrewery, Sandhills Brewing, attracts those who love our barrel aged wild ales.</p>
-						<p><a href="https://sandhillsbrewing.com/">Check out Sandhills Brewing &rarr;</a></p>
-					</div>
-				</div>
-			</section>
-
+			</div>
 		</div>
-
 	</section>
 
--->
+	<section class="team-commitment-section">
+		<div class="container">
+			<div class="row justify-content-around">
+				<div class="col-lg-6">
+					<div class="our-people">
+						<p>Freedom is important to us. We work from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize having healthy workplaces.</p>
+						<p>Our globally-distributed team consists of <?php echo count( shd_get_our_people() ); ?> professionals located in 7 countries across the globe.</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="our-commitment">
+						<p>We're committed to the well-being of our people at Sandhills Development. That allows us to collectively focus our efforts on positive experiences for our customers, and freeing up time for us all.</p>
+						<p>If you're interested in being part of our team, do not hesitate to <a href="<?php echo home_url( '/careers/' ); ?>">submit an application for consideration</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<?php
+	<?php
+	$last_post = get_posts( array( 'numberposts' => 1 ) );
+	if ( ! empty( $last_post ) ) {
+		?>
+
+		<section class="blog-section">
+			<div class="container">
+				<div class="blog-row row content-aside-split">
+					<div class="col-lg-8 content-split">
+						<div class="content-inner">
+
+							<?php
+							foreach ( $last_post as $post ) {
+								setup_postdata( $post );
+								?>
+								<span class="content-subtitle">The latest from Sandhills blog</span>
+								<a class="content-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								<?php the_excerpt(); ?>
+								<a class="aside-button shd-button" href="<?php the_permalink(); ?>">Continue reading</a>
+								<?php
+								wp_reset_query();
+							}
+							?>
+
+						</div>
+					</div>
+
+					<?php
+					$recent_posts = get_posts( array( 'numberposts' => 3, 'offset'=> 1 ) );
+					if ( ! empty( $recent_posts ) ) {
+						?>
+
+						<div class="col-lg-4 aside-split">
+							<div class="aside-inner d-flex flex-column">
+								<span class="aside-title"><i class="fad fa-pencil-alt"></i>More from the blog</span>
+								<ul class="aside-links">
+
+									<?php
+									foreach ( $recent_posts as $recent_post ) {
+										?>
+										<li><a class="aside-link" href="<?php echo get_the_permalink( $recent_post ); ?>"><?php echo get_the_title( $recent_post ); ?></a></li>
+										<?php
+									}
+									?>
+
+								</ul>
+								<div class="aside-cta mt-auto">
+									<a class="aside-link-cta" href="<?php echo home_url( '/blog/' ); ?>">Visit the blog &rarr;</a>
+								</div>
+								<a href="<?php echo home_url( '/blog/' ); ?>">
+									<img class="more-posts-graphic" src="<?php echo SHD_IMAGES . 'icons/main-blog-graphic.svg'; ?>">
+								</a>
+							</div>
+						</div>
+
+						<?php
+					}
+					?>
+
+				</div>
+			</div>
+		</section>
+
+		<?php
+	}
+
 get_footer();
