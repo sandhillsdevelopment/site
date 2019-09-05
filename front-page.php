@@ -106,7 +106,7 @@ get_header();
 
 						<div class="col-lg-4 aside-split">
 							<div class="aside-inner d-flex flex-column">
-								<span class="aside-title"><i class="fad fa-pencil-alt"></i>More from the blog</span>
+								<span class="aside-title"><i class="fad fa-chevron-circle-down"></i>More from the blog</span>
 								<ul class="aside-links">
 
 									<?php

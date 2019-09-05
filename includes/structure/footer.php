@@ -47,7 +47,9 @@ add_action( 'themedd_footer', 'shd_footer' );
  */
 function eddwp_add_privacy_policy_to_site_footer( $copyright, $classes ) {
 
-	$copyright = '<div class="site-copyright"><p class="mb-0">' . sprintf( 'Copyright &copy; %s %s', date( 'Y' ), '<span class="copyright-site-name"><strong>' . get_bloginfo( 'name' ) ) . '</strong></span></p></div>';
+	$copyright = '<div class="site-copyright"><p class="mb-0">' . sprintf( 'Copyright &copy; %s %s',
+			date( 'Y' ),
+			'<span class="copyright-site-name"><strong><a href="' . home_url() . '">' . get_bloginfo( 'name' ) ) . '</a></strong></span></p></div>';
 
 	return $copyright;
 }

@@ -35,7 +35,7 @@ function shd_get_our_people() {
 		),
 		'phil_d'   => array(
 			'name'        => 'Phil Derksen',
-			'role'        => 'Partner, Marketing',
+			'role'        => 'Partner, Product Lead',
 			'nickname'    => 'Phil D.',
 			'year_joined' => '2018',
 		),
