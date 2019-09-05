@@ -258,99 +258,44 @@
 
 	/* Projects CSS in projects.less */
 
-	& .team-commitment-section {
-		color: #fff;
-		padding: 0;
-
-		@media all and ( max-width: 991px ) {
-
-			& .container {
-				max-width: 100%;
-			}
-		}
+	& .team-section {
+		background: @night url( 'includes/assets/images/shapes/world-map-bg.svg' ) no-repeat center 3rem;
+		background-size: 630px auto;
+		color: @night_text;
 
 		@media all and ( min-width: 992px ) {
-			background: linear-gradient( to right, @night 40%, @green 40% );
+			background-position-y: 3.5rem;
+			background-size: 530px auto;
 		}
 
-		& [class*="col"] {
-
-			@media all and ( max-width: 991px ) {
-				padding: 0;
-			}
-
-			&:first-of-type {
-				padding-right: 0;
-
-				@media all and ( min-width: 992px ) {
-					background: @night url('includes/assets/images/shapes/world-map-bg.svg') no-repeat left 74px;
-					background-size: 88% auto;
-					padding-right: 0;
-				}
-
-				& + [class*="col"] {
-					padding-left: 0;
-				}
-			}
+		@media all and ( min-width: 1200px ) {
+			background-position-y: 4rem;
+			background-size: 730px auto;
 		}
 
-		& [class*="our-"] {
-			text-align: center;
-			padding: 7% 15px 9%;
-			margin: 0 -9px;
-
-			@media all and ( min-width: 576px ) {
-				padding: 7% 14%;
-				margin: 0;
-			}
+		& .generic-heading {
+			color: #fff;
+			font-size: 2rem;
 
 			@media all and ( min-width: 992px ) {
-				text-align: left;
-			}
-
-			& .generic-heading {
-				font-size: 3.4rem;
+				font-size: 3rem;
 			}
 		}
+	}
 
-		& .our-people {
-			background: @night url('includes/assets/images/shapes/world-map-bg.svg') no-repeat center 30px;
-			background-size: 80% auto;
+	& .commitment-section {
+		background-color: @gray;
+		background-image: url( 'includes/assets/images/icons/skills-icon-bg-light.svg' );
+		background-repeat: repeat;
+		background-position: -20px top;
+		background-size: 220px 220px;
+		border-bottom: 2px solid @gray_border;
 
-			@media all and ( min-width: 576px ) {
-				background-size: 50% auto;
-			}
-
-			@media all and ( min-width: 992px ) {
-				background: transparent;
-				background-size: unset;
-				padding: 5rem 5rem 5rem 0;
-			}
-
-			@media all and ( min-width: 1200px ) {
-				padding: 6rem 5rem 6.5rem 0;
-			}
-		}
-
-		& .our-commitment {
-			background: @green;
+		& .generic-heading {
+			font-size: 2rem;
 
 			@media all and ( min-width: 992px ) {
-				background: transparent;
-				padding: 5rem 0 5rem 5rem;
-			}
-
-			@media all and ( min-width: 1200px ) {
-				padding: 6rem 0 6.5rem 5rem;
-			}
-
-			& a {
-				color: #fff;
-				text-decoration: underline;
-
-				&:hover {
-					text-decoration: none;
-				}
+				font-size: 3rem;
 			}
 		}
 	}
@@ -381,13 +326,6 @@
 			& .aside-split {
 
 				& .aside-inner {
-
-					& .aside-title {
-
-						& .fad {
-							color: @turquoise;
-						}
-					}
 
 					& .more-posts-graphic {
 						display: none;

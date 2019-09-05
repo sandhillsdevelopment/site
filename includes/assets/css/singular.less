@@ -155,6 +155,14 @@
 
 			& .page-title {
 				margin-bottom: 0;
+
+				@media all and ( min-width: 768px ) {
+					font-size: 3.4rem;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					font-size: 4.8rem;
+				}
 			}
 
 			& .lead {
@@ -177,6 +185,83 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.page.careers-page,
+.page.contact-page {
+
+	& .site-content {
+
+		& > header {
+			padding: 2rem 0 !important;
+			margin-bottom: 2rem;
+
+			@media all and ( min-width: 768px ) {
+				padding: 3.8rem 0 !important;
+				margin-bottom: 2rem;
+			}
+
+			@media all and ( min-width: 992px ) {
+				padding: 4rem 0 6rem !important;
+				margin-bottom: 0;
+			}
+		}
+
+		@media all and ( min-width: 992px ) {
+
+			& .entry-content {
+				background: #fff;
+				padding: 2rem;
+				border: 1px solid @gray_border;
+				border-radius: 5px;
+				margin-top: -4rem;
+				box-shadow: 0 0 15px rgba(75, 101, 126,.05);
+
+				& .wpforms-container {
+					background: #fff;
+					padding: 1rem 1rem 0;
+					border: none;
+
+					input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+					textarea,
+					select {
+						background: @gray !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page.careers-page {
+
+	& .site-content {
+
+		& > header {
+			background-color: @alt_blue;
+			background-image: url( 'includes/assets/images/icons/skills-icon-bg.svg' );
+			background-repeat: repeat;
+			background-position: -20px top;
+			background-size: 220px 220px;
+
+			& .page-title {
+				color: #fff;
+			}
+
+			& .lead {
+				color: #cbd7e2 !important;
+			}
+		}
+	}
+}
+
+.page.contact-page {
+
+	& .site-content {
+
+		& > header {
 		}
 	}
 }

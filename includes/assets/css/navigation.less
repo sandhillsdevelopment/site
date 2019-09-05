@@ -1,14 +1,5 @@
 #masthead {
 
-	& .navbar-toggler {
-		border-radius: unset;
-		margin-top: 0;
-
-		&:hover {
-			background: #343a40;
-		}
-	}
-
 	nav[id*="nav-secondary"] {
 		position: relative;
 
@@ -43,6 +34,91 @@
 
 				@media all and ( min-width: 992px ) {
 					margin-right: 1rem;
+				}
+			}
+		}
+	}
+
+	& .navbar-toggler {
+		background: transparent;
+		border: none;
+		border-radius: unset;
+		margin-top: 0;
+		transition: background .2s;
+		outline: none;
+
+		&:hover {
+			background: @gray;
+		}
+
+		& .navbar-toggler-text {
+			color: @blue_title;
+		}
+
+		& .icon {
+			position: relative;
+			left: -5px;
+			color: @blue_title;
+		}
+	}
+
+	& #navbar-mobile {
+		margin-bottom: 1.25rem;
+
+		& #menu-mobile {
+			text-align: center;
+
+			& .nav-item {
+
+				& .nav-link {
+					color: @blue_title;
+					.branding;
+					font-size: 1.2rem;
+
+					&:hover {
+						color: @grayish_blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+.home,
+.blog {
+
+	& #masthead {
+
+		& .navbar-toggler {
+			background: transparent;
+			border: none;
+
+			&:hover {
+				background: rgba(255,255,255,.05);
+			}
+
+			& .navbar-toggler-text {
+				color: #fff;
+			}
+
+			& .icon {
+				color: #fff;
+			}
+		}
+
+		& #navbar-mobile {
+
+			& #menu-mobile {
+
+				& .nav-item {
+
+					& .nav-link {
+						color: @night_text;
+
+						&:hover {
+							color: #fff;
+						}
+					}
 				}
 			}
 		}

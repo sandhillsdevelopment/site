@@ -320,7 +320,7 @@ get_header();
 								<div class="col-md-6 events-col">
 									<div class="events-inner">
 										<div class="single-event-wrap">
-											<p class="event-description"><span class="member">Chris</span> joins the team as a co-lead developer for Easy Digital Downloads. <span class="member">Andrew</span>, co-founder of AffiliateWP, officially joins the team to focus on AffiliateWP and Easy Digital Downloads.</p>
+											<p class="event-description"><span class="member">Chris</span> joins the team as a co-lead developer for Easy Digital Downloads. <span class="member">Andrew</span>, co-founder of AffiliateWP, joins the team to focus on AffiliateWP and Easy Digital Downloads. <span class="member">John P.</span> (not pictured above) joins the team as a developer. <span class="member">Michael</span> joins the team as a support technician.</p>
 										</div>
 									</div>
 								</div>
@@ -351,7 +351,7 @@ get_header();
 								<div class="col-md-6 events-col order-md-2">
 									<div class="events-inner">
 										<div class="single-event-wrap">
-											<p class="event-description"><span class="member">Lisa</span> joins the team to take our copy-writing efforts to the next level. <span class="member">Drew</span> joins the team as a developer to focus primarily on AffiliateWP.</p>
+											<p class="event-description"><span class="member">Lisa</span> joins the team as a support technician. <span class="member">Drew</span> joins the team as a developer to focus primarily on AffiliateWP.</p>
 										</div>
 									</div>
 								</div>
@@ -389,6 +389,9 @@ get_header();
 										</div>
 										<div class="single-event-wrap">
 											<p class="event-description"><span class="member">Ashley</span>, <span class="member">Phil J.</span>, and <span class="member">John</span> join the company as developers. <span class="member">Ginger</span> and <span class="member">Keri</span> join to focus on customer support and documentation. <span class="member">Kyle</span> joins the team as a marketer.</p>
+										</div>
+										<div class="single-event-wrap">
+											<p class="event-description"><span class="member">Sean</span>, <span class="member">Chris</span>, <span class="member">Andrew</span>, and <span class="member">John P.</span> officially join <span class="member">Pippin</span> as Partners in Sandhills Development.</p>
 										</div>
 									</div>
 								</div>
@@ -471,7 +474,10 @@ get_header();
 								<div class="col-md-6 events-col">
 									<div class="events-inner">
 										<div class="single-event-wrap">
-											<p class="event-description"><span class="member">Michael</span>, <span class="member">Andrew</span>, and <span class="member">Adam</span> join the rockstar support crew. <span class="member">Spencer</span> and <span class="member">Adam</span> join as much needed developers for our fleet of software products.</p>
+											<p class="event-description"><span class="member">Andrew</span> and <span class="member">Adam</span> join the rockstar support crew. <span class="member">Spencer</span> and <span class="member">Alex</span> join as much needed developers for our fleet of software products. <span class="member">Michael</span>, previously part-time, becomes a full-time team member.</p>
+										</div>
+										<div class="single-event-wrap">
+											<p class="event-description">We bid farewell to <span class="member">John P.</span>, Partner and long-time developer. We appreciate his efforts to breathe new life into Restrict Content Pro during his time as Product Lead. He will be missed!</p>
 										</div>
 										<div class="single-event-wrap">
 											<p class="event-description">Sandhills purchases the building that houses our headquarters office as well as the Hutch microbrewery and tap room. With this purchase, we also become property managers, renting storefront space to a yoga studio.</p>
@@ -499,6 +505,13 @@ get_header();
 					<p>That's <?php echo shd_get_years_in_business(); ?> years and counting. Cheers! 🥂 Here's what to expect in the future.</p>
 				</div>
 				<div class="sandhills-future-timeline">
+					<div class="sandhills-future-timeline-item row justify-content-around">
+						<div class="col-lg-6 future-event-col">
+							<div class="future-event">
+								<p>Paying your affiliates shouldn't be so hard! We're building an integrated payouts service for AffiliateWP to make paying your affiliates partners through ACH transfers seamless and easy. <a href="https://payouts.sandhillsdev.com/">Check it out</a>.</p>
+							</div>
+						</div>
+					</div>
 					<div class="sandhills-future-timeline-item row justify-content-around">
 						<div class="col-lg-6 future-event-col">
 							<div class="future-event">

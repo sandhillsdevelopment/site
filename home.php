@@ -53,7 +53,10 @@ get_header();
 					?>
 
 					<div class="py-10 text-center">
-						<span class="more-coming-soon generic-heading">More coming soon. Stay tuned.</span>
+						<p><span class="more-coming-soon generic-heading">More coming soon. Stay tuned.</span></p>
+						<p>
+							<a class="shd-button" href="<?php echo home_url( '/projects/' ); ?>">View our projects</a>
+						</p>
 					</div>
 
 					<?php
