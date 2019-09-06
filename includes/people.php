@@ -80,8 +80,9 @@ function shd_get_our_people() {
 			'role'        => 'Support Lead',
 			'year_joined' => '2017',
 		),
-		'john'     => array(
+		'john_j'     => array(
 			'name'        => 'John Jacoby',
+			'nickname'    => 'John J.',
 			'role'        => 'Product Lead',
 			'year_joined' => '2017',
 		),

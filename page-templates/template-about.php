@@ -391,7 +391,7 @@ get_header();
 											<p class="event-description">Sugar Calendar re-launches as an event calendar plugin for WordPress.</p>
 										</div>
 										<div class="single-event-wrap">
-											<p class="event-description"><span class="member">Ashley</span>, <span class="member">Phil J.</span>, and <span class="member">John</span> join the company as developers. <span class="member">Ginger</span> and <span class="member">Keri</span> join to focus on customer support and documentation. <span class="member">Kyle</span> joins the team as a marketer.</p>
+											<p class="event-description"><span class="member">Ashley</span>, <span class="member">Phil J.</span>, and <span class="member">John J.</span> join the company as developers. <span class="member">Ginger</span> and <span class="member">Keri</span> join to focus on customer support and documentation. <span class="member">Kyle</span> joins the team as a marketer.</p>
 										</div>
 										<div class="single-event-wrap">
 											<p class="event-description"><span class="member">Sean</span>, <span class="member">Chris</span>, <span class="member">Andrew</span>, and <span class="member">John P.</span> officially join <span class="member">Pippin</span> as Partners in Sandhills Development.</p>
