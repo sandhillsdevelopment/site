@@ -477,7 +477,7 @@ get_header();
 								<div class="col-md-6 events-col">
 									<div class="events-inner">
 										<div class="single-event-wrap">
-											<p class="event-description"><span class="member">Andrew</span> and <span class="member">Adam</span> join the rockstar support crew. <span class="member">Spencer</span> and <span class="member">Alex</span> join as much needed developers for our fleet of software products. <span class="member">Michael</span>, previously part-time, becomes a full-time team member.</p>
+											<p class="event-description"><span class="member">Andrea</span> and <span class="member">Adam</span> join the rockstar support crew. <span class="member">Spencer</span> and <span class="member">Alex</span> join as much needed developers for our fleet of software products. <span class="member">Michael</span>, previously part-time, becomes a full-time team member.</p>
 										</div>
 										<div class="single-event-wrap">
 											<p class="event-description">We bid farewell to <span class="member">John P.</span>, Partner and long-time developer. We appreciate his efforts to breathe new life into Restrict Content Pro during his time as Product Lead. He will be missed!</p>
