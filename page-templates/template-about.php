@@ -327,6 +327,9 @@ get_header();
 								<div class="col-md-6 additional-info-col">
 									<div class="additional-info-inner">
 										<div class="additional-event">
+											<p>The Sandhills team meets up in Las Vegas twice this year.</p>
+										</div>
+										<div class="additional-event">
 											<p>This year, we began confronting one of our biggest challenges as a company. Check out <a href="https://pippinsplugins.com/2015-year-review/">2015 in review</a> for the scoop.</p>
 										</div>
 									</div>
@@ -358,7 +361,7 @@ get_header();
 								<div class="col-md-6 additional-info-col order-md-1">
 									<div class="additional-info-inner">
 										<div class="additional-event">
-											<p>Company meet-ups held in Tempe, Arizona and Las Vegas, Nevada.</p>
+											<p>Company meet-up held in Tempe, Arizona.</p>
 										</div>
 										<div class="additional-event">
 											<p>This year, we made a significant change to our business model. See <a href="https://pippinsplugins.com/2016-in-review/">2016 in review</a> if you're curious how it worked out.</p>
