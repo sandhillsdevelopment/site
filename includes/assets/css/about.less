@@ -1,0 +1,641 @@
+.page.about-page {
+
+	& .site-content {
+
+		& .entry-content {
+			padding: 0;
+			border: none;
+			margin: 0;
+			box-shadow: unset;
+		}
+	}
+
+	& .about-section {
+		background: #fff;
+
+		@media all and ( min-width: 1200px ) {
+			padding: 5rem 0 7rem;
+		}
+
+		& .quick-facts {
+			margin-bottom: 4rem;
+
+			@media all and ( min-width: 992px ) {
+				margin-bottom: 0;
+			}
+
+			& .facts-wrap {
+				margin-top: .15rem;
+			}
+		}
+	}
+
+	& .team-section {
+		/* stars background applied via "stars" class on element */
+
+		& .team-sandhills {
+
+			@media all and ( min-width: 1200px ) {
+				margin-bottom: 6rem;
+			}
+		}
+
+		& .our-people-row {
+
+			& .col-xl-3 {
+
+				&:nth-of-type(7n+1) {
+
+					& .sandhills-member {
+
+						& .member-graphic {
+							background-color: @alt_purple;
+						}
+					}
+				}
+
+				&:nth-of-type(7n+2) {
+
+					& .sandhills-member {
+
+						& .member-graphic {
+							background-color: @alt_blue;
+						}
+					}
+				}
+
+				&:nth-of-type(7n+3) {
+
+					& .sandhills-member {
+
+						& .member-graphic {
+							background-color: @alt_gold;
+						}
+					}
+				}
+
+				&:nth-of-type(7n+4) {
+
+					& .sandhills-member {
+
+						& .member-graphic {
+							background-color: @alt_green;
+						}
+					}
+				}
+
+				&:nth-of-type(7n+5) {
+
+					& .sandhills-member {
+
+						& .member-graphic {
+							background-color: @alt_red;
+						}
+					}
+				}
+
+				&:nth-of-type(7n+6) {
+
+					& .sandhills-member {
+
+						& .member-graphic {
+							background-color: @alt_teal;
+						}
+					}
+				}
+
+				&:nth-of-type(7n+7) {
+
+					& .sandhills-member {
+
+						& .member-graphic {
+							background-color: @alt_pink;
+						}
+					}
+				}
+			}
+
+			& [class*="col"] {
+
+				& .sandhills-member {
+					font-size: 1rem;
+					text-align: center;
+					border-radius: 5px;
+					margin-bottom: 2rem;
+
+					& .member-graphic {
+						background-image: url( 'includes/assets/images/icons/skills-icon-bg.svg' );
+						background-repeat: repeat;
+						background-position: left 5px;
+						background-size: 204px auto;
+						border-radius: 5px 5px 0 0;
+						min-height: 70px;
+
+						@media all and ( min-width: 576px ) {
+							min-height: 110px;
+						}
+					}
+
+					& .member-info {
+						position: relative;
+						background: #fff;
+						padding: 3.6rem 2rem 1.5rem;
+						border-radius: 0 0 5px 5px;
+
+						& .member-img {
+
+							& img {
+								position: absolute;
+								top: -50px;
+								left: 50%;
+								border: 3px solid @gray;
+								border-radius: 50%;
+								margin-left: -50px;
+								max-width: 100px;
+							}
+
+							& .member-img-placeholder {
+								display: block;
+								position: absolute;
+								top: -50px;
+								left: 50%;
+								background-color: @grayish_blue;
+								.diagonal-shade;
+								border: 3px solid #fff;
+								border-radius: 50%;
+								margin-left: -50px;
+								width: 100px;
+								height: 100px;
+							}
+						}
+
+						& .member-name {
+							color: @blue_title;
+							.branding;
+							font-size: 1.2rem;
+							line-height: 1;
+							margin-bottom: 0;
+						}
+
+						& .member-role {
+							color: @grayish_blue;
+							.branding;
+							font-size: 14px;
+						}
+					}
+
+					& p {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		& .row.global-footprint {
+			margin-bottom: 2rem;
+		}
+
+		& .join-our-team-container {
+			position: relative;
+
+			& .join-our-team {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				.branding;
+
+				& a {
+					color: @blue;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	& .quick-info {
+
+		& .camera {
+
+			& .fad {
+				color: @alt_purple;
+			}
+		}
+
+		& .nature {
+
+			& .fad {
+				color: @green;
+			}
+		}
+	}
+
+	& .timeline-section {
+		background: #fff;
+		padding: 0;
+
+		& .timeline-background-wrap {
+			background-color: #fff;
+			background-image: url( 'includes/assets/images/shapes/world-map.svg' );
+			background-repeat: no-repeat;
+			background-position: center 8rem;
+			background-size: 90% auto;
+			padding: 3.5rem 0;
+			margin: 0 auto;
+			max-width: 1200px;
+			min-height: 700px;
+			position: relative;
+
+			@media all and ( min-width: 768px ) {
+				padding: 5rem 0;
+			}
+
+			@media all and ( min-width: 992px ) {
+				background-image: url( 'includes/assets/images/shapes/world-map-team-markers-only.svg' ),
+				url( 'includes/assets/images/shapes/world-map.svg' );
+				background-repeat: no-repeat, no-repeat;
+				background-position: center 10rem, center 10rem;
+				background-size: 110% auto, 110% auto;
+			}
+
+			@media all and ( min-width: 1440px ) {
+				max-width: 1440px;
+				background-size: 100% auto, 100% auto;
+			}
+		}
+
+		& .sandhills-history-row {
+			margin-bottom: 2rem;
+
+			& .bold-description {
+
+				@media all and ( min-width: 576px ) {
+					margin-bottom: 30%;
+				}
+
+				@media all and ( min-width: 992px ) {
+					margin-bottom: 60%;
+				}
+			}
+
+			& .bold-description-secondary {
+
+				@media all and ( min-width: 992px ) {
+					font-size: 22px;
+				}
+			}
+		}
+
+		& .sandhills-timeline-row {
+			margin-bottom: 4rem;
+
+			& .timeline-wrap {
+
+				& > .row {
+					position: relative;
+
+					&.new-year-row {
+
+						@media all and ( max-width: 767px ) {
+							min-height: 122px;
+						}
+
+						& .new-year-date {
+
+							@media all and ( max-width: 767px ) {
+								left: 50%;
+							}
+						}
+					}
+
+					&:first-child {
+
+						& > [class*="col-"] {
+
+							@media all and ( min-width: 768px ) {
+								min-height: 80px;
+							}
+						}
+
+						@media all and ( min-width: 768px ) {
+
+							&:before {
+								position: absolute;
+								top: -4px;
+								left: 50%;
+								content: "";
+								background-color: @blue_timeline;
+								margin-left: -15px;
+								height: 4px;
+								width: 30px;
+							}
+						}
+					}
+
+					&:last-child {
+
+						& > [class*="col-"] {
+
+							@media all and ( min-width: 768px ) {
+								min-height: 80px;
+							}
+						}
+
+						&:after {
+							position: absolute;
+							bottom: -18px;
+							left: 50%;
+							content: "";
+							background-color: #fff;
+							border: 4px solid @blue_timeline;
+							border-radius: 50%;
+							margin-left: -10px;
+							width: 20px;
+							height: 20px;
+
+							@media all and ( min-width: 768px ) {
+								bottom: -4px;
+							}
+						}
+					}
+
+					& > [class*="col-"] {
+
+						@media all and ( min-width: 768px ) {
+							padding-top: 2rem;
+							padding-bottom: 2rem;
+							border: 2px solid @blue_timeline;
+							min-height: 130px;
+						}
+
+						&:first-child {
+
+							@media all and ( min-width: 768px ) {
+								padding: 0 4rem 0 0;
+								border-width: 0 2px 0 0;
+							}
+
+							&.events-col {
+
+								& .new-year-date {
+
+									@media all and ( min-width: 768px ) {
+										right: 0;
+										margin: 0 -50px 0 0;
+									}
+								}
+
+								& .events-inner {
+
+									& .single-event-wrap {
+
+										&:first-child {
+
+											&:before {
+												position: absolute;
+												left: 50%;
+												top: 0;
+												content: "";
+												background-color: @blue_timeline;
+												margin: -1.5rem 0  -2px;
+												height: 1.5rem;
+												width: 4px;
+
+												@media all and ( min-width: 768px ) {
+													display: none;
+												}
+											}
+										}
+
+										&:after {
+											position: absolute;
+											left: 50%;
+											bottom: 0;
+											content: "";
+											background-color: @blue_timeline;
+											margin: 0 0 -1.5rem -2px;
+											height: 1.5rem;
+											width: 4px;
+
+											@media all and ( min-width: 768px ) {
+												top: 50%;
+												left: unset;
+												bottom: unset;
+												right: -64px;
+												margin: -2px 0 0 0;
+												height: 4px;
+												width: 4rem;
+											}
+										}
+									}
+								}
+							}
+
+							/* Must be able to handle left and right configurations */
+							&.order-md-2 {
+
+								@media all and ( min-width: 768px ) {
+									padding: 0 0 0 4rem;
+									border-width: 0 0 0 2px;
+								}
+
+								&.events-col {
+
+									& .new-year-date {
+
+										@media all and ( min-width: 768px ) {
+											left: 0;
+											margin: 0 0 0 -50px;
+										}
+									}
+
+									& .events-inner {
+
+										& .single-event-wrap {
+
+											&:after {
+
+												@media all and ( min-width: 768px ) {
+													left: -64px;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						&:last-child {
+
+							@media all and ( min-width: 768px ) {
+								padding: 0 0 0 4rem;
+								border-width: 0 0 0 2px;
+							}
+
+							/* Must be able to handle left and right configurations */
+							&.order-md-1 {
+
+								@media all and ( min-width: 768px ) {
+									padding: 0 4rem 0 0;
+									border-width: 0 2px 0 0;
+								}
+							}
+						}
+
+						&.events-col {
+							position: relative;
+
+							& .new-year-date {
+								position: absolute;
+								top: 0;
+								background-color: @blue;
+								.diagonal-shade;
+								text-align: center;
+								border: 4px solid @blue_timeline;
+								border-radius: 50%;
+								margin-left: -50px;
+								width: 100px;
+								height: 100px;
+								z-index: 99999;
+
+								& .the-year {
+									display: inline-block;
+									.branding;
+									color: #fff;
+									font-size: 30px;
+									line-height: 92px;
+									text-shadow: 1px 1px 3px rgba(0,0,0,.2);
+								}
+							}
+
+							& .events-inner {
+
+								& .single-event-wrap {
+									position: relative;
+									background: @blue_title;
+									color: #fff;
+									padding: 1.5rem;
+									border-radius: 5px;
+									margin-bottom: 1.5rem;
+
+									& .event-title {
+										.branding;
+										font-size: 1.5rem;
+									}
+
+									& .event-description {
+
+										& a {
+											color: #ade1ba;
+											text-decoration: underline;
+
+											&:hover {
+												text-decoration: none;
+											}
+										}
+
+										& .member {
+											color: #e9c3ae;
+											font-weight: 600;
+										}
+									}
+								}
+							}
+						}
+
+						&.additional-info-col {
+
+							& .additional-info-inner {
+
+								& .additional-event {
+									position: relative;
+									background: #99a6b1;
+									color: #fff;
+									padding: 1.5rem;
+									border-radius: 5px;
+									margin-bottom: 1.5rem;
+
+									@media all and ( min-width: 768px ) {
+										background: @gray;
+										color: @night_light;
+									}
+
+									& a {
+										color: @gray;
+										text-decoration: underline;
+
+										@media all and ( min-width: 768px ) {
+											color: #849EB8;
+										}
+
+										&:hover {
+											text-decoration: none;
+										}
+									}
+
+									&:after {
+										position: absolute;
+										left: 50%;
+										bottom: 0;
+										content: "";
+										background-color: @blue_timeline;
+										margin: 0 0 -1.5rem -2px;
+										height: 1.5rem;
+										width: 4px;
+
+										@media all and ( min-width: 768px ) {
+											display: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		& .timeline-end {
+
+			@media all and ( min-width: 992px ) {
+				font-size: 22px;
+			}
+		}
+
+		& .sandhills-future-timeline {
+			padding: 3rem 0 0;
+
+			& .future-event-col {
+				margin-bottom: 1.5rem;
+
+				& .future-event {
+					background: #99a6b1;
+					color: #fff;
+					padding: 1.5rem;
+					border-radius: 5px;
+
+					@media all and ( min-width: 768px ) {
+						background: @gray;
+						color: @night_light;
+					}
+
+					& a {
+						color: @gray;
+						text-decoration: underline;
+
+						@media all and ( min-width: 768px ) {
+							color: #849EB8;
+						}
+
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& #content {
+		padding-bottom: 0;
+	}
+}

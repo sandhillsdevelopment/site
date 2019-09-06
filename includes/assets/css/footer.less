@@ -1,0 +1,30 @@
+#colophon {
+	color: @night_light;
+
+	& .site-copyright {
+		color: @grayish_blue;
+		font-size: 15px;
+
+		& .copyright-site-name {
+
+			@media all and ( max-width: 480px ) {
+				display: block;
+			}
+
+			& strong {
+				color: @night_light;
+				.branding;
+
+				& a {
+					color: @night_light;
+					transition: color .2s;
+
+					&:hover {
+						color: @grayish_blue;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,269 @@
+/* Shared - individual singulars are below this selector set */
+.single,
+.page {
+
+	& .site-content {
+
+		& > header {
+			padding: 1rem 0 5rem !important;
+
+			@media all and ( min-width: 768px ) {
+				padding: 4rem 0 5rem !important;
+			}
+
+			& .post-title,
+			.page-title {
+				font-size: 2.53rem;
+				line-height: 1.2;
+
+				@media all and ( min-width: 768px ) {
+					font-size: 3.4rem;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					font-size: 4.8rem;
+				}
+			}
+
+			& .lead {
+				display: inline-block;
+				color: @grayish_blue;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 1.6;
+				max-width: 800px;
+				margin: 0 auto;
+
+				@media all and ( min-width: 1200px ) {
+					font-size: 22px;
+				}
+			}
+		}
+
+		& #primary {
+			position: relative;
+
+			& #main {
+
+				@media all and ( min-width: 992px ) {
+
+					& > * {
+						max-width: 750px;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.single {
+
+	#masthead {
+		background: @gray;
+	}
+
+	& .site-content {
+
+		& > header {
+			background: @gray;
+			border-bottom: 1px solid @gray_border;
+		}
+
+		& #primary {
+			padding-top: 6rem;
+
+			& .single-post-graphic {
+				position: absolute;
+				top: -50px;
+				left: 50%;
+				background-color: @blue;
+				margin-left: -50px;
+				width: 100px;
+				height: auto;
+				box-shadow: 0 0 0 3px @gray_border;
+				border-radius: 50%;
+			}
+
+			& #main {
+
+				& .post-thumbnail {
+					text-align: center;
+					margin: -6rem 0 4rem !important;
+
+					& img {
+						border-radius: 0 0 5px 5px;
+					}
+				}
+			}
+		}
+	}
+
+	& .cat-tags-links {
+		color: @night_light;
+		.branding;
+		font-size: 15px;
+
+		& a {
+			color: @grayish_blue;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	& .post-edit-link {
+		color: @grayish_blue;
+		.branding;
+		font-size: 15px;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	& .nav-links {
+		.branding;
+		font-size: 1rem;
+
+		& .post-title {
+			color: @grayish_blue;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.page {
+
+	& .site-content {
+		padding-bottom: 8rem;
+
+		& > header {
+
+			& .page-title {
+				margin-bottom: 1rem;
+
+				@media all and ( min-width: 768px ) {
+					font-size: 3.4rem;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					font-size: 4.8rem;
+				}
+
+				&:last-child {
+
+					@media all and ( min-width: 992px ) {
+						margin-bottom: 1.5rem;
+					}
+
+					@media all and ( min-width: 1200px ) {
+						margin-bottom: 3rem;
+					}
+				}
+			}
+
+			& .lead {
+				color: @grayish_blue !important;
+
+				& .posted-on {
+					display: inline-block;
+					line-height: 1;
+				}
+
+				& a {
+					color: @grayish_blue !important;
+					cursor: text;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+
+			& + [class*="container"] {
+
+			}
+		}
+
+		@media all and ( min-width: 992px ) {
+
+			& .entry-content {
+				background: #fff;
+				padding: 2.4rem 2rem;
+				border: 1px solid @gray_border;
+				border-radius: 5px;
+				margin-top: -50px;
+
+				& .wpforms-container {
+					background: #fff;
+					padding: 1rem 1rem 0;
+					border: none;
+
+					input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+					textarea,
+					select {
+						background: @gray !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page.careers-page,
+.page.contact-page {
+
+	& .site-content {
+
+		& > header {
+			padding: 2rem 0 !important;
+			margin-bottom: 2rem;
+
+			@media all and ( min-width: 768px ) {
+				padding: 3.8rem 0 !important;
+				margin-bottom: 2rem;
+			}
+
+			@media all and ( min-width: 992px ) {
+				padding: 4rem 0 6rem !important;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.page.careers-page {
+
+	& .site-content {
+
+		& > header {
+			background-color: @alt_purple;
+			background-image: url( 'includes/assets/images/icons/skills-icon-bg.svg' );
+			background-repeat: repeat;
+			background-position: -20px top;
+			background-size: 204px auto;
+
+			& .page-title,
+			& .lead {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+.page.contact-page {
+
+	& .site-content {
+
+		& > header {
+		}
+	}
+}

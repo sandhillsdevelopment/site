@@ -1,0 +1,361 @@
+.front-page {
+
+	& #masthead {
+		background-color: @night;
+		background-image: url( 'includes/assets/images/shapes/sandhills.svg' ),
+		url( 'includes/assets/images/shapes/stars.svg' ),
+		url( 'includes/assets/images/shapes/moon-light.svg' );
+		background-repeat: no-repeat, repeat, no-repeat;
+		background-size: 102% auto, 1440px auto, 800px auto;
+		background-position: center bottom, left top, -300px -190px;
+		color: #fff;
+		padding-bottom: 6rem;
+
+		@media all and ( min-width: 576px ) {
+			padding-bottom: 10rem;
+		}
+
+		@media all and ( min-width: 1200px ) {
+			padding-bottom: 17rem;
+		}
+
+		& nav[id*="nav-secondary"] {
+
+			& .nav-item {
+
+				& .nav-link {
+					color: @night_text;
+					transition: color .2s;
+
+					&:hover {
+						color: #fff;
+						opacity: 1 !important;
+					}
+				}
+			}
+		}
+
+		& .hero {
+
+			& .tagline-container {
+				margin: 0 auto;
+
+				& .tagline-heading {
+					color: #fff;
+				}
+
+				& .tagline {
+					margin-bottom: 1rem;
+
+					& .bold-description {
+						color: @night_text;
+						margin: 0 auto 2rem;
+
+						& a {
+							color: #fff;
+							text-decoration: none;
+							border-bottom: 2px dotted rgba(255,255,255,.3);
+							transition: border-bottom-color .2s;
+
+							&:hover {
+								border-bottom-color: rgba(255,255,255,.7);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		& .sandhills-goals {
+
+			& [class*="col"] {
+				margin: 0 auto 4rem;
+				max-width: 600px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				@media all and ( min-width: 576px ) {
+					margin-bottom: 6rem;
+				}
+
+				@media all and ( min-width: 992px ) {
+					margin-bottom: 0;
+				}
+			}
+
+			& .sandhills-goal {
+				position: relative;
+				background: rgba(255, 255, 255, .04);
+				color: #fff;
+				text-align: center;
+				padding: 4rem 2rem 2rem;
+				border-radius: 5px;
+				height: 100%;
+
+				@media all and ( min-width: 576px ) {
+					padding-top: 4.5rem;
+				}
+
+				@media all and ( min-width: 768px ) {
+					padding-top: 5rem;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					padding: 5rem 3rem 2.5rem;
+				}
+
+				& .goal-icon {
+					position: absolute;
+					top: -30px;
+					left: 50%;
+					width: 60px;
+					margin-left: -30px;
+					height: auto;
+
+					@media all and ( min-width: 576px ) {
+						top: -40px;
+						left: 50%;
+						width: 80px;
+						margin-left: -40px;
+					}
+				}
+
+				& .goal-title {
+					color: #fff;
+					font-size: 18px;
+					margin-bottom: 2rem;
+
+					@media all and ( min-width: 576px ) {
+						font-size: 22px;
+					}
+
+					@media all and ( min-width: 992px ) {
+						font-size: 18px;
+					}
+
+					@media all and ( min-width: 1200px ) {
+						font-size: 22px;
+					}
+
+					&:after {
+						background: @title_border_stars;
+						bottom: -1.2rem
+					}
+				}
+
+				& .goal-description {
+					color: @night_text;
+					font-size: 18px;
+
+					& a {
+						color: #fff;
+						text-decoration: none;
+						border-bottom: 2px dotted rgba(255,255,255,.3);
+						transition: border-bottom-color .2s;
+
+						&:hover {
+							border-bottom-color: rgba(255,255,255,.7);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& .quick-info {
+		background: @gray;
+		font-size: 15px;
+
+		&.about-info {
+			padding: 1.2rem 0 1.3rem;
+			border-bottom: 2px solid @gray_border;
+			margin-top: -1px;
+
+			& .shd-founded {
+				--fa-primary-color: silver;
+				--fa-secondary-color: #CFC13A;
+			}
+
+			& .shd-global {
+				--fa-primary-color: #50997B;
+				--fa-secondary-color: #4CBBEE;
+			}
+
+			& .shd-headquarters {
+				--fa-secondary-color: #DF4E4E;
+				--fa-primary-opacity: 0.00;
+				--fa-secondary-opacity: 1;
+			}
+		}
+
+		&.projects-info {
+			padding: 1.3rem 0;
+			border-top: 2px solid @gray_border;
+
+			& .email-us {
+				--fa-primary-color: #649ACE;
+				--fa-secondary-color: @sand;
+				--fa-secondary-opacity: 1;
+			}
+		}
+
+		& .quick-detail {
+			display: block;
+			text-align: center;
+			margin-right: 1rem;
+
+			@media all and ( min-width: 768px ) {
+				display: inline-block;
+				text-align: left;
+			}
+
+			& [class*="fa-"] {
+				display: none;
+				font-size: 120%;
+				margin-right: 8px;
+
+				@media all and ( min-width: 768px ) {
+					display: inline;
+				}
+			}
+
+			& > .temp-hide {
+				display: inline;
+
+				@media all and ( min-width: 768px ) and ( max-width: 1199px ) {
+					display: none;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					display: inline;
+				}
+			}
+
+			& .quick-info-link {
+				text-decoration: underline;
+
+				& .temp-hide {
+					display: inline;
+
+					@media all and ( min-width: 768px ) and ( max-width: 991px ) {
+						display: none;
+					}
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	/* Projects CSS in projects.less */
+
+	& .team-section,
+	& .apply-section {
+
+		& .generic-heading {
+			font-size: 1.5rem;
+			line-height: 1;
+
+			@media all and ( min-width: 576px ) {
+				font-size: 2rem;
+			}
+
+			@media all and ( min-width: 992px ) {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	& .team-section {
+		background: @night url( 'includes/assets/images/shapes/world-map-bg.svg' ) no-repeat center 3.5rem;
+		background-size: 97% auto;
+		color: @night_text;
+
+		@media all and ( min-width: 576px ) {
+			background-position-y: 3.5rem;
+			background-size: 630px auto;
+		}
+
+		@media all and ( min-width: 992px ) {
+			background-position-y: 4rem;
+			background-size: 530px auto;
+		}
+
+		@media all and ( min-width: 1200px ) {
+			background-position-y: 5rem;
+			background-size: 730px auto;
+		}
+
+		& .generic-heading {
+			color: #fff;
+		}
+	}
+
+	& .apply-section {
+		background-color: @gray;
+		background-image: url( 'includes/assets/images/icons/skills-icon-bg-light.svg' );
+		background-repeat: repeat;
+		background-position: -20px 10px;
+		background-size: 204px auto;
+		border-bottom: 1px solid @gray_border;
+
+		& .shd-button {
+			background: @alt_purple;
+		}
+	}
+
+	& .blog-section {
+
+		& .content-aside-split {
+
+			 & .content-inner {
+				 position: relative;
+
+				 & .content-title {
+
+					 @media all and ( min-width: 1200px ) {
+						 font-size: 3.4rem;
+					 }
+				 }
+
+				 & .shd-button {
+					 margin-top: 1.5rem;
+				 }
+
+				 & .link-more {
+					 display: none;
+				 }
+			 }
+
+			& .aside-split {
+
+				& .aside-inner {
+
+					& .more-posts-graphic {
+						display: none;
+						position: absolute;
+						bottom: -20px;
+						right: -5px;
+						width: 100px;
+						height: auto;
+						background-color: @blue;
+						box-shadow: 0 0 0 3px @gray_border;
+						border-radius: 50%;
+
+						@media all and ( min-width: 992px ) {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& #content {
+		padding-bottom: 0;
+	}
+}

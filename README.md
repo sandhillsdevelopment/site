@@ -2,7 +2,7 @@
 
 Designer/Person of contact: [Sean Davis](https://github.com/SDavisMedia)
 
-Parent theme: [Themedd v1.0.x](https://github.com/easydigitaldownloads/themedd)
+Parent theme: [Themedd v1.1.x](https://github.com/easydigitaldownloads/themedd)
 
 #### Reporting issues
 If you experience an issue on the site, feel free to open an [Issue](https://github.com/sandhillsdevelopment/SHD-Site/issues) detailing the problem. If you are unsure of what you're seeing, contact 

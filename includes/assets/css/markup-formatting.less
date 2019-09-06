@@ -1,0 +1,210 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.generic-heading {
+	color: @blue_title;
+	.branding;
+	margin-bottom: 1rem;
+}
+
+.generic-heading {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+h1, .h1 {
+	font-size: 2.53rem;
+}
+
+h2, .h2 {
+	font-size: 1.75rem;
+}
+
+h3, .h3 {
+	font-size: 1.5rem;
+}
+
+h4, .h4 {
+	font-size: 1.25rem;
+}
+
+h5, .h5,
+h6, .h6 {
+	font-size: 1rem;
+}
+
+p {
+	margin-bottom: 1.5rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	& + h1,
+	& + h2,
+	& + h3,
+	& + h4,
+	& + h5,
+	& + h6 {
+		margin-top: 2rem;
+	}
+}
+
+a {
+	color: @blue;
+
+	&:hover {
+		color: @blue;
+	}
+}
+
+.entry-content,
+.comment-content {
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	& blockquote,
+	address {
+		color: @grayish_blue;
+		font-style: italic;
+		margin: 0 0 1.5rem;
+	}
+
+	& cite {
+		display: block;
+		color: @night_light;
+		font-size: 80%;
+		text-align: right;
+		margin-top: .5rem;
+	}
+
+	& table {
+		font-size: 1rem;
+		border: 2px solid @gray_border;
+		margin-bottom: 2rem;
+
+		& th {
+			.branding;
+		}
+
+		& th,
+		td {
+			padding: 15px;
+		}
+	}
+
+	& dl {
+		margin-bottom: 1.5rem;
+
+		& dt {
+			.branding;
+		}
+
+		& dd {
+			font-size: 1rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	& ul,
+	ol {
+		list-style-position: inside;
+		margin-bottom: 2rem;
+	}
+
+	& pre {
+		background: @gray;
+		color: @night;
+		font-size: 1rem;
+		padding: 1rem;
+		border-radius: 5px;
+	}
+
+	& q {
+		color: @grayish_blue;
+		font-style: italic;
+	}
+
+	& img {
+
+		&.alignleft {
+			margin-right: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		&.alignright {
+			margin-bottom: 1rem;
+			margin-left: 1rem;
+		}
+	}
+
+	& figcaption {
+		color: @grayish_blue;
+		font-size: 1rem;
+	}
+
+	& .page-links {
+		.branding;
+		font-size: 1rem;
+
+		& a {
+			color: @grayish_blue;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	& [for*="pwbox"] {
+		display: block;
+
+		& input {
+			display: block;
+		}
+	}
+
+	& .gallery {
+
+		& .gallery-item {
+
+			& .gallery-icon {
+				margin: 0;
+
+				& img {
+					border-radius: 3px;
+					box-shadow: 0 0 0 3px @gray_border;
+				}
+			}
+		}
+	}
+
+	& .edd-embedded-video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+		margin: 0 0 25px;
+	}
+
+	& .edd-embedded-video-wrapper iframe,
+	.edd-embedded-video-wrapper object,
+	.edd-embedded-video-wrapper embed,
+	.edd-embedded-video-wrapper video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
