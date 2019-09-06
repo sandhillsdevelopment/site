@@ -2,8 +2,6 @@
 /**
  * Front page hero section content
  */
-
-$projects = shd_get_our_projects();
 ?>
 
 <div class="container">
@@ -31,14 +29,14 @@ $projects = shd_get_our_projects();
 				<div class="sandhills-goal">
 					<img class="goal-icon" src="<?php echo SHD_IMAGES . 'icons/empowering-businesses-icon.svg'; ?>">
 					<h3 class="goal-title title-border">Empowering businesses</h3>
-					<p class="goal-description">We are the team of humans behind <a href="<?php echo $projects['awp']['url']; ?>">AffiliateWP</a>, <a href="<?php echo $projects['edd']['url']; ?>">Easy Digital Downloads</a>, <a href="<?php echo $projects['rcp']['url']; ?>">Restrict Content Pro</a>, <a href="<?php echo $projects['sc']['url']; ?>">Sugar Calendar</a>, <a href="<?php echo $projects['wpsp']['url']; ?>">WP Simple Pay</a>, <a href="<?php echo $projects['sb']['url']; ?>">SellBird</a>, and more.</p>
+					<p class="goal-description">We are the team of humans behind <a href="https://affiliatewp.com/">AffiliateWP</a>, <a href="https://easydigitaldownloads.com/">Easy Digital Downloads</a>, <a href="https://restrictcontentpro.com/">Restrict Content Pro</a>, <a href="https://sugarcalendar.com/">Sugar Calendar</a>, <a href="https://wpsimplepay.com/">WP Simple Pay</a>, <a href="https://sellbird.com">SellBird</a>, and more.</p>
 				</div>
 			</div>
 			<div class="col-lg-4">
 				<div class="sandhills-goal">
 					<img class="goal-icon" src="<?php echo SHD_IMAGES . 'icons/following-passions-icon.svg'; ?>">
 					<h3 class="goal-title title-border">Following passions</h3>
-					<p class="goal-description">Just like you, we have real passions. One of our passions happens to be beer. <a href="<?php echo $projects['beer']['url']; ?>">Sandhills Brewing</a> attracts those who love our barrel aged wild ales.</p>
+					<p class="goal-description">Just like you, we have real passions. One of our passions happens to be beer. <a href="https://sandhillsbrewing.com/">Sandhills Brewing</a> attracts those who love our barrel aged wild ales.</p>
 				</div>
 			</div>
 		</div>
