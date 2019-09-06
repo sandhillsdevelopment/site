@@ -1,17 +1,28 @@
-.about-page {
+.page.about-page {
+
+	& .site-content {
+
+		& .entry-content {
+			padding: 0;
+			border: none;
+			margin: 0;
+			box-shadow: unset;
+		}
+	}
 
 	& .about-section {
+		background: #fff;
 
 		@media all and ( min-width: 1200px ) {
 			padding: 5rem 0 7rem;
 		}
 
-		& .generic-heading {
-			color: @grayish_blue;
-			font-size: 1.4rem;
-		}
-
 		& .quick-facts {
+			margin-bottom: 4rem;
+
+			@media all and ( min-width: 992px ) {
+				margin-bottom: 0;
+			}
 
 			& .facts-wrap {
 				margin-top: .15rem;
@@ -20,6 +31,7 @@
 	}
 
 	& .team-section {
+		/* stars background applied via "stars" class on element */
 
 		& .team-sandhills {
 
@@ -114,10 +126,14 @@
 					& .member-graphic {
 						background-image: url( 'includes/assets/images/icons/skills-icon-bg.svg' );
 						background-repeat: repeat;
-						background-position: -20px top;
-						background-size: 220px 220px;
+						background-position: left 5px;
+						background-size: 204px auto;
 						border-radius: 5px 5px 0 0;
-						min-height: 110px;
+						min-height: 70px;
+
+						@media all and ( min-width: 576px ) {
+							min-height: 110px;
+						}
 					}
 
 					& .member-info {
@@ -214,6 +230,7 @@
 	}
 
 	& .timeline-section {
+		background: #fff;
 		padding: 0;
 
 		& .timeline-background-wrap {
@@ -488,30 +505,6 @@
 									line-height: 92px;
 									text-shadow: 1px 1px 3px rgba(0,0,0,.2);
 								}
-
-								&.purple {
-									background-color: @alt_purple;
-								}
-
-								&.red {
-									background-color: @alt_red;
-								}
-
-								&.green {
-									background-color: @alt_green;
-								}
-
-								&.teal {
-									background-color: @alt_teal;
-								}
-
-								&.pink {
-									background-color: @alt_pink;
-								}
-
-								&.gold {
-									background-color: @alt_gold;
-								}
 							}
 
 							& .events-inner {
@@ -532,7 +525,7 @@
 									& .event-description {
 
 										& a {
-											color: #c4e0cb;
+											color: #ade1ba;
 											text-decoration: underline;
 
 											&:hover {
@@ -541,7 +534,7 @@
 										}
 
 										& .member {
-											color: #e0cae8;
+											color: #e9c3ae;
 											font-weight: 600;
 										}
 									}
@@ -555,15 +548,24 @@
 
 								& .additional-event {
 									position: relative;
-									background: @gray;
-									color: @night_light;
+									background: #99a6b1;
+									color: #fff;
 									padding: 1.5rem;
 									border-radius: 5px;
 									margin-bottom: 1.5rem;
 
+									@media all and ( min-width: 768px ) {
+										background: @gray;
+										color: @night_light;
+									}
+
 									& a {
-										color: #849EB8;
+										color: @gray;
 										text-decoration: underline;
+
+										@media all and ( min-width: 768px ) {
+											color: #849EB8;
+										}
 
 										&:hover {
 											text-decoration: none;
@@ -606,14 +608,23 @@
 				margin-bottom: 1.5rem;
 
 				& .future-event {
-					background: @gray;
-					color: @grayish_blue;
+					background: #99a6b1;
+					color: #fff;
 					padding: 1.5rem;
 					border-radius: 5px;
 
+					@media all and ( min-width: 768px ) {
+						background: @gray;
+						color: @night_light;
+					}
+
 					& a {
-						color: #74828F;
+						color: @gray;
 						text-decoration: underline;
+
+						@media all and ( min-width: 768px ) {
+							color: #849EB8;
+						}
 
 						&:hover {
 							text-decoration: none;

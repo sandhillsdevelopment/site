@@ -119,6 +119,11 @@ section[class*="-section"] {
 	@media all and ( min-width: 576px ) {
 		padding: 3.8rem 0 2rem;
 	}
+
+	& .bold-description {
+		margin: 0 auto;
+		max-width: 800px;
+	}
 }
 
 .stars {
@@ -314,12 +319,6 @@ section[class*="-section"] {
 				@media all and ( min-width: 992px ) {
 					display: block;
 				}
-
-				& .fad {
-					color: @blue;
-					font-size: 90%;
-					margin-right: 10px;
-				}
 			}
 
 			& .aside-description {
@@ -359,11 +358,20 @@ section[class*="-section"] {
 }
 
 .small-content-aside-split {
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
+
+	@media all and ( min-width: 576px ) {
+		margin-bottom: 3rem;
+	}
 
 	& .small-aside-split {
+		display: none;
 		padding-top: 2px;
 		padding-right: 0;
+
+		@media all and ( min-width: 576px ) {
+			display: block;
+		}
 
 		& .small-aside-inner {
 			position: relative;
@@ -379,7 +387,10 @@ section[class*="-section"] {
 		& .small-content-inner {
 			position: relative;
 			font-size: 15px;
-			padding-left: 1rem;
+
+			@media all and ( min-width: 576px ) {
+				padding-left: 1rem;
+			}
 
 			& .small-content-title {
 				display: inline-block;
@@ -393,38 +404,6 @@ section[class*="-section"] {
 					border-radius: 3px;
 					margin-left: 0;
 					width: 60px;
-				}
-			}
-		}
-	}
-}
-
-.content-item-wrap {
-
-	& .content-item-text {
-
-		& .content-item-text-inner {
-
-			& .content-item-title {
-
-				&:hover {
-				}
-			}
-
-			& .link-more {
-				display: none;
-			}
-
-			& .content-item-text-link {
-				display: line-block;
-				color: @grayish_blue;
-				.branding;
-				font-size: 1rem;
-				line-height: 1;
-				text-decoration: underline;
-
-				&:hover {
-					text-decoration: none;
 				}
 			}
 		}

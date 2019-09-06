@@ -56,9 +56,9 @@ get_header();
 	<section class="team-section">
 		<div class="container">
 			<div class="row justify-content-around text-center">
-				<div class="col-9">
+				<div class="col-md-9">
 					<div class="our-people">
-						<span class="generic-heading">Learn about Sandhills</span>
+						<span class="generic-heading">Our global team</span>
 						<p>Freedom is important to us. We work from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize healthy workplaces. Our globally-distributed team consists of <?php echo count( shd_get_our_people() ); ?> professionals located in 7 countries across the globe.</p>
 						<p><a class="shd-button" href="<?php echo home_url( '/about/' ); ?>">About Sandhills</a></p>
 					</div>
@@ -67,12 +67,12 @@ get_header();
 		</div>
 	</section>
 
-	<section class="commitment-section">
+	<section class="apply-section">
 		<div class="container">
 			<div class="row justify-content-around text-center">
-				<div class="col-9">
+				<div class="col-md-9">
 					<div class="our-commitment">
-						<span class="generic-heading">Our top priority</span>
+						<span class="generic-heading">Sandhills careers</span>
 						<p>We're committed to the well-being of our people. That allows us to collectively focus our efforts on positive experiences for our customers, and freeing up time for us all. If you're interested in being part of our team, do not hesitate to submit an application for consideration.</p>
 						<p><a class="shd-button" href="<?php echo home_url( '/careers/' ); ?>">Work at Sandhills</a></p>
 					</div>
@@ -115,7 +115,7 @@ get_header();
 
 						<div class="col-lg-4 aside-split">
 							<div class="aside-inner d-flex flex-column">
-								<span class="aside-title"><i class="fad fa-chevron-circle-down"></i>More from the blog</span>
+								<span class="aside-title">More from the blog</span>
 								<ul class="aside-links">
 
 									<?php

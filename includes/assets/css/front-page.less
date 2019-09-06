@@ -125,6 +125,7 @@
 				& .goal-title {
 					color: #fff;
 					font-size: 18px;
+					margin-bottom: 2rem;
 
 					@media all and ( min-width: 576px ) {
 						font-size: 22px;
@@ -140,6 +141,7 @@
 
 					&:after {
 						background: @title_border_stars;
+						bottom: -1.2rem
 					}
 				}
 
@@ -251,24 +253,16 @@
 
 	/* Projects CSS in projects.less */
 
-	& .team-section {
-		background: @night url( 'includes/assets/images/shapes/world-map-bg.svg' ) no-repeat center 3rem;
-		background-size: 630px auto;
-		color: @night_text;
-
-		@media all and ( min-width: 992px ) {
-			background-position-y: 3.5rem;
-			background-size: 530px auto;
-		}
-
-		@media all and ( min-width: 1200px ) {
-			background-position-y: 4rem;
-			background-size: 730px auto;
-		}
+	& .team-section,
+	& .apply-section {
 
 		& .generic-heading {
-			color: #fff;
-			font-size: 2rem;
+			font-size: 1.5rem;
+			line-height: 1;
+
+			@media all and ( min-width: 576px ) {
+				font-size: 2rem;
+			}
 
 			@media all and ( min-width: 992px ) {
 				font-size: 3rem;
@@ -276,20 +270,41 @@
 		}
 	}
 
-	& .commitment-section {
+	& .team-section {
+		background: @night url( 'includes/assets/images/shapes/world-map-bg.svg' ) no-repeat center 3.5rem;
+		background-size: 97% auto;
+		color: @night_text;
+
+		@media all and ( min-width: 576px ) {
+			background-position-y: 3.5rem;
+			background-size: 630px auto;
+		}
+
+		@media all and ( min-width: 992px ) {
+			background-position-y: 4rem;
+			background-size: 530px auto;
+		}
+
+		@media all and ( min-width: 1200px ) {
+			background-position-y: 5rem;
+			background-size: 730px auto;
+		}
+
+		& .generic-heading {
+			color: #fff;
+		}
+	}
+
+	& .apply-section {
 		background-color: @gray;
 		background-image: url( 'includes/assets/images/icons/skills-icon-bg-light.svg' );
 		background-repeat: repeat;
-		background-position: -20px top;
-		background-size: 220px 220px;
-		border-bottom: 2px solid @gray_border;
+		background-position: -20px 10px;
+		background-size: 204px auto;
+		border-bottom: 1px solid @gray_border;
 
-		& .generic-heading {
-			font-size: 2rem;
-
-			@media all and ( min-width: 992px ) {
-				font-size: 3rem;
-			}
+		& .shd-button {
+			background: @alt_purple;
 		}
 	}
 

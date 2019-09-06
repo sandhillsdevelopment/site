@@ -10,7 +10,7 @@ $projects = shd_get_our_projects();
 	<div class="hero">
 		<div class="row justify-content-around text-center">
 			<div class="tagline-container col-lg-8">
-				<h1 class="tagline-heading bold-title">Crafting Ingenuity</h1>
+				<h1 class="tagline-heading bold-title">Crafting <span class="title-highlight">Ingenuity</span></h1>
 				<div class="tagline">
 					<p class="bold-description">With <a href="<?php echo home_url( '/commitments/' ); ?>">commitment</a> and a deep appreciation for the human element, we aim to craft superior experiences through ingenuity.</p>
 					<p><a class="shd-button" href="<?php echo home_url( '/projects/'); ?>">view our projects</a></p>

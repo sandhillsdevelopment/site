@@ -10,7 +10,7 @@ get_header();
 		<div class="container">
 			<div class="hero">
 				<header class="row justify-content-around text-center">
-					<div class="col-lg-8">
+					<div class="col-lg-10">
 						<h1 class="bold-title">About <span class="title-highlight">Sandhills</span></h1>
 						<p class="bold-description">Time is our single most valuable and limited asset. Our goal is not to waste it. We work to live, for time is one thing we cannot waste. ⏳</p>
 					</div>
@@ -31,7 +31,7 @@ get_header();
 										<img class="about-icon" src="<?php echo SHD_IMAGES . 'icons/toast-icon.svg'; ?>">
 									</div>
 								</div>
-								<div class="col-lg-9 col-sm-10 col-9 small-content-split">
+								<div class="col-lg-9 col-sm-10 col-12 small-content-split">
 									<div class="small-content-inner">
 										<span class="small-content-title title-border"><?php echo shd_get_years_in_business(); ?> years in business</span>
 										<p class="small-content-description">As a self-funded company, we're proud of our humble beginnings and excited for our future growth.</p>
@@ -44,7 +44,7 @@ get_header();
 										<img class="about-icon" src="<?php echo SHD_IMAGES . 'icons/brick-and-mortar-icon.svg'; ?>">
 									</div>
 								</div>
-								<div class="col-lg-9 col-sm-10 col-9 small-content-split">
+								<div class="col-lg-9 col-sm-10 col-12 small-content-split">
 									<div class="small-content-inner">
 										<span class="small-content-title title-border"><?php echo count( shd_get_our_people() ); ?> team members</span>
 										<p class="small-content-description">Every day, our team of passionate, dedicated humans come together to build a company we truly believe in.</p>
@@ -57,7 +57,7 @@ get_header();
 										<img class="about-icon" src="<?php echo SHD_IMAGES . 'icons/globally-distributed-icon.svg'; ?>">
 									</div>
 								</div>
-								<div class="col-lg-9 col-sm-10 col-9 small-content-split">
+								<div class="col-lg-9 col-sm-10 col-12 small-content-split">
 									<div class="small-content-inner">
 										<span class="small-content-title title-border">7 different countries</span>
 										<p class="small-content-description">Sandhills is a globally-distributed company with team members on 4 different continents.</p>
@@ -70,7 +70,7 @@ get_header();
 										<img class="about-icon" src="<?php echo SHD_IMAGES . 'icons/location-icon.svg'; ?>">
 									</div>
 								</div>
-								<div class="col-lg-9 col-sm-10 col-9 small-content-split">
+								<div class="col-lg-9 col-sm-10 col-12 small-content-split">
 									<div class="small-content-inner">
 										<span class="small-content-title title-border">Headquartered In "Hutch"</span>
 										<p class="small-content-description">Hutch is located in a region of Kansas known for its prairies and hills called the Sandhills. Get it?</p>
@@ -165,7 +165,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date purple">
+									<div class="new-year-date">
 										<span class="the-year">2009</span>
 									</div>
 									<div class="events-inner">
@@ -181,7 +181,7 @@ get_header();
 								<div class="col-md-6 events-col">
 									<div class="events-inner">
 										<div class="single-event-wrap">
-											<p class="event-description">Fueled by coffee and interrupted by school work, Pippin begins building the foundation of what would eventually become Sandhills Development, LLC.</p>
+											<p class="event-description">Fueled by coffee and interrupted by school work, <span class="member">Pippin</span> begins building the foundation of what would eventually become Sandhills Development, LLC.</p>
 										</div>
 										<div class="single-event-wrap">
 											<p class="event-description">Over a few years, custom solutions built for clients begin to take shape as standalone WordPress plugins.</p>
@@ -227,7 +227,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date gold">
+									<div class="new-year-date">
 										<span class="the-year">2012</span>
 									</div>
 									<div class="events-inner">
@@ -267,7 +267,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event order-md-2">
-									<div class="new-year-date green">
+									<div class="new-year-date">
 										<span class="the-year">2014</span>
 									</div>
 									<div class="events-inner">
@@ -304,7 +304,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date red">
+									<div class="new-year-date">
 										<span class="the-year">2015</span>
 									</div>
 									<div class="events-inner">
@@ -338,7 +338,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event order-md-2">
-									<div class="new-year-date teal">
+									<div class="new-year-date">
 										<span class="the-year">2016</span>
 									</div>
 									<div class="events-inner">
@@ -372,7 +372,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date pink">
+									<div class="new-year-date">
 										<span class="the-year">2017</span>
 									</div>
 									<div class="events-inner">
@@ -412,7 +412,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event order-md-2">
-									<div class="new-year-date purple">
+									<div class="new-year-date">
 										<span class="the-year">2018</span>
 									</div>
 									<div class="events-inner">
@@ -461,7 +461,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date pink">
+									<div class="new-year-date">
 										<span class="the-year">2019</span>
 									</div>
 									<div class="events-inner">

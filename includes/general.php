@@ -109,7 +109,7 @@ function shd_excerpt_length( $length ) {
 		return 50;
 	}
 
-	return 30;
+	return 25;
 }
 add_filter( 'excerpt_length', 'shd_excerpt_length', 999 );
 

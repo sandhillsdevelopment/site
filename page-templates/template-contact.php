@@ -17,7 +17,6 @@ themedd_header();
 
 						<?php
 						do_action( 'themedd_entry_article_start' );
-						themedd_post_thumbnail();
 						?>
 
 						<div class="entry-content content-wrapper">

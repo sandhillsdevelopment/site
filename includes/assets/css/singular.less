@@ -13,14 +13,29 @@
 
 			& .post-title,
 			.page-title {
-				font-size: 2rem;
+				font-size: 2.53rem;
+				line-height: 1.2;
 
 				@media all and ( min-width: 768px ) {
-					font-size: 2.53rem;
+					font-size: 3.4rem;
 				}
 
 				@media all and ( min-width: 1200px ) {
-					font-size: 3.4rem;
+					font-size: 4.8rem;
+				}
+			}
+
+			& .lead {
+				display: inline-block;
+				color: @grayish_blue;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 1.6;
+				max-width: 800px;
+				margin: 0 auto;
+
+				@media all and ( min-width: 1200px ) {
+					font-size: 22px;
 				}
 			}
 		}
@@ -52,29 +67,7 @@
 
 		& > header {
 			background: @gray;
-			border: 2px solid @gray_border;
-			border-width: 0 0 2px;
-
-			& .entry-meta {
-				color: @grayish_blue !important;
-				.branding;
-				font-size: 1rem;
-				line-height: 1;
-
-				& .posted-on {
-					display: inline-block;
-					line-height: 1;
-				}
-
-				& a {
-					color: @grayish_blue !important;
-					cursor: text;
-
-					&:hover {
-						text-decoration: none;
-					}
-				}
-			}
+			border-bottom: 1px solid @gray_border;
 		}
 
 		& #primary {
@@ -150,11 +143,12 @@
 .page {
 
 	& .site-content {
+		padding-bottom: 8rem;
 
 		& > header {
 
 			& .page-title {
-				margin-bottom: 0;
+				margin-bottom: 1rem;
 
 				@media all and ( min-width: 768px ) {
 					font-size: 3.4rem;
@@ -163,13 +157,21 @@
 				@media all and ( min-width: 1200px ) {
 					font-size: 4.8rem;
 				}
+
+				&:last-child {
+
+					@media all and ( min-width: 992px ) {
+						margin-bottom: 1.5rem;
+					}
+
+					@media all and ( min-width: 1200px ) {
+						margin-bottom: 3rem;
+					}
+				}
 			}
 
 			& .lead {
 				color: @grayish_blue !important;
-				.branding;
-				font-size: 1rem;
-				line-height: 1;
 
 				& .posted-on {
 					display: inline-block;
@@ -182,6 +184,33 @@
 
 					&:hover {
 						text-decoration: none;
+					}
+				}
+			}
+
+			& + [class*="container"] {
+
+			}
+		}
+
+		@media all and ( min-width: 992px ) {
+
+			& .entry-content {
+				background: #fff;
+				padding: 2.4rem 2rem;
+				border: 1px solid @gray_border;
+				border-radius: 5px;
+				margin-top: -50px;
+
+				& .wpforms-container {
+					background: #fff;
+					padding: 1rem 1rem 0;
+					border: none;
+
+					input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+					textarea,
+					select {
+						background: @gray !important;
 					}
 				}
 			}
@@ -208,30 +237,6 @@
 				margin-bottom: 0;
 			}
 		}
-
-		@media all and ( min-width: 992px ) {
-
-			& .entry-content {
-				background: #fff;
-				padding: 2rem;
-				border: 1px solid @gray_border;
-				border-radius: 5px;
-				margin-top: -4rem;
-				box-shadow: 0 0 15px rgba(75, 101, 126,.05);
-
-				& .wpforms-container {
-					background: #fff;
-					padding: 1rem 1rem 0;
-					border: none;
-
-					input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
-					textarea,
-					select {
-						background: @gray !important;
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -240,18 +245,15 @@
 	& .site-content {
 
 		& > header {
-			background-color: @alt_blue;
+			background-color: @alt_purple;
 			background-image: url( 'includes/assets/images/icons/skills-icon-bg.svg' );
 			background-repeat: repeat;
 			background-position: -20px top;
-			background-size: 220px 220px;
+			background-size: 204px auto;
 
-			& .page-title {
-				color: #fff;
-			}
-
+			& .page-title,
 			& .lead {
-				color: #cbd7e2 !important;
+				color: #fff !important;
 			}
 		}
 	}

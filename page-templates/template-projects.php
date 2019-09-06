@@ -10,7 +10,7 @@ get_header();
 		<div class="container">
 			<div class="hero">
 				<header class="row justify-content-around text-center">
-					<div class="col-lg-8">
+					<div class="col-lg-10">
 						<h1 class="bold-title">Sandhills <span class="title-highlight">projects</span></h1>
 						<p class="bold-description">From 7 different countries across the globe, the Sandhills Development team works together to develop software, create resources, and brew beer. 🍻</p>
 					</div>

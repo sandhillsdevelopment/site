@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="hero">
 			<div class="blog-row row justify-content-around text-center">
-				<div class="col-lg-8">
+				<div class="col-lg-10">
 
 					<?php
 					if ( have_posts() ) :
@@ -16,12 +16,9 @@
 							?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-								<span class="bold-subtitle">The latest from Sandhills Blog</span>
 								<a class="bold-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								<div class="bold-description"><?php the_excerpt(); ?></div>
 								<a class="aside-button shd-button" href="<?php the_permalink(); ?>">Continue reading</a>
-
 							</article>
 
 						<?php

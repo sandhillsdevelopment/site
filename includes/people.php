@@ -39,6 +39,11 @@ function shd_get_our_people() {
 			'nickname'    => 'Phil D.',
 			'year_joined' => '2018',
 		),
+		'michael'  => array(
+			'name'        => 'Michael Beil',
+			'role'        => 'Support Technician',
+			'year_joined' => '2015',
+		),
 		'lisa'     => array(
 			'name'        => 'Lisa Gibson',
 			'role'        => 'Marketing Lead',
@@ -105,11 +110,6 @@ function shd_get_our_people() {
 			'name'        => 'Tunbosun Ayinla',
 			'role'        => 'Developer',
 			'year_joined' => '2018',
-		),
-		'michael'  => array(
-			'name'        => 'Michael Beil',
-			'role'        => 'Support Technician',
-			'year_joined' => '2019',
 		),
 		'spencer'  => array(
 			'name'        => 'Spencer Finnell',

@@ -2,18 +2,17 @@
 
 	& #masthead {
 		background-color: @night;
-		background-image: url( 'includes/assets/images/shapes/sandhills.svg' ),
-		url( 'includes/assets/images/shapes/stars.svg' ),
+		background-image: url( 'includes/assets/images/shapes/stars.svg' ),
 		url( 'includes/assets/images/shapes/moon-light.svg' );
-		background-repeat: no-repeat, repeat, no-repeat;
-		background-size: 102% auto, 1440px auto, 800px auto;
-		background-position: center bottom, left top, -300px -190px;
+		background-repeat: repeat, no-repeat;
+		background-size: 1440px auto, 800px auto;
+		background-position: left top, -300px -190px;
 		color: #fff;
 
 		& .hero {
 
 			@media all and ( min-width: 1200px ) {
-				padding: 4rem 0 14rem;
+				padding: 4rem 0 6rem;
 			}
 
 			& .bold-subtitle {
@@ -26,16 +25,18 @@
 
 			& .bold-title {
 				color: #fff;
-				font-size: 2rem;
+				font-size: 2.53rem;
+				line-height: 1.2;
+				margin-bottom: 1rem;
 				text-decoration: none;
 				transition: opacity .2s;
 
 				@media all and ( min-width: 768px ) {
-					font-size: 2.53rem;
+					font-size: 3.4rem;
 				}
 
 				@media all and ( min-width: 1200px ) {
-					font-size: 3.4rem;
+					font-size: 4.8rem;
 				}
 
 				&:hover {
@@ -184,7 +185,7 @@
 			& .content-item-graphic {
 				display: none;
 
-				@media all and ( min-width: 768px ) {
+				@media all and ( min-width: 992px ) {
 					display: block;
 				}
 
@@ -198,7 +199,7 @@
 					margin-left: auto;
 					width: 20px;
 					height: 20px;
-					box-shadow: 0 0 0 3px @dark_gray;
+					box-shadow: 0 0 0 2px @dark_gray;
 					border-radius: 50%;
 				}
 			}
@@ -208,7 +209,7 @@
 				& .content-item-text-inner {
 					background: none;
 
-					@media all and ( min-width: 768px ) {
+					@media all and ( min-width: 992px ) {
 						padding: 0 5rem 0 0;
 					}
 
@@ -224,7 +225,7 @@
 							color: @blue_title;
 							text-decoration: none;
 
-							--fa-primary-color: @blue_title;
+							--fa-primary-color: @blue;
 						}
 
 						& [class*="fad"] {
@@ -235,7 +236,7 @@
 							transition: color .2s;
 						}
 
-						--fa-primary-color: @blue;
+						--fa-primary-color: @blue_title;
 						--fa-secondary-color: @grayish_blue;
 						--fa-primary-opacity: 1;
 						--fa-secondary-opacity: .8;
@@ -243,6 +244,35 @@
 
 					& > p {
 						font-size: 18px;
+					}
+
+					& .link-more {
+						display: none;
+					}
+
+					& .content-footer-row {
+						color: @grayish_blue;
+						.branding;
+						font-size: 1rem;
+						line-height: 1;
+
+						& a {
+							display: inline-block;
+							color: @grayish_blue;
+							text-decoration: underline;
+
+							&:hover {
+								text-decoration: none;
+							}
+
+							&.content-item-text-link {
+								margin-bottom: 1rem;
+
+								@media all and ( min-width: 576px ) {
+									margin-bottom: 0;
+								}
+							}
+						}
 					}
 				}
 			}
