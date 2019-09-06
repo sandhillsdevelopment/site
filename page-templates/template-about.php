@@ -165,7 +165,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date">
+									<div class="new-year-date purple">
 										<span class="the-year">2009</span>
 									</div>
 									<div class="events-inner">
@@ -199,7 +199,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event order-md-2">
-									<div class="new-year-date">
+									<div class="new-year-date blue">
 										<span class="the-year">2011</span>
 									</div>
 									<div class="events-inner">
@@ -227,7 +227,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date">
+									<div class="new-year-date gold">
 										<span class="the-year">2012</span>
 									</div>
 									<div class="events-inner">
@@ -267,7 +267,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event order-md-2">
-									<div class="new-year-date">
+									<div class="new-year-date green">
 										<span class="the-year">2014</span>
 									</div>
 									<div class="events-inner">
@@ -304,7 +304,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date">
+									<div class="new-year-date red">
 										<span class="the-year">2015</span>
 									</div>
 									<div class="events-inner">
@@ -338,7 +338,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event order-md-2">
-									<div class="new-year-date">
+									<div class="new-year-date teal">
 										<span class="the-year">2016</span>
 									</div>
 									<div class="events-inner">
@@ -372,7 +372,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date">
+									<div class="new-year-date pink">
 										<span class="the-year">2017</span>
 									</div>
 									<div class="events-inner">
@@ -412,7 +412,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event order-md-2">
-									<div class="new-year-date">
+									<div class="new-year-date purple">
 										<span class="the-year">2018</span>
 									</div>
 									<div class="events-inner">
@@ -461,7 +461,7 @@ get_header();
 
 							<div class="row new-year-row">
 								<div class="col-md-6 events-col new-year-event">
-									<div class="new-year-date">
+									<div class="new-year-date blue">
 										<span class="the-year">2019</span>
 									</div>
 									<div class="events-inner">
