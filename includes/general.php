@@ -121,7 +121,7 @@ function shd_single_post_graphic() {
 
 	if ( is_singular( 'post' ) ) {
 		?>
-		<img class="single-post-graphic" src="<?php echo SHD_IMAGES . 'icons/main-blog-graphic.svg'; ?>">
+		<img class="single-post-graphic" src="<?php echo SHD_IMAGES . 'icons/writing-icon.svg'; ?>">
 		<?php
 	}
 }

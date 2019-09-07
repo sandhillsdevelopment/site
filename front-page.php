@@ -125,7 +125,7 @@ get_header();
 								<div class="aside-inner lone-post-meta d-flex flex-column">
 									<blockquote>"We recognize now more than ever that the single most valuable resource we each have is time. It’s not infinite and we must do whatever we can to help our team and our customers gain back more of their time."</blockquote>
 									<a class="blog-post-graphic" href="<?php the_permalink(); ?>">
-										<img class="more-posts-graphic" src="<?php echo SHD_IMAGES . 'icons/main-blog-graphic.svg'; ?>">
+										<img class="more-posts-graphic" src="<?php echo SHD_IMAGES . 'icons/writing-icon.svg'; ?>">
 									</a>
 									<p class="mt-auto">- <span><?php echo $post_author_name; ?></span></p>
 								</div>
@@ -159,7 +159,7 @@ get_header();
 									<a class="aside-link-cta" href="<?php echo home_url( '/blog/' ); ?>">Visit the blog &rarr;</a>
 								</div>
 								<a href="<?php echo home_url( '/blog/' ); ?>">
-									<img class="more-posts-graphic" src="<?php echo SHD_IMAGES . 'icons/main-blog-graphic.svg'; ?>">
+									<img class="more-posts-graphic" src="<?php echo SHD_IMAGES . 'icons/writing-icon.svg'; ?>">
 								</a>
 							</div>
 						</div>
