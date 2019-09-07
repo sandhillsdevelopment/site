@@ -198,117 +198,121 @@
 				border-bottom: 1px solid @gray_border;
 			}
 
-			& .content-split {
+			& .content-aside-split {
+				margin-bottom: 0;
 
-				& .content-inner {
+				& .content-split {
 
-					& .info-row {
-						margin-bottom: 1rem;
+					& .content-inner {
 
-						@media all and ( min-width: 768px ) {
-							margin-bottom: 2rem;
-						}
-
-						& [class*="-mascot-col"] {
-							position: relative;
-							display: none;
+						& .info-row {
+							margin-bottom: 1rem;
 
 							@media all and ( min-width: 768px ) {
-								display: block;
+								margin-bottom: 2rem;
 							}
 
-							& img.mascot {
-								position: absolute;
-								top: -1rem;
-								left: 1rem;
+							& [class*="-mascot-col"] {
+								position: relative;
 								display: none;
 
-								@media all and ( min-width: 576px ) {
-									display: inline;
+								@media all and ( min-width: 768px ) {
+									display: block;
 								}
 
-								&.awp-mascot {
-									left: 7px;
-									width: 91px;
-								}
+								& img.mascot {
+									position: absolute;
+									top: -1rem;
+									left: 1rem;
+									display: none;
 
-								&.edd-mascot {
-									top: -19px;
-									left: 12px;
-									width: 76px;
-								}
-
-								&.rcp-mascot {
-									top: -25px;
-									left: 19px;
-									width: 72px;
-								}
-
-								&.sc-mascot {
-									left: 1px;
-									width: 102px;
-								}
-
-								&.wpsp-mascot {
-									top: -30px;
-									left: 13px;
-									width: 77px;
-								}
-
-								&.sb-mascot {
-									top: -21px;
-									left: -21px;
-									width: 129px;
-								}
-
-								&.pp-mascot {
-									top: -22px;
-									left: 6px;
-									width: 104px;
-								}
-
-								&.beer-mascot {
-									top: -19px;
-									left: 7px;
-									width: 99px;
-								}
-							}
-						}
-
-						& [class*="-info-col"] {
-
-							@media all and ( min-width: 1200px ) {
-								padding-left: 0;
-							}
-
-							& [class*="-info-container"] {
-
-								& .content-subtitle {
-									color: @blue;
-								}
-
-								& .content-title {
-									margin-bottom: 0;
-
-									&:hover {
-										color: @blue_title;
-										text-decoration: none;
-
-										--fa-primary-color: @blue_title;
+									@media all and ( min-width: 576px ) {
+										display: inline;
 									}
 
-									& [class*="fad"] {
-										position: relative;
-										bottom: 2px;
-										font-size: 50%;
-										margin-left: 6px;
-										transition: color .2s;
+									&.awp-mascot {
+										left: 7px;
+										width: 91px;
 									}
 
-									--fa-primary-color: @blue;
-									--fa-secondary-color: @grayish_blue;
-									--fa-primary-opacity: 1;
-									--fa-secondary-opacity: .8;
+									&.edd-mascot {
+										top: -19px;
+										left: 12px;
+										width: 76px;
+									}
+
+									&.rcp-mascot {
+										top: -25px;
+										left: 19px;
+										width: 72px;
+									}
+
+									&.sc-mascot {
+										left: 1px;
+										width: 102px;
+									}
+
+									&.wpsp-mascot {
+										top: -30px;
+										left: 13px;
+										width: 77px;
+									}
+
+									&.sb-mascot {
+										top: -21px;
+										left: -21px;
+										width: 129px;
+									}
+
+									&.pp-mascot {
+										top: -22px;
+										left: 6px;
+										width: 104px;
+									}
+
+									&.beer-mascot {
+										top: -19px;
+										left: 7px;
+										width: 99px;
+									}
+								}
+							}
+
+							& [class*="-info-col"] {
+
+								@media all and ( min-width: 1200px ) {
+									padding-left: 0;
+								}
+
+								& [class*="-info-container"] {
+
+									& .content-subtitle {
+										color: @blue;
+									}
+
+									& .content-title {
+										margin-bottom: 0;
+
+										&:hover {
+											color: @blue_title;
+											text-decoration: none;
+
+											--fa-primary-color: @blue_title;
+										}
+
+										& [class*="fad"] {
+											position: relative;
+											bottom: 2px;
+											font-size: 50%;
+											margin-left: 6px;
+											transition: color .2s;
+										}
+
+										--fa-primary-color: @blue;
+										--fa-secondary-color: @grayish_blue;
+										--fa-primary-opacity: 1;
+										--fa-secondary-opacity: .8;
+									}
 								}
 							}
 						}
