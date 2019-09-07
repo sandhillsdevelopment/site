@@ -102,7 +102,7 @@ function shd_get_our_projects() {
 		'beer' => array(
 			'name'       => 'Sandhills Brewing',
 			'short_desc' => 'Central Kansas brewery focusing on barrel aged wild ales.',
-			'long_desc'  => '<p>Sandhills Brewery specializes in oak-aged and oak-fermented beers. The central Kansas microbrewery officially opened its doors in 2018. With two taproom locations, the first in Hutchinson, Kansas at the Sandhills Development headquarters, and the second in Mission, KS, Sandhills Brewery is will on its way to be a central Kansas favorite among craft beer enthusiasts.</p>',
+			'long_desc'  => '<p>Sandhills Brewery specializes in oak-aged and oak-fermented beers. The central Kansas microbrewery officially opened its doors in 2018. With two taproom locations, the first in Hutchinson, Kansas at the Sandhills Development headquarters, and the second in Mission, KS, Sandhills Brewery is well on its way to being a central Kansas favorite among craft beer enthusiasts.</p>',
 			'mascot'     => SHD_IMAGES . 'mascots/sandhills-brewing.png',
 			'type'       => 'Microbrewery',
 			'links'      => array(
