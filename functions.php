@@ -34,7 +34,6 @@ function shd_theme_setup() {
 	// Site structure functions
 	include( SHD_STRUCTURE . 'header.php' );
 	include( SHD_STRUCTURE . 'footer.php' );
-	include( SHD_STRUCTURE . 'navigation.php' );
 }
 add_action( 'after_setup_theme', 'shd_theme_setup' );
 
