@@ -16,29 +16,6 @@ module.exports = function (grunt) {
 			}
 		},
 
-		// concat
-		concat: {
-			js: {
-				options: {
-					separator: ';'
-				},
-				src: ['includes/assets/js/*.min.js', 'includes/assets/js/theme.min.js'],
-				dest: 'includes/assets/js/theme.min.js'
-			},
-		},
-
-		// uglify
-		uglify: {
-			options: {
-				mangle: false
-			},
-			js: {
-				files: {
-					'includes/assets/js/theme.min.js': ['includes/assets/js/theme.js'],
-				}
-			}
-		},
-
 		watch: {
 			styles: {
 				files: ['includes/assets/css/*.less'],
@@ -47,18 +24,12 @@ module.exports = function (grunt) {
 					nospawn: true
 				}
 			},
-			js: {
-				files: ['includes/assets/js/**/*.js', 'includes/assets/js/theme.js'],
-				tasks: ['concat:js', 'uglify:js'],
-			},
 		},
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['watch', 'less', 'concat', 'uglify']);
+	grunt.registerTask('default', ['watch', 'less']);
 };

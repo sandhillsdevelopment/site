@@ -49,30 +49,16 @@ function shd_styles_scripts() {
 		wp_deregister_style( 'dashicons' ); // WP Dashicons
 	}
 
-	// With SCRIPT_DEBUG set to true, prepare to load unminified resources
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-
 	// Resource dependencies
 	$themedd            = 'themedd';
 	$child_css          = 'shd-styles';
-	$child_js           = 'shd-scripts';
-	$google_fonts       = 'google-fonts'; // PT Sans, Open Sans
-	$style_dependencies = array( $themedd, $google_fonts );
+	$style_dependencies = array( $themedd );
 
 	// Enqueue parent theme stylesheet
 	wp_enqueue_style( $themedd, SHD_TEMPLATE_URI . 'style.css' );
 
 	// Register child theme stylesheet for later use
 	wp_register_style( $child_css, SHD_STYLESHEET_URI . 'style.css', $style_dependencies, SHD_SITE_VERSION );
-
-	// Register Google Fonts dependency
-	wp_register_style( $google_fonts, '//fonts.googleapis.com/css?family=Open+Sans|PT+Serif&display=swap' );
-
-	// Enqueue Bootstrap scripts
-	wp_enqueue_script( 'bootstrap-js', SHD_ASSETS . 'js/bootstrap.js', array( 'jquery' ), SHD_SITE_VERSION );
-
-	// Enqueue child theme scripts
-	wp_enqueue_script( $child_js, SHD_ASSETS . 'js/theme' . $suffix . '.js', array( 'jquery' ), SHD_SITE_VERSION );
 
 	// Enqueue child styles last so it easily overrides other styles
 	wp_enqueue_style( $child_css );

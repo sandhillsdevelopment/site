@@ -1,3 +1,0 @@
-/**
- * Site-wide theme JS
- */
