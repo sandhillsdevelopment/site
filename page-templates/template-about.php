@@ -108,7 +108,7 @@ get_header();
 			<div class="row text-center justify-content-around">
 				<div class="col-lg-8">
 					<div class="team-sandhills section-header">
-						<span class="our-people-title bold-title section-title">Meet our <span class="title-highlight">Team</span></span>
+						<span class="our-people-title bold-title">Meet our <span class="title-highlight">Team</span></span>
 						<p class="bold-description">We're a team of many talents, working daily to help each other grow professionally. We employ writers, designers, support technicians, developers, marketers, and most importantly, people who care.</p>
 					</div>
 				</div>
