@@ -191,7 +191,7 @@ get_header();
 								<div class="col-md-6 additional-info-col">
 									<div class="additional-info-inner">
 										<div class="additional-event">
-											<p>Pippin graduated from the University of Kansas with a bachelor's degree in Linguistics.</p>
+											<p>Pippin studied Linguistics at the University of Kansas. Writing code was merely a hobby at this point.</p>
 										</div>
 									</div>
 								</div>
@@ -221,6 +221,9 @@ get_header();
 								</div>
 								<div class="col-md-6 additional-info-col order-md-1">
 									<div class="additional-info-inner">
+										<div class="additional-event">
+											<p>Pippin graduated from the University of Kansas with a bachelor's degree in Linguistics.</p>
+										</div>
 									</div>
 								</div>
 							</div>
