@@ -12,7 +12,7 @@ Sean directly via Slack.
 Feature requests should be based on an overall goal. That goal will most likely fall under a company "department," like Marketing or Support. Please contact the person in charge of that department to explain the request. That person will then contact the development lead (Chris) to discuss the scope of the enhancement. Once Chris has decided on a necessary course of action, he will open an issue outlining only the essential tasks and considerations.
 
 #### Development environment
-The theme uses LESS CSS and compiles that CSS with Grunt. When doing work locally, run `grunt watch` while you work. Any changes to LESS files will result in an updated style.css file, and any changes to specified JS files will result in clean, minified, and (possibly) concatenated theme JS files.
+The theme uses LESS CSS and compiles that CSS with Grunt. When doing work locally, run `grunt watch` while you work. Any changes to LESS files will result in an updated style.css file.
 
 #### Deployments
 Theme deployments are done through [DeployHQ](https://affiliatewp.deployhq.com/). 

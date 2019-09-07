@@ -18,7 +18,14 @@ define( 'SHD_STRUCTURE', SHD_INCLUDES . 'structure/' );
 define( 'SHD_ASSETS', SHD_STYLESHEET_URI . 'includes/assets/' );
 define( 'SHD_IMAGES', SHD_STYLESHEET_URI . 'includes/assets/images/' );
 
-define( 'SHD_HOME', trailingslashit( home_url() ) );
+define( 'AWP', 'https://affiliatewp.com/' );
+define( 'EDD', 'https://easydigitaldownloads.com/' );
+define( 'RCP', 'https://restrictcontentpro.com/' );
+define( 'SC', 'https://sugarcalendar.com/' );
+define( 'WPSP', 'https://wpsimplepay.com/' );
+define( 'SB', 'http://sellbird.com/' );
+define( 'PP', 'https://pippinsplugins.com/' );
+define( 'BEER', 'https://sandhillsbrewing.com/' );
 
 
 /**
@@ -30,6 +37,7 @@ function shd_theme_setup() {
 	include( SHD_INCLUDES . 'general.php' );
 	include( SHD_INCLUDES . 'projects.php' );
 	include( SHD_INCLUDES . 'people.php' );
+	include( SHD_INCLUDES . 'about.php' );
 
 	// Site structure functions
 	include( SHD_STRUCTURE . 'header.php' );

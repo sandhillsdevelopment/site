@@ -82,7 +82,6 @@ get_header();
 	</section>
 
 	<?php
-
 	// Get total post count for later use
 	$count_posts     = wp_count_posts();
 	$published_posts = $count_posts->publish;
@@ -95,12 +94,10 @@ get_header();
 		<section class="blog-section">
 			<div class="container">
 				<div class="blog-row row content-aside-split">
-
 					<?php
 					foreach ( $last_post as $post ) {
 						setup_postdata( $post );
 						?>
-
 						<div class="col-lg-8 content-split">
 							<div class="content-inner">
 								<span class="content-subtitle">The latest from Sandhills blog</span>
@@ -109,9 +106,7 @@ get_header();
 								<a class="aside-button shd-button" href="<?php the_permalink(); ?>">Continue reading</a>
 							</div>
 						</div>
-
 						<?php
-
 						// Reset the query so additional posts can be shown later in the markup.
 						// If there's only 1 published posts, stay in the query and show post-related markup
 						if ( 1 < $published_posts ) {
@@ -120,7 +115,6 @@ get_header();
 							$post_author_id   = get_post_field( 'post_author', get_the_ID() );
 							$post_author_name = get_the_author_meta( 'display_name', $post_author_id );
 							?>
-
 							<div class="col-lg-4 aside-split">
 								<div class="aside-inner lone-post-meta d-flex flex-column">
 									<blockquote>"We recognize now more than ever that the single most valuable resource we each have is time. It’s not infinite and we must do whatever we can to help our team and our customers gain back more of their time."</blockquote>
@@ -130,22 +124,17 @@ get_header();
 									<p class="mt-auto">- <span><?php echo $post_author_name; ?></span></p>
 								</div>
 							</div>
-
 							<?php
 						}
 					}
-					?>
 
-					<?php
 					$recent_posts = get_posts( array( 'numberposts' => 3, 'offset'=> 1 ) );
 					if ( ! empty( $recent_posts ) ) {
 						?>
-
 						<div class="col-lg-4 aside-split">
 							<div class="aside-inner d-flex flex-column">
 								<span class="aside-title">More from the blog</span>
 								<ul class="aside-links">
-
 									<?php
 									foreach ( $recent_posts as $recent_post ) {
 										?>
@@ -153,7 +142,6 @@ get_header();
 										<?php
 									}
 									?>
-
 								</ul>
 								<div class="aside-cta mt-auto">
 									<a class="aside-link-cta" href="<?php echo home_url( '/blog/' ); ?>">Visit the blog &rarr;</a>
@@ -163,11 +151,9 @@ get_header();
 								</a>
 							</div>
 						</div>
-
 						<?php
 					}
 					?>
-
 				</div>
 			</div>
 		</section>

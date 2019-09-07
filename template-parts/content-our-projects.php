@@ -63,7 +63,6 @@ if ( is_page( 'projects') ) {
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col">
 									<?php echo isset( $value['long_desc'] ) ? $value['long_desc'] : $value['short_desc']; ?>
@@ -71,13 +70,11 @@ if ( is_page( 'projects') ) {
 							</div>
 						</div>
 					</div>
-
 					<div class="col-lg-4 <?php echo $key . '-actions-col'; ?> aside-split">
 						<div class="aside-inner d-flex flex-column">
 							<span class="aside-title">Quick details</span>
 							<p class="aside-description"><?php echo $value['short_desc']; ?></p>
 							<ul class="aside-links">
-
 								<?php
 								foreach ( $value['links'] as $link_key => $link_value ) {
 
@@ -88,7 +85,6 @@ if ( is_page( 'projects') ) {
 									}
 								}
 								?>
-
 							</ul>
 							<div class="aside-cta mt-auto">
 								<a class="aside-button shd-button" href="<?php echo $value['links']['url']; ?>">View project</a>

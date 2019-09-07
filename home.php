@@ -20,7 +20,6 @@ get_header();
 	<div class="container">
 		<div class="row justify-content-around">
 			<div class="col-lg-10">
-
 				<?php
 				$args      = array(
 					'posts_per_page' => 999,
@@ -31,7 +30,6 @@ get_header();
 				if ( $latest_posts->have_posts() ) :
 					while ( $latest_posts->have_posts() ) : $latest_posts->the_post();
 						?>
-
 						<div class="blog-row row content-item-wrap">
 							<div class="col-lg-2 content-item-graphic">
 								<div class="content-item-graphic-inner">
@@ -53,23 +51,19 @@ get_header();
 								</article>
 							</div>
 						</div>
-
 					<?php
 					endwhile;
 				else :
 					?>
-
 					<div class="py-10 text-center">
 						<p><span class="more-coming-soon generic-heading">More coming soon. Stay tuned.</span></p>
 						<p>
 							<a class="shd-button" href="<?php echo home_url( '/projects/' ); ?>">View our projects</a>
 						</p>
 					</div>
-
 					<?php
 				endif;
 				?>
-
 			</div>
 		</div>
 	</div>

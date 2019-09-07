@@ -29,14 +29,14 @@
 				<div class="sandhills-goal">
 					<img class="goal-icon" src="<?php echo SHD_IMAGES . 'icons/empowering-businesses-icon.svg'; ?>">
 					<h3 class="goal-title title-border">Empowering businesses</h3>
-					<p class="goal-description">We are the team of humans behind <a href="https://affiliatewp.com/">AffiliateWP</a>, <a href="https://easydigitaldownloads.com/">Easy Digital Downloads</a>, <a href="https://restrictcontentpro.com/">Restrict Content Pro</a>, <a href="https://sugarcalendar.com/">Sugar Calendar</a>, <a href="https://wpsimplepay.com/">WP Simple Pay</a>, <a href="https://sellbird.com">SellBird</a>, and more.</p>
+					<p class="goal-description">We are the team of humans behind <a href="<?php echo AWP; ?>">AffiliateWP</a>, <a href="<?php echo EDD; ?>">Easy Digital Downloads</a>, <a href="<?php echo RCP; ?>">Restrict Content Pro</a>, <a href="<?php echo SC; ?>">Sugar Calendar</a>, <a href="<?php echo WPSP; ?>">WP Simple Pay</a>, <a href="<?php echo SB; ?>">SellBird</a>, and more.</p>
 				</div>
 			</div>
 			<div class="col-lg-4">
 				<div class="sandhills-goal">
 					<img class="goal-icon" src="<?php echo SHD_IMAGES . 'icons/following-passions-icon.svg'; ?>">
 					<h3 class="goal-title title-border">Following passions</h3>
-					<p class="goal-description">Just like you, we have real passions. One of our passions happens to be beer. <a href="https://sandhillsbrewing.com/">Sandhills Brewing</a> attracts those who love our barrel aged wild ales.</p>
+					<p class="goal-description">Just like you, we have real passions. One of our passions happens to be beer. <a href="<?php echo BEER; ?>">Sandhills Brewing</a> attracts those who love our barrel aged wild ales.</p>
 				</div>
 			</div>
 		</div>

@@ -9,7 +9,6 @@
 		<div class="hero">
 			<div class="blog-row row justify-content-around text-center">
 				<div class="col-lg-10">
-
 					<?php
 					if ( have_posts() ) :
 						while ( have_posts() ) : the_post();
@@ -26,7 +25,6 @@
 						wp_reset_postdata();
 					endif;
 					?>
-
 				</div>
 			</div>
 		</div>

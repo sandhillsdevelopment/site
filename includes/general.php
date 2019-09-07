@@ -40,6 +40,7 @@ function shd_get_years_in_business() {
 	return $years_in_business = date( 'Y' ) - 2009;
 }
 
+
 /**
  * Modify queries
  *

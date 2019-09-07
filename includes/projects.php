@@ -19,10 +19,10 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/affiliatewp.png',
 			'type'       => 'WordPress plugin',
 			'links'      => array(
-				'url'      => 'https://affiliatewp.com/',
-				'features' => 'https://affiliatewp.com/features/',
-				'pricing'  => 'https://affiliatewp.com/pricing/',
-				'support'  => 'https://affiliatewp.com/support/',
+				'url'      => AWP,
+				'features' => AWP . 'features/',
+				'pricing'  => AWP . 'pricing/',
+				'support'  => AWP . 'support/',
 			),
 		),
 		'edd'  => array(
@@ -32,10 +32,10 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/easy-digital-downloads.png',
 			'type'       => 'WordPress plugin',
 			'links'      => array(
-				'url'      => 'https://easydigitaldownloads.com/',
-				'features' => 'https://easydigitaldownloads.com/edd-features/',
-				'pricing'  => 'https://easydigitaldownloads.com/pricing/',
-				'support'  => 'https://easydigitaldownloads.com/support/',
+				'url'      => EDD,
+				'features' => EDD . 'edd-features/',
+				'pricing'  => EDD . 'pricing/',
+				'support'  => EDD . 'support/',
 			),
 		),
 		'rcp'  => array(
@@ -45,10 +45,10 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/restrict-content-pro.png',
 			'type'       => 'WordPress plugin',
 			'links'      => array(
-				'url'      => 'https://restrictcontentpro.com/',
-				'features' => 'https://restrictcontentpro.com/features/',
-				'pricing'  => 'https://restrictcontentpro.com/pricing/',
-				'support'  => 'https://restrictcontentpro.com/support/',
+				'url'      => RCP,
+				'features' => RCP . 'features/',
+				'pricing'  => RCP . 'pricing/',
+				'support'  => RCP . 'support/',
 			),
 		),
 		'sc'   => array(
@@ -58,9 +58,9 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/sugar-calendar.png',
 			'type'       => 'WordPress plugin',
 			'links'      => array(
-				'url'     => 'https://sugarcalendar.com/',
-				'pricing' => 'https://sugarcalendar.com/pricing/',
-				'support' => 'https://sugarcalendar.com/support/',
+				'url'     => SC,
+				'pricing' => SC . 'pricing/',
+				'support' => SC . 'support/',
 			),
 		),
 		'wpsp' => array(
@@ -70,10 +70,10 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/wp-simple-pay.png',
 			'type'       => 'WordPress plugin',
 			'links'      => array(
-				'url'      => 'https://wpsimplepay.com/',
-				'features' => 'https://wpsimplepay.com/features/',
-				'pricing'  => 'https://wpsimplepay.com/pricing/',
-				'support'  => 'https://wpsimplepay.com/support/',
+				'url'      => WPSP,
+				'features' => WPSP . 'features/',
+				'pricing'  => WPSP . 'pricing/',
+				'support'  => WPSP . 'support/',
 			),
 		),
 		'sb'   => array(
@@ -83,7 +83,7 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/sellbird.png',
 			'type'       => 'eCommerce Service',
 			'links'      => array(
-				'url' => 'http://sellbird.com/',
+				'url' => SB,
 			),
 		),
 		'pp'   => array(
@@ -93,10 +93,10 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/pippins-plugins.png',
 			'type'       => 'Developer resource',
 			'links'      => array(
-				'url'       => 'https://pippinsplugins.com/',
-				'plugins'   => 'https://pippinsplugins.com/products/',
-				'tutorials' => 'https://pippinsplugins.com/learn/',
-				'reviews'   => 'https://pippinsplugins.com/category/reviews/',
+				'url'       => PP,
+				'plugins'   => PP . 'products/',
+				'tutorials' => PP . 'learn/',
+				'reviews'   => PP . 'category/reviews/',
 			),
 		),
 		'beer' => array(
@@ -106,8 +106,8 @@ function shd_get_our_projects() {
 			'mascot'     => SHD_IMAGES . 'mascots/sandhills-brewing.png',
 			'type'       => 'Microbrewery',
 			'links'      => array(
-				'url'       => 'https://sandhillsbrewing.com/',
-				'our_beers' => 'https://sandhillsbrewing.com/our-beers/',
+				'url'       => BEER,
+				'our_beers' => BEER . 'our-beers/',
 			),
 		),
 	);
