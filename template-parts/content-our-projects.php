@@ -72,7 +72,7 @@ if ( is_page( 'projects') ) {
 					</div>
 					<div class="col-lg-4 <?php echo $key . '-actions-col'; ?> aside-split">
 						<div class="aside-inner d-flex flex-column">
-							<span class="aside-title">Quick details</span>
+							<span class="aside-title"><i class="fad fa-info-circle"></i>Quick details</span>
 							<p class="aside-description"><?php echo $value['short_desc']; ?></p>
 							<ul class="aside-links">
 								<?php

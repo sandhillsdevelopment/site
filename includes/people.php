@@ -5,8 +5,7 @@
 
 
 /**
- * Get all of the team members. If they go by a specific name, say so. Also indicate if
- * they were the first person to join the company in a calendar year.
+ * Get all of the team members. If they go by a specific name, say so.
  *
  * @return array All team members and information about their year joined and names
  */

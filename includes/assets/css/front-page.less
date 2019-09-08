@@ -76,8 +76,27 @@
 				margin: 0 auto 4rem;
 				max-width: 600px;
 
+				&:first-of-type {
+
+					@media all and ( min-width: 1200px ) {
+						padding-right: 1.8rem;
+					}
+				}
+
+				&:nth-child(2) {
+
+					@media all and ( min-width: 1200px ) {
+						padding-right: .9rem;
+						padding-left: .9rem;
+					}
+				}
+
 				&:last-of-type {
 					margin-bottom: 0;
+
+					@media all and ( min-width: 1200px ) {
+						padding-left: 1.8rem;
+					}
 				}
 
 				@media all and ( min-width: 576px ) {
@@ -89,8 +108,6 @@
 				}
 
 				@media all and ( min-width: 1200px ) {
-					padding-right: 1.3rem;
-					padding-left: 1.3rem;
 				}
 			}
 
