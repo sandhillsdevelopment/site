@@ -103,7 +103,7 @@ function shd_get_our_people() {
 		),
 		'mandy'    => array(
 			'name'        => 'Mandy Jones',
-			'role'        => 'Content Writer',
+			'role'        => 'Content creator',
 			'year_joined' => '2018',
 		),
 		'tunbosun' => array(
@@ -133,7 +133,7 @@ function shd_get_our_people() {
 		),
 		'joe'     => array(
 			'name'        => 'Joe Wells',
-			'role'        => 'Marketer',
+			'role'        => 'Content creator',
 			'year_joined' => '2019',
 		),
 	);
