@@ -81,8 +81,14 @@ get_header();
 					</div>
 				</div>
 			</div>
-			<div class="our-people-row row">
+			<div class="our-people-row row mb-lg-3">
 				<?php get_template_part( 'template-parts/content', 'our-humans' ); ?>
+			</div>
+			<div class="submit-an-app-row row justify-content-around text-center">
+				<div class="col-lg-4">
+					<p class="member-name">Interested in joining our team?</p>
+					<a class="shd-button" href="<?php echo home_url( '/careers/' ); ?>">Work at Sandhills</a>
+				</div>
 			</div>
 		</div>
 	</section>
