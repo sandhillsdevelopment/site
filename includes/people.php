@@ -87,7 +87,7 @@ function shd_get_our_people() {
 		),
 		'tyler'    => array(
 			'name'        => 'Tyler Lau',
-			'role'        => 'Administration, Marketing',
+			'role'        => 'Administration, Marketer',
 			'year_joined' => '2018',
 		),
 		'daniel'   => array(
@@ -129,6 +129,11 @@ function shd_get_our_people() {
 		'adam'     => array(
 			'name'        => 'Adam Lea',
 			'role'        => 'Support Technician',
+			'year_joined' => '2019',
+		),
+		'joe'     => array(
+			'name'        => 'Joe Wells',
+			'role'        => 'Marketer',
 			'year_joined' => '2019',
 		),
 	);

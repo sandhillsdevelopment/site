@@ -29,6 +29,7 @@ foreach ( $people as $key => $value ) {
 }
 ?>
 
+<!--
 <div class="col-xl-3 col-lg-4 col-md-6">
 	<div class="sandhills-member row no-gutters">
 		<div class="col">
@@ -44,5 +45,6 @@ foreach ( $people as $key => $value ) {
 		</div>
 	</div>
 </div>
+-->
 
 <?php
