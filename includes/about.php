@@ -137,7 +137,7 @@ function shd_timeline() {
 			'main_events' => array(
 				'<a href="' . BEER . '">Sandhills Brewing</a> opens its doors as one of very few microbreweries in Hutchinson, Kansas! Sandhills Brewing now has a location in Hutch, as well as Mission, Kansas.',
 				'<span class="member">Phil D.</span> joins the team, bringing with him <a href="' . WPSP . '">WP Simple Pay</a>. What a great day!',
-				'<span class="member">Daniel</span> and <span class="member">Mihai</span> join the team to focus on support. <span class="member">Tyler</span> joins the company to manage social outreach and help with administration efforts. <span class="member">Mandy</span> joins as a dedicated copy-writer. <span class="member">Tunbosun</span> joins as a developer to focus on AffiliateWP.',
+				'<span class="member">Daniel</span> and <span class="member">Mihai</span> join the team to focus on support. <span class="member">Tyler</span> joins the company to manage social outreach and help with administration efforts. <span class="member">Mandy</span> joins as a content writer. <span class="member">Tunbosun</span> joins as a developer to focus on AffiliateWP.',
 				'Sandhills purchases its first plot of land in Hutch with a goal of preserving nature in a quickly growing city.',
 			),
 			'addtl_events' => array(
@@ -152,7 +152,7 @@ function shd_timeline() {
 			'color'       => 'blue',
 			'left_config' => true,
 			'main_events' => array(
-				'<span class="member">Andrea</span> and <span class="member">Adam</span> join the rockstar support crew. <span class="member">Spencer</span> and <span class="member">Alex</span> join as much needed developers for our fleet of software products. <span class="member">Michael</span>, previously part-time, becomes a full-time team member.',
+				'<span class="member">Andrea</span> and <span class="member">Adam</span> join the rockstar support crew. <span class="member">Spencer</span> and <span class="member">Alex</span> join as much needed developers for our fleet of software products. <span class="member">Michael</span>, previously part-time, becomes a full-time team member. <span class="member">Joe</span> joins the team as a content creator.',
 				'We bid farewell to <span class="member">John P.</span>, Partner and long-time developer. We appreciate his efforts to breathe new life into Restrict Content Pro during his time as Product Lead. He will be missed!',
 				'Sandhills purchases the building that houses our headquarters office as well as the Hutch microbrewery and tap room. With this purchase, we also become property managers, renting storefront space to a yoga studio.',
 			),
