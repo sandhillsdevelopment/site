@@ -79,7 +79,7 @@ function shd_get_our_projects() {
 		'sb'   => array(
 			'name'       => 'Sellbird',
 			'short_desc' => 'Helping your digital product and media sales take flight.',
-			'long_desc'  => '<p>Still in development, SellBird is a hosted eCommerce system that will enable digital product creators to effortlessly sell their products without worrying about the hassle or challenges of website hosting and site management. Sign up at Sellbird.com to stay up to date with launch news!</p>',
+			'long_desc'  => '<p>Still in development, Sellbird is a hosted eCommerce system that will enable digital product creators to effortlessly sell their products without worrying about the hassle or challenges of website hosting and site management. Sign up at Sellbird.com to stay up to date with launch news!</p>',
 			'mascot'     => SHD_IMAGES . 'mascots/sellbird.png',
 			'type'       => 'eCommerce Service',
 			'links'      => array(
