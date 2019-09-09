@@ -23,7 +23,7 @@ define( 'EDD', 'https://easydigitaldownloads.com/' );
 define( 'RCP', 'https://restrictcontentpro.com/' );
 define( 'SC', 'https://sugarcalendar.com/' );
 define( 'WPSP', 'https://wpsimplepay.com/' );
-define( 'SB', 'http://sellbird.com/' );
+define( 'SB', 'https://sellbird.com/' );
 define( 'PP', 'https://pippinsplugins.com/' );
 define( 'BEER', 'https://sandhillsbrewing.com/' );
 
