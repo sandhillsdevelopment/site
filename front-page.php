@@ -12,7 +12,7 @@ get_header();
 					<span class="quick-detail shd-founded"><i class="fad fa-lightbulb"></i><strong>Founded in 2009</strong><span class="temp-hide"> by CEO Pippin Williamson.</span></span>
 					<span class="quick-detail shd-global"><i class="fad fa-globe-americas"></i><span class="temp-hide"><?php echo count( shd_get_our_people() ); ?> </span><strong>globally-distributed team</strong><span class="temp-hide"> members.</span></span>
 					<span class="quick-detail shd-headquarters"><i class="fad fa-map-marker-alt"></i><span class="temp-hide">Headquartered in </span><strong>Hutchinson, Kansas</strong>.</span>
-					<span class="quick-detail"><a class="quick-info-link" href="<?php echo home_url( '/about/' ); ?>">More<span class="temp-hide"> about Sandhills</span> &rarr;</a></span>
+					<span class="quick-detail"><a class="quick-info-link" href="<?php echo home_url( '/about/' ); ?>">More<span class="temp-hide">&nbsp;about&nbsp;Sandhills</span>&nbsp;&rarr;</a></span>
 				</div>
 			</div>
 		</div>
@@ -47,7 +47,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<span class="quick-detail email-us"><i class="fad fa-inbox-in"></i>Need to <strong>contact us</strong> directly, or inquire about one of our projects? <a class="quick-info-link" href="<?php echo home_url( '/contact/' ); ?>">Get in touch &rarr;</a></span>
+					<span class="quick-detail email-us"><i class="fad fa-inbox-in"></i>Need to <strong>contact us</strong> directly, or inquire about one of our projects? <a class="quick-info-link" href="<?php echo home_url( '/contact/' ); ?>">Get&nbsp;in&nbsp;touch&nbsp;&rarr;</a></span>
 				</div>
 			</div>
 		</div>
