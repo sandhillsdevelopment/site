@@ -97,7 +97,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<span class="quick-detail camera"><i class="fad fa-camera-retro"></i><strong>Did you know:</strong> Our microbrewery, Sandhills Brewing, has an awesome Instagram profile full of beer and good times. <a class="quick-info-link" href="https://www.instagram.com/sandhillsbrewing/" target="_blank">Check it out &rarr;</a></span>
+					<span class="quick-detail camera"><i class="fad fa-camera-retro"></i><strong>Did you know:</strong> Our microbrewery, Sandhills Brewing, has an awesome Instagram profile full of beer and good times. <a class="quick-info-link" href="https://www.instagram.com/sandhillsbrewing/" target="_blank">Check&nbsp;it&nbsp;out&nbsp;&rarr;</a></span>
 				</div>
 			</div>
 		</div>

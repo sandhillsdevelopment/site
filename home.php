@@ -10,7 +10,7 @@ get_header();
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<span class="quick-detail feather-pen"><i class="fad fa-feather-alt"></i><strong>Did you know:</strong> We also publish project-specific content on our individual product sites. <a class="quick-info-link" href="<?php echo home_url( '/projects/' ); ?>">Check them out &rarr;</a></span>
+				<span class="quick-detail feather-pen"><i class="fad fa-feather-alt"></i><strong>Did you know:</strong> We also publish project-specific content on our individual product sites. <a class="quick-info-link" href="<?php echo home_url( '/projects/' ); ?>">Check&nbsp;them&nbsp;out&nbsp;&rarr;</a></span>
 			</div>
 		</div>
 	</div>
