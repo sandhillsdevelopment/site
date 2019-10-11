@@ -69,7 +69,7 @@ function shd_site_branding() {
 
 		<span class="<?php echo themedd_output_classes( $classes ); ?>">
 			<a class="shd-logo-anchor navbar-brand mr-0" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logos/shd-logo-' . $logo_color . '.svg'; ?>" alt="Sandhills Development" data-fallback="<?php echo SHD_IMAGES . 'logos/shd-logo-' . $logo_color . '.png'; ?>">
+				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logos/shd-logo-' . $logo_color . '.svg'; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" data-fallback="<?php echo SHD_IMAGES . 'logos/shd-logo-' . $logo_color . '.png'; ?>">
 			</a>
 		</span>
 
