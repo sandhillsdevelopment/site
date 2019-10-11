@@ -48,7 +48,7 @@ input[type="submit"] {
 	& .wpforms-field,
 	.gfield {
 		padding-right: 0 !important;
-		margin-bottom: 10px;
+		margin: 0 0 30px !important;
 
 		& select {
 			padding: 8px 6px !important;
@@ -137,10 +137,6 @@ input[type="submit"] {
 		}
 	}
 
-	& .gfield {
-		margin-bottom: 30px;
-	}
-
 	& .wpforms-submit,
 	.gform_button[type="submit"] {
 		font-size: 1.25rem !important;
@@ -154,6 +150,82 @@ input[type="submit"] {
 
 		@media all and ( min-width: 576px ) {
 			width: auto;
+		}
+	}
+
+	/* Error handling */
+	&.gform_validation_error {
+
+		& div.validation_error {
+			clear: both;
+			background: #fff4f4;
+			color: #db1212 !important;
+			font-size: 1rem;
+			font-weight: 600;
+			text-align: left;
+			padding: 1rem 1.5rem !important;
+			border:  none !important;
+			border-radius: 5px;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		& .gform_body {
+
+			& ul.gform_fields {
+
+				& li.gfield {
+					padding-right: 0 !important;
+					max-width: 100% !important;
+					width: 100% !important;
+
+					&.gfield_error {
+						background: transparent !important;
+						color: #db1212;
+						font-weight: 400;
+						padding: 0 !important;
+						border: none !important;
+						margin: 0 0 30px !important;
+
+						&:not(.gf_left_half):not(.gf_right_half) {
+							max-width: 100% !important;
+							width: 100% !important;
+						}
+
+						& .gfield_label {
+							color: @night_light !important;
+							margin-top: 0 !important;
+
+							& input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+							textarea {
+								border-color: @gray_border !important;
+							}
+
+							&:before {
+								color: #db1212;
+								.fontawesome;
+								content: "\f071";
+								font-size: 80%;
+								margin-right: 5px;
+							}
+						}
+
+						& .gfield_radio,
+						.gfield_checkbox {
+							color: @night_light !important;
+						}
+
+						& input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+						textarea {
+							border: 2px solid @gray_border;
+						}
+					}
+				}
+
+				& .validation_message {
+					display: none;
+				}
+			}
 		}
 	}
 }
@@ -185,10 +257,5 @@ input[type="submit"] {
 		&:first-child {
 			padding-top: 0 !important;
 		}
-	}
-
-	& > * + .wpforms-container,
-	& > * + .gform_wrapper {
-		margin: 1rem 0 !important;
 	}
 }
