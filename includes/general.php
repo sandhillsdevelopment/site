@@ -17,6 +17,10 @@ function shd_body_classes_front_end( $classes ) {
 		$classes[] = 'front-page';
 	}
 
+	if ( is_front_page() || is_home() ) {
+		$classes[] = 'has-stars-hero';
+	}
+
 	$page_body_classes = array( 'projects', 'about', 'careers', 'contact' );
 
 	foreach ( $page_body_classes as $page ) {

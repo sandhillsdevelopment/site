@@ -14,6 +14,7 @@ define( 'SHD_INCLUDES', SHD_ROOT . '/includes/' );
 define( 'SHD_TEMPLATE_URI', trailingslashit( get_template_directory_uri() ) );
 define( 'SHD_STYLESHEET_URI', trailingslashit( get_stylesheet_directory_uri() ) );
 
+define( 'SHD_INTEGRATIONS', SHD_INCLUDES . 'integrations/' );
 define( 'SHD_STRUCTURE', SHD_INCLUDES . 'structure/' );
 define( 'SHD_ASSETS', SHD_STYLESHEET_URI . 'includes/assets/' );
 define( 'SHD_IMAGES', SHD_STYLESHEET_URI . 'includes/assets/images/' );
@@ -38,6 +39,9 @@ function shd_theme_setup() {
 	include( SHD_INCLUDES . 'projects.php' );
 	include( SHD_INCLUDES . 'people.php' );
 	include( SHD_INCLUDES . 'about.php' );
+
+	// Integration functions
+	include( SHD_INTEGRATIONS . 'simple-notices-pro.php' );
 
 	// Site structure functions
 	include( SHD_STRUCTURE . 'header.php' );
