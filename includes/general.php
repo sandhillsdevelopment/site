@@ -52,27 +52,30 @@ function shd_get_years_in_business() {
  */
 function shd_modify_queries( $query ) {
 
-	if ( $query->is_main_query() && $query->is_home() ) {
+	if ( ! is_admin() && $query->is_home() ) {
 
-		$query->set( 'posts_per_page', 1 );
-		$query->set( 'ignore_sticky_posts', true );
+		if ( $query->is_main_query() ) {
 
-		// modify blog home queries - part 1
-		// https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
-	} elseif ( ! $query->is_main_query() && is_home() ) {
+			$query->set( 'posts_per_page', 1 );
+			$query->set( 'ignore_sticky_posts', true );
 
-		$offset        = 1;
-		$post_per_page = 15;
+			// modify blog home queries - part 1
+			// https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
+		} elseif ( ! $query->is_main_query() && 'notices' !== $query->get('post_type') ) {
 
-		if ( $query->is_paged ) {
+			$offset        = 1;
+			$post_per_page = 15;
 
-			$blog_offset = $offset + ( ( $query->query_vars['paged']-1 ) * $post_per_page );
-			$query->set( 'offset', $blog_offset );
+			if ( $query->is_paged ) {
 
-		} else {
+				$blog_offset = $offset + ( ( $query->query_vars['paged']-1 ) * $post_per_page );
+				$query->set( 'offset', $blog_offset );
 
-			$query->set( 'offset', $offset );
+			} else {
 
+				$query->set( 'offset', $offset );
+
+			}
 		}
 	}
 }

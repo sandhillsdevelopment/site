@@ -115,7 +115,7 @@ function shd_get_countdown( $end_date = '' ) {
 	ob_start();
 	?>
 
-	<span id="countdown"><span id="countdown-text"></span><span id="countdown-date"></span></span><script type="text/javascript">
+	<span id="countdown"><span id="countdown-date"></span></span><script type="text/javascript">
 
 		var endDate = moment.tz("<?php echo $end_date; ?>", "America/Chicago");
 
