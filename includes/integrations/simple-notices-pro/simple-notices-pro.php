@@ -43,6 +43,11 @@ function shd_display_notice() {
 				$can_view = true;
 			}
 
+			// Get the necessary data to build out a CTA button
+			$button_url  = get_post_meta( $notice->ID, 'shd_cta_button_url', true );
+			$button_text = get_post_meta( $notice->ID, 'shd_cta_button_text', true );
+			$has_cta     = ! empty( $button_url ) ? true : false;
+
 			if ( $can_view ) {
 				if ( function_exists( 'pippin_check_notice_is_read' ) && pippin_check_notice_is_read( $notice->ID, $user_ID ) != true ) {
 					?>
@@ -60,12 +65,14 @@ function shd_display_notice() {
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-9 col-content text-center text-lg-left pb-4 pb-lg-0 pl-lg-4 pl-xl-5">
+									<div class="col-lg-<?php echo $has_cta ? '9' : '11'; ?> col-content text-center text-lg-left pb-4 pb-lg-0 pl-lg-4 pl-xl-5">
 										<span class="notice-text"><?php echo do_shortcode( $notice->post_content ); ?></span>
 									</div>
-									<div class="col-lg-2 col-cta text-center text-lg-right position-relative">
-										<a class="shd-button" href="#">Button text</a>
-									</div>
+									<?php if ( $has_cta ) { ?>
+										<div class="col-lg-2 col-cta text-center text-lg-right position-relative">
+											<a class="shd-button" href="<?php echo $button_url; ?>"><?php echo ! empty( $button_text ) ? $button_text : 'Learn more'; ?></a>
+										</div>
+									<?php } ?>
 								</div>
 								<a class="remove-notice" href="#" id="remove-notice" rel="<?php echo $notice->ID; ?>" title="Dismiss notice">
 									<i class="fas fa-times" aria-hidden="true"></i>

@@ -41,7 +41,9 @@ function shd_theme_setup() {
 	include( SHD_INCLUDES . 'about.php' );
 
 	// Integration functions
-	include( SHD_INTEGRATIONS . 'simple-notices-pro.php' );
+	include( SHD_INTEGRATIONS . 'simple-notices-pro/metaboxes.php' );
+	include( SHD_INTEGRATIONS . 'simple-notices-pro/simple-notices-pro.php' );
+	include( SHD_INTEGRATIONS . 'simple-notices-pro/countdown.php' );
 
 	// Site structure functions
 	include( SHD_STRUCTURE . 'header.php' );
