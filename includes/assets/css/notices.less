@@ -1,0 +1,139 @@
+/*
+ * Simple Notices Pro styles
+ */
+#notification-area {
+	background: @blue;
+	font-size: 18px;
+	padding: 1.8rem 0 2rem;
+	border-bottom: 3px dashed #fff;
+	width: 100%;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+
+	& [class*="col-"] {
+
+		& + [class*="col-"] {
+			margin-top: 0 !important;
+		}
+	}
+
+	& .notice-content {
+
+		& strong,
+		#countdown-date {
+			.branding;
+			font-size: 110%;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.35);
+		}
+
+		& .col-icon {
+
+			@media all and ( min-width: 992px ) {
+				padding-top: 8px;
+			}
+
+			& .notice-icon-wrap {
+
+				& .notice-icon {
+					width: 60px;
+					height: auto;
+					margin-left: 12px;
+
+					@media all and ( min-width: 992px ) {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		& .col-content {
+
+			& .notice-text {
+				display: inline;
+				color: #fff;
+				margin-bottom: 0;
+			}
+
+			& h3 {
+				display: none;
+				margin-bottom: 0;
+			}
+
+			& a {
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 2px dotted rgba(255,255,255,0.55);
+				transition: border-bottom-color .2s;
+
+				&:hover {
+					text-decoration: none;
+					border-bottom-color: #fff;
+				}
+			}
+		}
+
+		& .col-cta {
+
+			& .shd-button {
+				background: @night;
+
+				@media all and ( min-width: 992px ) {
+					position: absolute;
+					top: 9px;
+					right: 15px;
+				}
+
+				@media all and ( min-width: 1200px ) {
+					top: 14px;
+				}
+
+				&:hover {
+					background: lighten( @night, 5% );
+				}
+			}
+		}
+	}
+
+	& #remove-notice {
+		position: absolute;
+		top: 12px;
+		right: 1rem;
+		color: #fff;
+		line-height: 1;
+		border: none;
+		outline: none;
+		margin: 0;
+		opacity: .3;
+		transition: all .2s;
+
+		& [class*="fa-"] {
+			color: #fff;
+			width: 13px;
+			height: 13px;
+			font-size: 100%;
+			margin-right: 0;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&.snp-hidden {
+		display: none;
+	}
+}
+
+.logged-in #notification-area.snp-hidden {
+	display: block;
+}
+
+/* Special styles for pages that has the stars graphic hero */
+.has-stars-hero {
+
+	#notification-area {
+		border-bottom-color: @night;
+	}
+}
