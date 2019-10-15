@@ -35,6 +35,7 @@ module.exports = function (grunt) {
 			js: {
 				files: {
 					'includes/assets/js/theme.min.js': ['includes/assets/js/theme.js'],
+					'includes/assets/js/lib/jquery.countdown.min.js': ['includes/assets/js/lib/jquery.countdown.js'],
 					'includes/assets/js/lib/moment.min.js': ['includes/assets/js/lib/moment.js'],
 					'includes/assets/js/lib/moment-timezone.min.js': ['includes/assets/js/lib/moment-timezone.js'],
 					'includes/assets/js/lib/moment-timezone-with-data.min.js': ['includes/assets/js/lib/moment-timezone-with-data.js']
