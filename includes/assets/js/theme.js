@@ -31,5 +31,10 @@
 				}
 			}
 		}
+
+		// Simple Notices remove notice
+		$('.remove-notice').on('click', function() {
+			$('#notification-area').slideUp();
+		});
 	});
 }(jQuery));
