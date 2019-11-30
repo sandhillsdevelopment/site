@@ -97,8 +97,14 @@
 			}
 		}
 	}
+}
 
-	& .older-posts-section {
+/* Moved outside of the above .blog class so .archive could share CSS without added baggage */
+.blog,
+.archive {
+
+	& .older-posts-section,
+	.archive-posts-section {
 		padding: 0;
 
 		& .content-item-wrap {
@@ -281,6 +287,16 @@
 
 		& .more-coming-soon {
 			color: @grayish_blue;
+		}
+	}
+
+	.archive-posts-section {
+
+		& .content-item-wrap {
+
+			&:first-child {
+				padding-top: 2rem;
+			}
 		}
 	}
 }

@@ -106,7 +106,7 @@ get_header();
 						wp_reset_query();
 					}
 
-					$recent_posts = get_posts( array( 'numberposts' => 3, 'offset'=> 1 ) );
+					$recent_posts = get_posts( array( 'numberposts' => 5, 'offset'=> 1 ) );
 					if ( ! empty( $recent_posts ) ) {
 						?>
 						<div class="col-lg-4 aside-split">
