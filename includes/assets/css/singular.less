@@ -89,10 +89,13 @@
 
 				& .post-thumbnail {
 					text-align: center;
-					margin: -6rem 0 4rem !important;
+					margin: -9rem 0 2rem !important;
 
 					& img {
-						border-radius: 0 0 5px 5px;
+
+						@media all and ( min-width: 992px ) {
+							border-radius: 5px;
+						}
 					}
 				}
 			}

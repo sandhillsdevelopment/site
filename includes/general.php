@@ -124,17 +124,3 @@ function shd_excerpt_length( $length ) {
 	return 25;
 }
 add_filter( 'excerpt_length', 'shd_excerpt_length', 999 );
-
-
-/**
- * Add graphic to single blog posts
- */
-function shd_single_post_graphic() {
-
-	if ( is_singular( 'post' ) ) {
-		?>
-		<img class="single-post-graphic" src="<?php echo SHD_IMAGES . 'icons/writing-icon.svg'; ?>">
-		<?php
-	}
-}
-add_action( 'themedd_entry_article_start', 'shd_single_post_graphic' );
