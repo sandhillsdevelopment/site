@@ -155,6 +155,7 @@ function shd_timeline() {
 				'<span class="member">Andrea</span> and <span class="member">Adam</span> join the rockstar support crew. <span class="member">Spencer</span> and <span class="member">Alex</span> join as much needed developers for our fleet of software products. <span class="member">Michael</span>, previously part-time, becomes a full-time team member. <span class="member">Joe</span> joins the team as a content creator.',
 				'We bid farewell to <span class="member">John P.</span>, Partner and long-time developer. We appreciate his efforts to breathe new life into Restrict Content Pro during his time as Product Lead. He will be missed!',
 				'Sandhills purchases the building that houses our headquarters office as well as the Hutch microbrewery and tap room. With this purchase, we also become property managers, renting storefront space to a yoga studio.',
+				'We launched our payouts service for AffiliateWP! Our service makes paying affiliates directly to their bank accounts is simple and affordable. It also supports more than 30 countries. <a href="https://payouts.sandhillsdev.com/">Take a look</a>!',
 			),
 			'addtl_events' => array(
 				'Sandhills Summit held in Rockford, Illinois.',
@@ -172,7 +173,6 @@ function shd_timeline() {
 function shd_upcoming_events() {
 
 	$upcoming_events = array(
-		'Paying your affiliates shouldn\'t be so hard! We\'re building an integrated payouts service for AffiliateWP to make paying your affiliates partners through ACH transfers seamless and easy. <a href="https://payouts.sandhillsdev.com/">Check it out</a>.',
 		'Though Sellbird is currently under development, <a href="' . SB . '">you can sign up</a> to receive updates and information as the project takes flight.',
 		'The development team is working diligently on Easy Digital Downloads 3.0, the most significant update the eCommerce plugin has ever received. Stay up to date with our <a href="' . EDD . 'development/">development blog</a>.',
 	);
