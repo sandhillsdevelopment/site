@@ -82,10 +82,6 @@ get_header();
 	</section>
 
 	<?php
-	// Get total post count for later use
-	$count_posts     = wp_count_posts();
-	$published_posts = $count_posts->publish;
-
 	// Get latest post
 	$last_post = get_posts( array( 'numberposts' => 1 ) );
 	if ( ! empty( $last_post ) ) {
@@ -107,25 +103,7 @@ get_header();
 							</div>
 						</div>
 						<?php
-						// Reset the query so additional posts can be shown later in the markup.
-						// If there's only 1 published posts, stay in the query and show post-related markup
-						if ( 1 < $published_posts ) {
-							wp_reset_query();
-						} else {
-							$post_author_id   = get_post_field( 'post_author', get_the_ID() );
-							$post_author_name = get_the_author_meta( 'display_name', $post_author_id );
-							?>
-							<div class="col-lg-4 aside-split">
-								<div class="aside-inner lone-post-meta d-flex flex-column">
-									<blockquote>"We recognize now more than ever that the single most valuable resource we each have is time. It’s not infinite and we must do whatever we can to help our team and our customers gain back more of their time."</blockquote>
-									<a class="blog-post-graphic" href="<?php the_permalink(); ?>">
-										<img class="more-posts-graphic" src="<?php echo SHD_IMAGES . 'icons/writing-icon.svg'; ?>">
-									</a>
-									<p class="mt-auto">- <span><?php echo $post_author_name; ?></span></p>
-								</div>
-							</div>
-							<?php
-						}
+						wp_reset_query();
 					}
 
 					$recent_posts = get_posts( array( 'numberposts' => 3, 'offset'=> 1 ) );

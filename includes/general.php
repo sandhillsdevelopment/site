@@ -59,9 +59,13 @@ function shd_modify_queries( $query ) {
 			$query->set( 'posts_per_page', 1 );
 			$query->set( 'ignore_sticky_posts', true );
 
-			// modify blog home queries - part 1
-			// https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
+		// modify blog home queries - part 1
+		// https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
 		} elseif ( ! $query->is_main_query() && 'notices' !== $query->get('post_type') ) {
+
+			if ( is_front_page() ) {
+				return;
+			}
 
 			$offset        = 1;
 			$post_per_page = 15;
