@@ -97,8 +97,14 @@
 			}
 		}
 	}
+}
 
-	& .older-posts-section {
+/* Moved outside of the above .blog class so .archive could share CSS without added baggage */
+.blog,
+.archive {
+
+	& .older-posts-section,
+	.archive-posts-section {
 		padding: 0;
 
 		& .content-item-wrap {
@@ -283,6 +289,16 @@
 			color: @grayish_blue;
 		}
 	}
+
+	.archive-posts-section {
+
+		& .content-item-wrap {
+
+			&:first-child {
+				padding-top: 2rem;
+			}
+		}
+	}
 }
 
 #comments {
@@ -297,6 +313,10 @@
 	}
 
 	& .comment {
+
+		& .has-avatars {
+			position: relative;
+		}
 
 		& .avatar {
 			box-shadow: 0 0 0 2px @gray_border;
