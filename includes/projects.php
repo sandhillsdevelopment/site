@@ -65,8 +65,8 @@ function shd_get_our_projects() {
 		),
 		'wpsp' => array(
 			'name'       => 'WP Simple Pay',
-			'short_desc' => 'The #1 Stripe Payments Plugin for WordPress.',
-			'long_desc'  => '<p>Accepting credit cards online used to be challenging and expensive. Stripe, Inc changed that by launching a payment processing platform that was built for developers, making it easy for programmers to create and launch their own tools to accept payments online.</p><p>WP Simple Pay was created in 2014 to provide site owners a simple, fast way to start collecting credit card payments on their WordPress-powered websites. Today it is the highest rated and most used WordPress plugin for Stripe payments.</p>',
+			'short_desc' => 'A lightweight Stripe payments plugin for WordPress.',
+			'long_desc'  => '<p>Accepting credit cards online used to be challenging and expensive. Stripe, Inc changed that by launching a payment processing platform that was built for developers, making it easy for programmers to create and launch their own tools to accept payments online.</p><p>WP Simple Pay was created in 2014 to provide site owners a simple, fast way to start collecting one-time and recurring credit card payments on their WordPress-powered websites. Today it is the highest rated and most used WordPress plugin for Stripe payments.</p>',
 			'mascot'     => SHD_IMAGES . 'mascots/wp-simple-pay.png',
 			'type'       => 'WordPress plugin',
 			'links'      => array(
