@@ -14,7 +14,7 @@ function shd_get_our_people() {
 	$our_people = array(
 		'pippin'   => array(
 			'name'        => 'Pippin Williamson',
-			'role'        => 'Founder, CEO',
+			'role'        => 'Founder',
 			'year_joined' => '2009',
 		),
 		'sean'     => array(
