@@ -68,12 +68,6 @@ function shd_get_our_people() {
 			'role'        => 'Support Technician',
 			'year_joined' => '2017',
 		),
-		'phil_j'   => array(
-			'name'        => 'Phil Johnston',
-			'nickname'    => 'Phil J.',
-			'role'        => 'Developer',
-			'year_joined' => '2017',
-		),
 		'keri'     => array(
 			'name'        => 'Keri Jacoby',
 			'role'        => 'Support Lead',
