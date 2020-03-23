@@ -173,8 +173,9 @@ function shd_get_our_countries_count() {
 	}
 
 	// Get a count of the non-duplicate countries
-	$countries = array_unique( $countries );
-	$countries = is_countable( $countries ) ? count( $countries ) : 0;
+	$countries     = array_unique( $countries );
+	$country_count = is_countable( $countries ) ? count( $countries ) : 0;
 
-	return $countries;
+	return $country_count;
+
 }
