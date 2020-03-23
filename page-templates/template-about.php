@@ -109,7 +109,7 @@ get_header();
 				<div class="sandhills-history-row row justify-content-around text-center">
 					<div class="col-lg-8">
 						<h1 class="bold-title">Sandhills <span class="title-highlight">History</span></h1>
-						<p class="bold-description">From 7 different countries around the world, we've slowly come <em>together</em> to create what we believe in, and what makes our customers' lives better.</p>
+						<p class="bold-description">From <?php echo shd_get_our_countries_count(); ?> different countries around the world, we've slowly come <em>together</em> to create what we believe in, and what makes our customers' lives better.</p>
 						<p class="bold-description-secondary">Here's how we did it.</p>
 					</div>
 				</div>

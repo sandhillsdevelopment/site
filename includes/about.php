@@ -22,7 +22,7 @@ function shd_quick_facts() {
 		),
 		'countries'         => array(
 			'icon'  => 'globally-distributed',
-			'title' => '7 different countries',
+			'title' => shd_get_our_countries_count() . ' different countries',
 			'desc'  => 'Sandhills is a globally-distributed company with team members on 4 different continents.',
 		),
 		'headquarters'      => array(
