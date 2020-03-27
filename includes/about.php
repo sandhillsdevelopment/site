@@ -159,6 +159,17 @@ function shd_timeline() {
 			),
 			'addtl_events' => array(
 				'Sandhills Summit held in Rockford, Illinois.',
+				'This year was all about laying a foundation for the future. Read <a href="' . home_url( '/2020/01/2019-year-in-review/' ) . '">2019 in review</a> to understand what that looks like for Sandhills Development.',
+			),
+		),
+		'2020' => array(
+			'year'        => '2020',
+			'color'       => 'gold',
+			'left_config' => false,
+			'main_events' => array(
+				'Sandhills completes its second land stewardship project by purchasing 54 acres of Tallgrass prairie land! Read more about the project <a href="' . home_url( '/2020/03/land-stewardship/' ) . '">here</a>.',
+			),
+			'addtl_events' => array(
 			),
 		),
 	);
