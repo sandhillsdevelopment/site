@@ -126,9 +126,17 @@ ol {
 		margin-bottom: 2rem;
 	}
 
-	& ul.wp-block-gallery,
-	ul.blocks-gallery-grid {
-		padding-left: 0 !important;
+	& figure {
+
+		& .blocks-gallery-grid {
+			padding-left: 0 !important;
+		}
+	}
+
+	& > ul.wp-block-gallery,
+	& > ul.blocks-gallery-grid {
+		padding-right: 15px !important;
+		padding-left: 15px !important;
 	}
 
 	& pre {
