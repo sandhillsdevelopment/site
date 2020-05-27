@@ -153,6 +153,12 @@ function shd_get_our_people() {
 			'year_joined' => '2019',
 			'country'     => 'usa',
 		),
+		'shayne'  => array(
+			'name'        => 'Shayne Sanderson',
+			'role'        => 'Support Technician',
+			'year_joined' => '2020',
+			'country'     => 'usa',
+		),
 	);
 
 	return (array) $our_people;
