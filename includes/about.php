@@ -168,7 +168,7 @@ function shd_timeline() {
 			'left_config' => false,
 			'main_events' => array(
 				'Sandhills completes its second land stewardship project by purchasing 54 acres of Tallgrass prairie land! Read more about the project <a href="' . home_url( '/2020/03/land-stewardship/' ) . '">here</a>.',
-				'<span class="member">Shayne</span> joins the Sandhills team as a support technician and <span class="member">Robin</span> joins as a developer! Welcome to the team!'
+				'<span class="member">Shayne</span> joins the Sandhills team as a support technician while <span class="member">Robin</span> and <span class="member">Lisa C.</span> join as developers! Welcome to the team, you all!'
 			),
 			'addtl_events' => array(
 			),

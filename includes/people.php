@@ -165,6 +165,12 @@ function shd_get_our_people() {
 			'year_joined' => '2020',
 			'country'     => 'usa',
 		),
+		'lisa_c' => array(
+			'name'        => 'Lisa Canini',
+			'role'        => 'Developer',
+			'year_joined' => '2020',
+			'country'     => 'usa',
+		),
 	);
 
 	return (array) $our_people;
