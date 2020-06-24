@@ -43,12 +43,6 @@ function shd_get_our_people() {
 			'year_joined' => '2018',
 			'country'     => 'usa',
 		),
-		'michael'  => array(
-			'name'        => 'Michael Beil',
-			'role'        => 'Support Technician',
-			'year_joined' => '2015',
-			'country'     => 'germany',
-		),
 		'lisa'     => array(
 			'name'        => 'Lisa Gibson',
 			'role'        => 'Marketing Lead',
