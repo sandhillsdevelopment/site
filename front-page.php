@@ -59,7 +59,7 @@ get_header();
 				<div class="col-md-9">
 					<div class="our-people">
 						<span class="generic-heading">Our global team</span>
-						<p>Freedom is important to us. We work from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize healthy workplaces. Our globally-distributed team consists of <?php echo count( shd_get_our_people() ); ?> professionals located in 7 countries across the globe.</p>
+						<p>Freedom is important to us. We work from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize healthy workplaces. Our globally-distributed team consists of <?php echo count( shd_get_our_people() ); ?> professionals located in <?php echo shd_get_our_countries_count(); ?> countries across the globe.</p>
 						<p><a class="shd-button" href="<?php echo home_url( '/about/' ); ?>">About Sandhills</a></p>
 					</div>
 				</div>
