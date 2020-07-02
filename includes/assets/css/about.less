@@ -140,10 +140,11 @@
 					& .member-info {
 						position: relative;
 						background: #fff;
-						padding: 3.6rem 2rem 1.5rem;
+						padding: 3.6rem 2rem 1.2rem;
 						border-radius: 0 0 5px 5px;
 
 						& .member-img {
+							margin-bottom: 6px;
 
 							& img {
 								position: absolute;
@@ -175,13 +176,18 @@
 							.branding;
 							font-size: 1.2rem;
 							line-height: 1;
-							margin-bottom: 0;
+							margin-bottom: 10px;
 						}
 
 						& .member-role {
 							color: @grayish_blue;
 							.branding;
 							font-size: 14px;
+							line-height: 1.4;
+
+							@media all and ( min-width: 768px ) {
+								min-height: 40px;
+							}
 						}
 					}
 
