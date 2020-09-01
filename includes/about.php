@@ -168,9 +168,11 @@ function shd_timeline() {
 			'left_config' => false,
 			'main_events' => array(
 				'Sandhills completes its second land stewardship project by purchasing 54 acres of Tallgrass prairie land! Read more about the project <a href="' . home_url( '/2020/03/land-stewardship/' ) . '">here</a>.',
-				'<span class="member">Shayne</span> joins the Sandhills team as a support technician while <span class="member">Robin</span> and <span class="member">Lisa C.</span> join as developers! Welcome to the team, you all!'
+				'<span class="member">Shayne</span> joins the Sandhills team as a support technician while <span class="member">Robin</span> and <span class="member">Lisa C.</span> join as developers! Welcome to the team, you all!',
+				'Restrict Content Pro acquired by iThemes / Liquid Web, allowing us to narrow our focus. <a href="' . home_url( '/2020/09/a-long-bright-future-for-restrict-content-pro-with-ithemes-and-liquid-web/' ) . '">Read more</a> this acquisition.'
 			),
 			'addtl_events' => array(
+				'Sellbird development put on hold in light of the uncertainties of COVID-19.'
 			),
 		),
 	);
@@ -185,7 +187,7 @@ function shd_timeline() {
 function shd_upcoming_events() {
 
 	$upcoming_events = array(
-		'Though Sellbird is currently under development, <a href="' . SB . '">you can sign up</a> to receive updates and information as the project takes flight.',
+		/*'Though Sellbird is currently under development, <a href="' . SB . '">you can sign up</a> to receive updates and information as the project takes flight.',*/
 		'The development team is working diligently on Easy Digital Downloads 3.0, the most significant update the eCommerce plugin has ever received. Stay up to date with our <a href="' . EDD . 'development/">development blog</a>.',
 	);
 
