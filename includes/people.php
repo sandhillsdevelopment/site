@@ -165,6 +165,12 @@ function shd_get_our_people() {
 			'year_joined' => '2020',
 			'country'     => 'usa',
 		),
+		'taylor' => array(
+			'name'        => 'Taylor Jackson',
+			'role'        => 'Application Support Specialist',
+			'year_joined' => '2020',
+			'country'     => 'usa',
+		),
 	);
 
 	return (array) $our_people;
