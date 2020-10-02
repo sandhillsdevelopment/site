@@ -23,6 +23,9 @@ if ( is_front_page() ) {
 						</div>
 						<div class="col-sm-9 <?php echo $key . '-info-col'; ?>">
 							<span class="project-type generic-heading"><?php echo $value['type']; ?></span>
+							<?php if ( 'acquired' === $value['status'] ) { ?>
+								<span class="project-status generic-heading">(Project <?php echo $value['status']; ?>)</span>
+							<?php } ?>
 							<span class="project-title generic-heading"><?php echo $value['name']; ?><span class="external-project-link"><i class="fad fa-external-link"></i></span></span>
 							<p class="project-description"><?php echo $value['short_desc']; ?></p>
 						</div>
@@ -59,6 +62,9 @@ if ( is_page( 'projects') ) {
 								<div class="col-md-10 <?php echo $key . '-info-col'; ?>">
 									<div class="<?php echo $key . '-info-container'; ?>">
 										<span class="content-subtitle"><?php echo $value['type']; ?></span>
+										<?php if ( 'acquired' === $value['status'] ) { ?>
+											<span class="project-status generic-heading">(Project <?php echo $value['status']; ?>)</span>
+										<?php } ?>
 										<a class="content-title" href="<?php echo $value['links']['url']; ?>"><?php echo $value['name']; ?>&nbsp;<i class="fad fa-external-link"></i></a>
 									</div>
 								</div>
@@ -87,7 +93,13 @@ if ( is_page( 'projects') ) {
 								?>
 							</ul>
 							<div class="aside-cta mt-auto">
-								<a class="aside-button shd-button" href="<?php echo $value['links']['url']; ?>">View project</a>
+								<?php
+								$button_text = 'View project';
+								if ( 'acquired' === $value['status'] ) {
+									$button_text = 'Project acquired';
+								}
+								?>
+								<a class="aside-button shd-button" href="<?php echo $value['links']['url']; ?>"><?php echo $button_text; ?></a>
 							</div>
 						</div>
 					</div>
