@@ -20,6 +20,7 @@ define( 'SHD_ASSETS', SHD_STYLESHEET_URI . 'includes/assets/' );
 define( 'SHD_IMAGES', SHD_STYLESHEET_URI . 'includes/assets/images/' );
 
 define( 'AWP', 'https://affiliatewp.com/' );
+define( 'PS', 'https://payouts.sandhillsdev.com/' );
 define( 'EDD', 'https://easydigitaldownloads.com/' );
 define( 'RCP', 'https://restrictcontentpro.com/' );
 define( 'SC', 'https://sugarcalendar.com/' );

@@ -108,8 +108,16 @@
 										padding-left: 0;
 
 										& .project-type {
-											display: block;
+											display: inline-block;
 											color: @blue;
+											.branding;
+											font-size: 13px;
+											margin-bottom: 4px;
+										}
+
+										& .project-status {
+											display: inline-block;
+											color: lighten( @alt_red, 5% );
 											.branding;
 											font-size: 13px;
 											margin-bottom: 4px;
@@ -287,7 +295,17 @@
 								& [class*="-info-container"] {
 
 									& .content-subtitle {
+										display: inline-block;
 										color: @blue;
+									}
+
+									& .project-status {
+										display: inline-block;
+										color: lighten( @alt_red, 5% );
+										.branding;
+										font-size: 1rem;
+										line-height: 1;
+										margin-bottom: 10px;
 									}
 
 									& .content-title {
