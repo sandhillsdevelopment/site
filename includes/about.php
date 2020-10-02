@@ -169,7 +169,8 @@ function shd_timeline() {
 			'main_events' => array(
 				'Sandhills completes its second land stewardship project by purchasing 54 acres of Tallgrass prairie land! Read more about the project <a href="' . home_url( '/2020/03/land-stewardship/' ) . '">here</a>.',
 				'<span class="member">Shayne</span> joins the Sandhills team as a support technician while <span class="member">Robin</span> and <span class="member">Lisa C.</span> join as developers! Welcome to the team, you all!',
-				'Restrict Content Pro acquired by iThemes / Liquid Web, allowing us to narrow our focus. <a href="' . home_url( '/2020/09/a-long-bright-future-for-restrict-content-pro-with-ithemes-and-liquid-web/' ) . '">Read more</a> this acquisition.'
+				'Restrict Content Pro acquired by iThemes / Liquid Web, allowing us to narrow our focus. <a href="' . home_url( '/2020/09/a-long-bright-future-for-restrict-content-pro-with-ithemes-and-liquid-web/' ) . '">Read more</a> about this acquisition.',
+				'<span class="member">Taylor</span> becomes the newest member of our team as a support technician.'
 			),
 			'addtl_events' => array(
 				'Sellbird development put on hold in light of the uncertainties of COVID-19.'
