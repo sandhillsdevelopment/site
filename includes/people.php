@@ -51,7 +51,7 @@ function shd_get_our_people() {
 		),
 		'drew'     => array(
 			'name'        => 'Drew Jaynes',
-			'role'        => 'Lead Developer',
+			'role'        => 'Development Manager',
 			'year_joined' => '2016',
 			'country'     => 'usa',
 		),
@@ -88,7 +88,7 @@ function shd_get_our_people() {
 		),
 		'tyler'    => array(
 			'name'        => 'Tyler Lau',
-			'role'        => 'Community Relations Coordinator',
+			'role'        => 'Partnership Specialist',
 			'year_joined' => '2018',
 			'country'     => 'usa',
 		),
@@ -107,7 +107,7 @@ function shd_get_our_people() {
 		),
 		'mandy'    => array(
 			'name'        => 'Mandy Jones',
-			'role'        => 'Content Marketing Specialist',
+			'role'        => 'Product Marketing Specialist',
 			'year_joined' => '2018',
 			'country'     => 'usa',
 		),
@@ -143,7 +143,7 @@ function shd_get_our_people() {
 		),
 		'joe'     => array(
 			'name'        => 'Joe Wells',
-			'role'        => 'Content Marketing Specialist',
+			'role'        => 'Product Marketing Specialist',
 			'year_joined' => '2019',
 			'country'     => 'usa',
 		),
