@@ -10,7 +10,7 @@ get_header();
 			<div class="row">
 				<div class="col">
 					<span class="quick-detail shd-founded"><i class="fad fa-lightbulb"></i><strong>Founded in 2009</strong><span class="temp-hide"> by Pippin Williamson.</span></span>
-					<span class="quick-detail shd-global"><i class="fad fa-globe-americas"></i><span class="temp-hide"><?php echo count( shd_get_our_people() ); ?> </span><strong>globally-distributed team</strong><span class="temp-hide"> members.</span></span>
+					<span class="quick-detail shd-global"><i class="fad fa-globe-americas"></i><span class="temp-hide"><?php echo shd_get_team_members_count(); ?> </span><strong>globally-distributed team</strong><span class="temp-hide"> members.</span></span>
 					<span class="quick-detail shd-headquarters"><i class="fad fa-map-marker-alt"></i><span class="temp-hide">Headquartered in </span><strong>Hutchinson, Kansas</strong>.</span>
 					<span class="quick-detail"><a class="quick-info-link" href="<?php echo home_url( '/about/' ); ?>">More<span class="temp-hide">&nbsp;about&nbsp;Sandhills</span>&nbsp;&rarr;</a></span>
 				</div>
@@ -59,7 +59,7 @@ get_header();
 				<div class="col-md-9">
 					<div class="our-people">
 						<span class="generic-heading">Our global team</span>
-						<p>Freedom is important to us. We work from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize healthy workplaces. Our globally-distributed team consists of <?php echo count( shd_get_our_people() ); ?> professionals located in <?php echo shd_get_our_countries_count(); ?> countries across the globe.</p>
+						<p>Freedom is important to us. We work from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize healthy workplaces. Our globally-distributed team consists of <?php echo shd_get_team_members_count(); ?> professionals located in <?php echo shd_get_team_members_country_count(); ?> countries across the globe.</p>
 						<p><a class="shd-button" href="<?php echo home_url( '/about/' ); ?>">About Sandhills</a></p>
 					</div>
 				</div>
