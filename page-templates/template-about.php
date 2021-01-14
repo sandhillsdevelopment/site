@@ -82,7 +82,7 @@ get_header();
 				</div>
 			</div>
 			<div class="our-people-row row mb-lg-3">
-				<?php get_template_part( 'template-parts/content', 'our-humans' ); ?>
+				<?php get_template_part( 'template-parts/content', 'team-members' ); ?>
 			</div>
 			<div class="submit-an-app-row row justify-content-around text-center">
 				<div class="col-lg-4">
@@ -109,7 +109,7 @@ get_header();
 				<div class="sandhills-history-row row justify-content-around text-center">
 					<div class="col-lg-8">
 						<h1 class="bold-title">Sandhills <span class="title-highlight">History</span></h1>
-						<p class="bold-description">From <?php echo shd_get_our_countries_count(); ?> different countries around the world, we've slowly come <em>together</em> to create what we believe in, and what makes our customers' lives better.</p>
+						<p class="bold-description">From <?php echo shd_get_team_members_country_count(); ?> different countries around the world, we've slowly come <em>together</em> to create what we believe in, and what makes our customers' lives better.</p>
 						<p class="bold-description-secondary">Here's how we did it.</p>
 					</div>
 				</div>
