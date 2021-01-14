@@ -1,6 +1,6 @@
 {
   "name": "SHD-Site",
-  "version": "1.0.7",
+  "version": "1.0.7.1",
   "description": "Version 1.X.X of Sandhills Development Site",
   "main": "gruntfile.js",
   "scripts": {

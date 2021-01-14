@@ -123,6 +123,7 @@ get_header();
 							</div>
 
 							<?php
+							$test = shd_get_events(); var_dump($test);
 							$years = shd_timeline();
 							foreach ( $years as $year ) {
 								?>

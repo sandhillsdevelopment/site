@@ -5,6 +5,25 @@
 
 
 /**
+ * All team members
+ */
+function shd_get_events( $year = 0 ) {
+
+	$event_args = array(
+		'post_type'      => 'event',
+		'post_status'    => 'publish',
+		'posts_per_page' => -1,
+		'order'          => 'ASC',
+		'meta_key'		 => ! empty( $year ) ? 'year_occurred' : '',
+		'meta_value'	 => ! empty( $year ) ? $year : '',
+	);
+	$events     = get_posts( $event_args );
+
+	return $events;
+}
+
+
+/**
  * Company timeline excluding upcoming events (shd_upcoming_events())
  */
 function shd_timeline() {
