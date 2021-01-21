@@ -123,15 +123,26 @@ get_header();
 							</div>
 
 							<?php
-							$test = shd_get_events(); var_dump($test);
-							$years = shd_timeline();
+							// Get an array of each year that has at least one published company event
+							$years = shd_get_years_with_events();
+
+							// Each iteration will set the event group row as 'odd' or 'even', enabling alternating styles
+							$event_group = 'odd';
+
+							// For each year that has published events, output the year marker,
+							// all primary events, and all secondary events
 							foreach ( $years as $year ) {
+
+								// Skip non-year values, like Future events
+								if ( 0 === $year ) {
+									continue;
+								}
 								?>
 
 								<div class="row new-year-row">
 									<div class="col-md-6 events-col new-year-event">
-										<div class="new-year-date <?php echo $year['color']; ?>">
-											<span class="the-year"><?php echo $year['year']; ?></span>
+										<div class="new-year-date blue">
+											<span class="the-year"><?php echo $year; ?></span>
 										</div>
 										<div class="events-inner">
 										</div>
@@ -140,36 +151,45 @@ get_header();
 									</div>
 								</div>
 
-								<div class="row">
-									<div class="col-md-6 events-col<?php echo $year['left_config'] ? '' : ' order-md-2'; ?>">
+								<div class="row event-group-row">
+
+									<div class="col-md-6 events-col<?php echo $event_group === 'odd' ? '' : ' order-md-2'; ?>">
 										<div class="events-inner">
 											<?php
-											foreach ( $year['main_events'] as $main_event ) {
+											// Get all of the Primary events for the current $year in the loop
+											$primary_events = shd_get_events_by_group( $year, 'Primary event' );
+											foreach ( $primary_events as $p_event ) {
 												?>
 												<div class="single-event-wrap">
-													<p class="event-description"><?php echo $main_event; ?></p>
+													<p><?php echo $p_event->post_content; ?></p>
 												</div>
 												<?php
 											}
 											?>
 										</div>
 									</div>
-									<div class="col-md-6 additional-info-col<?php echo $year['left_config'] ? '' : ' order-md-1'; ?>">
+
+									<div class="col-md-6 additional-info-col<?php echo $event_group === 'odd' ? '' : ' order-md-1'; ?>">
 										<div class="additional-info-inner">
 											<?php
-											foreach ( $year['addtl_events'] as $addtl_event ) {
+											// Get all of the Secondary events for the current $year in the loop
+											$secondary_events = shd_get_events_by_group( $year, 'Secondary event' );
+											foreach ( $secondary_events as $s_event ) {
 												?>
 												<div class="additional-event">
-													<p><?php echo $addtl_event; ?></p>
+													<p><?php echo $s_event->post_content; ?></p>
 												</div>
 												<?php
 											}
 											?>
 										</div>
 									</div>
+
 								</div>
 
 								<?php
+								// Now swap the alignment of events as we output a new year
+								$event_group = $event_group === 'odd' ? 'even' : 'odd';
 							}
 							?>
 
@@ -187,13 +207,14 @@ get_header();
 				<div class="sandhills-future-timeline">
 
 					<?php
-					$upcoming_events = shd_upcoming_events();
-					foreach ( $upcoming_events as $upcoming_event ) {
+					// Get all future events
+					$future_events = shd_get_future_events();
+					foreach ( $future_events as $f_event ) {
 						?>
 						<div class="sandhills-future-timeline-item row justify-content-around">
 							<div class="col-lg-6 future-event-col">
 								<div class="future-event">
-									<p><?php echo $upcoming_event; ?></p>
+									<p><?php echo $f_event->post_content; ?></p>
 								</div>
 							</div>
 						</div>

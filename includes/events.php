@@ -5,21 +5,72 @@
 
 
 /**
- * All team members
+ * Get company events based on year and type
  */
-function shd_get_events( $year = 0 ) {
+function shd_get_events_by_group( $year = 0, $type = null ) {
 
 	$event_args = array(
 		'post_type'      => 'event',
 		'post_status'    => 'publish',
 		'posts_per_page' => -1,
 		'order'          => 'ASC',
-		'meta_key'		 => ! empty( $year ) ? 'year_occurred' : '',
-		'meta_value'	 => ! empty( $year ) ? $year : '',
+		'meta_query'     => array(
+			'relation' => 'AND',
+			array(
+				'key'   => 'year_occurred',
+				'value' => $year,
+			),
+			array(
+				'key'   => 'event_type',
+				'value' => $type,
+			),
+		),
 	);
 	$events     = get_posts( $event_args );
 
 	return $events;
+}
+
+
+/**
+ * Get all future company events
+ */
+function shd_get_future_events() {
+
+	$future_event_args = array(
+		'post_type'      => 'event',
+		'post_status'    => 'publish',
+		'posts_per_page' => -1,
+		'order'          => 'ASC',
+		'meta_key'       => 'event_type',
+		'meta_value'     => 'Future event',
+	);
+	$future_events     = get_posts( $future_event_args );
+
+	return $future_events;
+}
+
+
+/**
+ * Get a list of the years that have published company events
+ */
+function shd_get_years_with_events() {
+
+	$event_args = array(
+		'post_type'      => 'event',
+		'post_status'    => 'publish',
+		'posts_per_page' => -1,
+		'order'          => 'ASC',
+	);
+	$events     = get_posts( $event_args );
+
+	foreach ( $events as $event ) {
+		$event_years[] = (int) get_field( 'year_occurred', $event->ID );
+	}
+
+	$years = array_unique( $event_years );
+
+	return $years;
 }
 
 

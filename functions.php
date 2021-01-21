@@ -39,7 +39,7 @@ function shd_theme_setup() {
 	include( SHD_INCLUDES . 'general.php' );
 	include( SHD_INCLUDES . 'projects.php' );
 	include( SHD_INCLUDES . 'people.php' );
-	include( SHD_INCLUDES . 'timeline.php' );
+	include( SHD_INCLUDES . 'events.php' );
 	include( SHD_INCLUDES . 'about.php' );
 
 	// Integration functions
