@@ -141,7 +141,7 @@ get_header();
 
 								<div class="row new-year-row">
 									<div class="col-md-6 events-col new-year-event">
-										<div class="new-year-date blue">
+										<div class="new-year-date">
 											<span class="the-year"><?php echo $year; ?></span>
 										</div>
 										<div class="events-inner">
@@ -161,7 +161,7 @@ get_header();
 											foreach ( $primary_events as $p_event ) {
 												?>
 												<div class="single-event-wrap">
-													<p><?php echo $p_event->post_content; ?></p>
+													<p class="event-description"><?php echo $p_event->post_content; ?></p>
 												</div>
 												<?php
 											}
@@ -177,7 +177,7 @@ get_header();
 											foreach ( $secondary_events as $s_event ) {
 												?>
 												<div class="additional-event">
-													<p><?php echo $s_event->post_content; ?></p>
+													<p class="event-description"><?php echo $s_event->post_content; ?></p>
 												</div>
 												<?php
 											}
