@@ -7,7 +7,7 @@
 /**
  * Definitions
  */
-define( 'SHD_SITE_VERSION', '1.0.7.1' );
+define( 'SHD_SITE_VERSION', '1.0.8' );
 
 define( 'SHD_ROOT', dirname(__FILE__) );
 define( 'SHD_INCLUDES', SHD_ROOT . '/includes/' );
@@ -39,7 +39,7 @@ function shd_theme_setup() {
 	include( SHD_INCLUDES . 'general.php' );
 	include( SHD_INCLUDES . 'projects.php' );
 	include( SHD_INCLUDES . 'people.php' );
-	include( SHD_INCLUDES . 'timeline.php' );
+	include( SHD_INCLUDES . 'events.php' );
 	include( SHD_INCLUDES . 'about.php' );
 
 	// Integration functions
