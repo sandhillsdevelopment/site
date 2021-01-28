@@ -2,43 +2,113 @@
 /**
  * Front page hero section content
  */
+
+
 ?>
 
 <div class="container">
+
 	<div class="hero">
 		<div class="row justify-content-around text-center">
+
 			<div class="tagline-container col-lg-8">
-				<h1 class="tagline-heading bold-title">Crafting <span class="title-highlight">Ingenuity</span></h1>
-				<div class="tagline">
-					<p class="bold-description">With <a href="<?php echo home_url( '/commitments/' ); ?>">commitment</a> and a deep appreciation for the human element, we aim to craft superior experiences through ingenuity.</p>
-					<p><a class="shd-button" href="<?php echo home_url( '/projects/'); ?>">view our projects</a></p>
-				</div>
+
+				<h1 class="tagline-heading bold-title">
+					<?php
+					/**
+					 * Wait till the last minute (output) to add markup to the site description.
+					 * This is done for styling reasons. It is not essential.
+					 */
+					echo str_replace(
+						'Ingenuity',
+						'<span class="title-highlight">Ingenuity</span>',
+						get_bloginfo( 'description' )
+					);
+					?>
+				</h1>
+
+				<?php
+				// Get the hero tagline
+				$hero_tagline = get_field( 'hero_tagline' );
+
+				// Only output a hero tagline if it exists.
+				if ( ! empty( $hero_tagline ) ) {
+					?>
+
+					<div class="tagline">
+
+						<div class="bold-description">
+							<?php echo $hero_tagline; ?>
+						</div>
+
+						<?php
+						// Get the button and its subfields
+						$hero_button      = get_field( 'hero_button' );
+						$hero_button_url  = $hero_button['hero_button_url'];
+						$hero_button_text = $hero_button['hero_button_text'];
+
+						// Only output a hero button if it exists.
+						if ( ! empty( $hero_button_url ) && ! empty( $hero_button_text ) ) {
+							?>
+							<p><a class="shd-button" href="<?php echo $hero_button_url; ?>"><?php echo $hero_button_text; ?></a></p>
+							<?php
+						}
+						?>
+
+					</div>
+
+					<?php
+				}
+				?>
+
 			</div>
+
 		</div>
 	</div>
+
 	<div class="sandhills-goals">
 		<div class="row">
-			<div class="col-lg-4">
-				<div class="sandhills-goal">
-					<img class="goal-icon" src="<?php echo SHD_IMAGES . 'icons/uplifting-communities-icon.svg'; ?>">
-					<h3 class="goal-title title-border">Uplifting communities</h3>
-					<p class="goal-description">Through various charities, land development, and property management, our aim is to leave the world in better condition than how we found it.</p>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="sandhills-goal">
-					<img class="goal-icon" src="<?php echo SHD_IMAGES . 'icons/empowering-businesses-icon.svg'; ?>">
-					<h3 class="goal-title title-border">Empowering businesses</h3>
-					<p class="goal-description">We are the team of humans behind <a href="<?php echo AWP; ?>">AffiliateWP</a>, <a href="<?php echo EDD; ?>">Easy Digital Downloads</a>, <a href="<?php echo PS; ?>">Payouts Service</a>, <a href="<?php echo SC; ?>">Sugar Calendar</a>, <a href="<?php echo WPSP; ?>">WP Simple Pay</a>, <a href="<?php echo SB; ?>">Sellbird</a>, and more.</p>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="sandhills-goal">
-					<img class="goal-icon" src="<?php echo SHD_IMAGES . 'icons/following-passions-icon.svg'; ?>">
-					<h3 class="goal-title title-border">Following passions</h3>
-					<p class="goal-description">Just like you, we have real passions. One of our passions happens to be beer. <a href="<?php echo BEER; ?>">Sandhills Brewing</a> attracts those who love our barrel aged wild ales.</p>
-				</div>
-			</div>
+
+			<?php
+			// Get all of the company goals
+			$hero_goals = get_field( 'hero_goals' );
+
+			if ( have_rows( 'hero_goals' ) ) {
+
+				// To reduce code, use this handy-dandy array to loop through the created goals.
+				$goal_count = array( 'one', 'two', 'three' );
+
+				while ( have_rows( 'hero_goals' ) ) {
+					the_row();
+
+					// Each goal uses the same naming scheme, so loop through based on $goal_count
+					foreach ( $goal_count as $goal ) {
+
+						if ( have_rows( 'goal_' . $goal ) ) {
+
+							while ( have_rows( 'goal_' . $goal ) ) {
+								the_row();
+								$goal_icon        = get_sub_field( 'icon' );
+								$goal_title       = get_sub_field( 'title' );
+								$goal_description = get_sub_field( 'description' );
+								?>
+								<div class="col-lg-4">
+									<div class="sandhills-goal">
+										<img alt="" class="goal-icon" src="<?php echo $goal_icon; ?>">
+										<h3 class="goal-title title-border"><?php echo $goal_title; ?></h3>
+										<div class="goal-description">
+											<?php echo $goal_description; ?>
+										</div>
+									</div>
+								</div>
+								<?php
+							}
+						}
+					}
+				}
+			}
+			?>
 		</div>
 	</div>
+
 </div>
