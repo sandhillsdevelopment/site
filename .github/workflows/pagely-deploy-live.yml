@@ -2,7 +2,7 @@ name: "pagely-deploy-live"
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   deploy:
     name: Deploy to Sandhills Development - Live
