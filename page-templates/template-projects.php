@@ -20,7 +20,11 @@ get_header();
 	</div>
 
 	<div class="full-projects-wrapper">
-		<?php get_template_part( 'template-parts/content', 'our-projects' ); ?>
+		<?php
+		while ( have_posts() ) : the_post();
+			get_template_part( 'template-parts/content', 'our-projects' );
+		endwhile;
+		?>
 	</div>
 
 <?php
