@@ -13,6 +13,7 @@ function shd_get_projects() {
 		'post_status'    => 'publish',
 		'posts_per_page' => -1,
 		'order'          => 'ASC',
+		'orderby'        => 'menu_order'
 	);
 	return get_posts( $project_args );
 }
