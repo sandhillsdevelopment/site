@@ -13,7 +13,7 @@ jobs:
       - name: Run deploy
         uses: pagely/action-deploy@v1
         with:
-          PAGELY_DEPLOY_DEST: "/httpdocs/wp-content/plugins/shd-custom-functions"
+          PAGELY_DEPLOY_DEST: "/httpdocs/wp-content/themes/sandhills-site"
           PAGELY_INTEGRATION_SECRET: ${{secrets.PAGELY_INTEGRATION_SECRET}}
           PAGELY_INTEGRATION_ID: "NCPKntTcDJRQMfEQyRo268"
           PAGELY_APP_ID: "31999"
