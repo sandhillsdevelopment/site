@@ -22,24 +22,108 @@ get_header();
 		<div class="container">
 			<div class="projects-header row justify-content-around text-center">
 				<div class="col-xl-8 col-lg-10">
-					<span class="bold-title">Our <span class="title-highlight">projects</span></span>
-					<p class="bold-description">Whether it's a software designed to enhance your business, or a Berliner-style Weisse perfect for sunny days outside, we create with passion and intent.</p>
+					<?php
+					if ( have_rows( 'projects_section' ) ) {
+
+						while ( have_rows( 'projects_section' ) ) {
+							the_row();
+
+							$projects_section  = get_field( 'projects_section' );
+							$projects_title    = get_sub_field( 'title' );
+							$projects_subtitle = get_sub_field( 'subtitle' );
+
+							if ( ! empty( $projects_title ) ) {
+								?>
+								<span class="bold-title">
+									<?php echo shd_title_with_highlight( 'projects', $projects_title ); ?>
+								</span>
+								<?php
+							}
+
+							if ( ! empty( $projects_subtitle ) ) {
+								?>
+								<p class="bold-description"><?php echo $projects_subtitle; ?></p>
+								<?php
+							}
+						}
+
+						reset_rows();
+					}
+					?>
 				</div>
 			</div>
 			<div class="projects-row row justify-content-around">
+
 				<div class="projects-col col">
+
 					<div class="projects-wrapper">
 						<div class="row justify-content-between no-gutters">
-							<?php get_template_part( 'template-parts/content', 'our-projects' ); ?>
+							<?php
+							$projects = shd_get_projects();
+
+							foreach ( $projects as $project ) {
+								$project_type    = get_field( 'project_type', $project->ID );
+								$project_status  = get_field( 'project_status', $project->ID );
+								$project_url     = get_field( 'project_url', $project->ID );
+								?>
+
+								<div class="<?php echo $project->post_name . '-col'; ?> project-col col-lg-6">
+									<a class="<?php echo $project->post_name . '-url'; ?>" href="<?php echo $project_url; ?>">
+										<div class="<?php echo $project->post_name . '-project'; ?> project">
+											<div class="row">
+												<div class="col-sm-3 <?php echo $project->post_name . '-mascot-col'; ?>">
+													<?php echo get_the_post_thumbnail( $project->ID, 'full', array( 'class' => $project->post_name . '-mascot mascot' ) ); ?>
+												</div>
+												<div class="col-sm-9 <?php echo $project->post_name . '-info-col'; ?>">
+													<span class="project-type generic-heading"><?php echo $project_type; ?></span>
+													<?php if ( 'Acquired' === $project_status ) { ?>
+														<span class="project-status generic-heading">(Project <?php echo $project_status; ?>)</span>
+													<?php } ?>
+													<span class="project-title generic-heading"><?php echo $project->post_title; ?><span class="external-project-link"><i class="fad fa-external-link"></i></span></span>
+													<p class="project-description"><?php echo $project->post_excerpt; ?></p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<?php
+							}
+							?>
+
 						</div>
 					</div>
+
 				</div>
+
 			</div>
-			<div class="more-projects-row row text-center">
-				<div class="col">
-					<a class="shd-button more-project-details" href="<?php echo home_url( '/projects/' ); ?>">Full project details</a>
-				</div>
-			</div>
+
+			<?php
+			if ( have_rows( 'projects_section' ) ) {
+
+				while ( have_rows( 'projects_section' ) ) {
+					the_row();
+
+					// Get the button content
+					$projects_button_url  = get_sub_field( 'button_url' );
+					$projects_button_text = get_sub_field( 'button_text' );
+
+					// Only output a button if it exists.
+					if ( ! empty( $projects_button_url ) && ! empty( $projects_button_text ) ) {
+						?>
+
+						<div class="more-projects-row row text-center">
+							<div class="col">
+								<a class="shd-button more-project-details" href="<?php echo $projects_button_url; ?>"><?php echo $projects_button_text; ?></a>
+							</div>
+						</div>
+
+						<?php
+					}
+				}
+			}
+			?>
+
 		</div>
 	</section>
 
@@ -53,35 +137,45 @@ get_header();
 		</div>
 	</section>
 
-	<section class="team-section">
-		<div class="container">
-			<div class="row justify-content-around text-center">
-				<div class="col-md-9">
-					<div class="our-people">
-						<span class="generic-heading">Our global team</span>
-						<p>Freedom is important to us. We work from the comfort of our own homes, or wherever we find ourselves happy and productive. We do our best work when we prioritize healthy workplaces. Our globally-distributed team consists of <?php echo shd_get_team_members_count(); ?> professionals located in <?php echo shd_get_team_members_country_count(); ?> countries across the globe.</p>
-						<p><a class="shd-button" href="<?php echo home_url( '/about/' ); ?>">About Sandhills</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="apply-section">
-		<div class="container">
-			<div class="row justify-content-around text-center">
-				<div class="col-md-9">
-					<div class="our-commitment">
-						<span class="generic-heading">Sandhills careers</span>
-						<p>We're committed to the well-being of our people. That allows us to collectively focus our efforts on positive experiences for our customers, and freeing up time for us all. If you're interested in being part of our team, do not hesitate to submit an application for consideration.</p>
-						<p><a class="shd-button" href="<?php echo home_url( '/careers/' ); ?>">Work at Sandhills</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<?php
+	if ( have_rows( 'team_careers_section' ) ) {
+
+		while ( have_rows( 'team_careers_section' ) ) {
+			the_row();
+			?>
+
+			<section class="team-section">
+				<div class="container">
+					<div class="row justify-content-around text-center">
+						<div class="col-md-9">
+							<div class="our-people">
+								<span class="generic-heading"><?php echo get_sub_field( 'team_title' ); ?></span>
+								<p><?php echo get_sub_field( 'team_content' ); ?></p>
+								<p><a class="shd-button" href="<?php echo get_sub_field( 'team_button_url' ); ?>"><?php echo get_sub_field( 'team_button_text' ); ?></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="apply-section">
+				<div class="container">
+					<div class="row justify-content-around text-center">
+						<div class="col-md-9">
+							<div class="our-commitment">
+								<span class="generic-heading"><?php echo get_sub_field( 'careers_title' ); ?></span>
+								<p><?php echo get_sub_field( 'careers_content' ); ?></p>
+								<p><a class="shd-button" href="<?php echo get_sub_field( 'careers_button_url' ); ?>"><?php echo get_sub_field( 'careers_button_text' ); ?></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<?php
+		}
+	}
+
 	// Get latest post
 	$last_post = get_posts( array( 'numberposts' => 1 ) );
 	if ( ! empty( $last_post ) ) {

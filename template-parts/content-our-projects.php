@@ -5,41 +5,6 @@
 
 $projects = shd_get_projects();
 
-/**
- * Used on the front page to display projects with short descriptions
- */
-if ( is_front_page() ) {
-
-	foreach ( $projects as $project ) {
-		$project_type    = get_field( 'project_type', $project->ID );
-		$project_status  = get_field( 'project_status', $project->ID );
-		$project_url     = get_field( 'project_url', $project->ID );
-		?>
-
-		<div class="<?php echo $project->post_name . '-col'; ?> project-col col-lg-6">
-			<a class="<?php echo $project->post_name . '-url'; ?>" href="<?php echo $project_url; ?>">
-				<div class="<?php echo $project->post_name . '-project'; ?> project">
-					<div class="row">
-						<div class="col-sm-3 <?php echo $project->post_name . '-mascot-col'; ?>">
-							<?php echo get_the_post_thumbnail( $project->ID, 'full', array( 'class' => $project->post_name . '-mascot mascot' ) ); ?>
-						</div>
-						<div class="col-sm-9 <?php echo $project->post_name . '-info-col'; ?>">
-							<span class="project-type generic-heading"><?php echo $project_type; ?></span>
-							<?php if ( 'Acquired' === $project_status ) { ?>
-								<span class="project-status generic-heading">(Project <?php echo $project_status; ?>)</span>
-							<?php } ?>
-							<span class="project-title generic-heading"><?php echo $project->post_title; ?><span class="external-project-link"><i class="fad fa-external-link"></i></span></span>
-							<p class="project-description"><?php echo $project->post_excerpt; ?></p>
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<?php
-	}
-}
-
 
 /**
  * Used on the Projects page to display projects with long descriptions
