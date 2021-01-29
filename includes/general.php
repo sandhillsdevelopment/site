@@ -124,3 +124,24 @@ function shd_excerpt_length( $length ) {
 	return 25;
 }
 add_filter( 'excerpt_length', 'shd_excerpt_length', 999 );
+
+
+/**
+ * Wrap a specific string of text in a span for styling purposes
+ */
+function shd_title_with_highlight( $highlight, $title ) {
+
+	// Bail if no highlighting is needed
+	if ( empty( $highlight ) ) {
+		return $title;
+	}
+
+	// Wrap the specified text in a span
+	$title = str_replace(
+		$highlight,
+		'<span class="title-highlight">' . $highlight . '</span>',
+		$title
+	);
+
+	return $title;
+}
