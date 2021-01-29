@@ -28,7 +28,6 @@ get_header();
 						while ( have_rows( 'projects_section' ) ) {
 							the_row();
 
-							$projects_section  = get_field( 'projects_section' );
 							$projects_title    = get_sub_field( 'title' );
 							$projects_subtitle = get_sub_field( 'subtitle' );
 
