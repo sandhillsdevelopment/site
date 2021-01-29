@@ -7,7 +7,7 @@
 /**
  * Definitions
  */
-define( 'SHD_SITE_VERSION', '1.0.8' );
+define( 'SHD_SITE_VERSION', '1.0.9' );
 
 define( 'SHD_ROOT', dirname(__FILE__) );
 define( 'SHD_INCLUDES', SHD_ROOT . '/includes/' );
