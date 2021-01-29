@@ -11,8 +11,8 @@ get_header();
 			<div class="hero">
 				<header class="row justify-content-around text-center">
 					<div class="col-lg-10">
-						<h1 class="bold-title">About <span class="title-highlight">Sandhills</span></h1>
-						<p class="bold-description">Time is our single most valuable and limited asset. Our goal is not to waste it. We work to live, for time is one thing we cannot waste. ⏳</p>
+						<h1 class="bold-title"><?php echo shd_title_with_highlight( 'Sandhills', get_the_title() ); ?></h1>
+						<p class="bold-description"><?php echo get_field( '_subtitle' ); ?></p>
 					</div>
 				</header>
 			</div>
@@ -76,8 +76,33 @@ get_header();
 			<div class="row text-center justify-content-around">
 				<div class="col-lg-8">
 					<div class="team-sandhills section-header">
-						<span class="our-people-title bold-title">Meet our <span class="title-highlight">Team</span></span>
-						<p class="bold-description">We're a team of many talents, working daily to help each other grow professionally. We employ writers, designers, support technicians, developers, marketers, and most importantly, people who care.</p>
+						<?php
+						if ( have_rows( 'team_section' ) ) {
+
+							while ( have_rows( 'team_section' ) ) {
+								the_row();
+
+								$team_title    = get_sub_field( 'title' );
+								$team_subtitle = get_sub_field( 'subtitle' );
+
+								if ( ! empty( $team_title ) ) {
+									?>
+									<span class="our-people-title bold-title">
+										<?php echo shd_title_with_highlight( 'Team', $team_title ); ?>
+									</span>
+									<?php
+								}
+
+								if ( ! empty( $team_subtitle ) ) {
+									?>
+									<p class="bold-description"><?php echo $team_subtitle; ?></p>
+									<?php
+								}
+							}
+
+							reset_rows();
+						}
+						?>
 					</div>
 				</div>
 			</div>
