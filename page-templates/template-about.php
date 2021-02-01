@@ -11,8 +11,8 @@ get_header();
 			<div class="hero">
 				<header class="row justify-content-around text-center">
 					<div class="col-lg-10">
-						<h1 class="bold-title">About <span class="title-highlight">Sandhills</span></h1>
-						<p class="bold-description">Time is our single most valuable and limited asset. Our goal is not to waste it. We work to live, for time is one thing we cannot waste. ⏳</p>
+						<h1 class="bold-title"><?php echo shd_title_with_highlight( 'Sandhills', get_the_title() ); ?></h1>
+						<p class="bold-description"><?php echo get_field( '_subtitle' ); ?></p>
 					</div>
 				</header>
 			</div>
@@ -26,19 +26,30 @@ get_header();
 					<div class="quick-facts">
 						<div class="facts-wrap">
 							<?php
-							$quick_facts = shd_quick_facts();
-							foreach ( $quick_facts as $fact ) {
+							/**
+							 * For whatever reason, standard repeater field looping isn't working here for ACF.
+							 * This is an extremely simple work around, grabbing the field data using
+							 * get_post_meta. It achieves the same thing.
+							 */
+							$fact_count = array( 'one', 'two', 'three', 'four' );
+							foreach ( $fact_count as $fact ) {
+								$icon    = wp_get_attachment_image(
+									get_post_meta( get_the_ID(), 'quick_facts_fact_' . $fact . '_icon', true ),
+									'full', false, array( 'class' => 'about-icon' )
+								);
+								$title   = get_post_meta( get_the_ID(), 'quick_facts_fact_' . $fact . '_title', true );
+								$content = get_post_meta( get_the_ID(), 'quick_facts_fact_' . $fact . '_content', true );
 								?>
 								<div class="small-content-aside-split row justify-content-between">
 									<div class="col-lg-3 col-sm-2 col-3 small-aside-split">
 										<div class="small-aside-inner">
-											<img class="about-icon" src="<?php echo SHD_IMAGES . 'icons/' . $fact['icon'] . '-icon.svg'; ?>">
+											<?php echo $icon; ?>
 										</div>
 									</div>
 									<div class="col-lg-9 col-sm-10 col-12 small-content-split">
 										<div class="small-content-inner">
-											<span class="small-content-title title-border"><?php echo $fact['title']; ?></span>
-											<p class="small-content-description"><?php echo $fact['desc']; ?></p>
+											<span class="small-content-title title-border"><?php echo $title; ?></span>
+											<p class="small-content-description"><?php echo $content; ?></p>
 										</div>
 									</div>
 								</div>
@@ -76,8 +87,13 @@ get_header();
 			<div class="row text-center justify-content-around">
 				<div class="col-lg-8">
 					<div class="team-sandhills section-header">
-						<span class="our-people-title bold-title">Meet our <span class="title-highlight">Team</span></span>
-						<p class="bold-description">We're a team of many talents, working daily to help each other grow professionally. We employ writers, designers, support technicians, developers, marketers, and most importantly, people who care.</p>
+						<span class="our-people-title bold-title">
+							<?php
+							$team_title = get_post_meta( get_the_ID(), 'team_section_title', true );
+							echo shd_title_with_highlight( 'Team', $team_title );
+							?>
+						</span>
+						<p class="bold-description"><?php echo get_post_meta( get_the_ID(), 'team_section_subtitle', true ); ?></p>
 					</div>
 				</div>
 			</div>
@@ -86,8 +102,12 @@ get_header();
 			</div>
 			<div class="submit-an-app-row row justify-content-around text-center">
 				<div class="col-lg-4">
-					<p class="member-name">Interested in joining our team?</p>
-					<a class="shd-button" href="<?php echo home_url( '/careers/' ); ?>">Work at Sandhills</a>
+					<?php
+					$join_button_text  = get_post_meta( get_the_ID(), 'team_section_button_text', true );
+					$join_button_url   = get_post_meta( get_the_ID(), 'team_section_button_url' );
+					?>
+					<p class="member-name"><?php echo get_post_meta( get_the_ID(), 'team_section_join_our_team', true ); ?></p>
+					<a class="shd-button" href="<?php echo $join_button_url[0]['url']; ?>"><?php echo $join_button_text; ?></a>
 				</div>
 			</div>
 		</div>
@@ -108,9 +128,14 @@ get_header();
 			<div class="container">
 				<div class="sandhills-history-row row justify-content-around text-center">
 					<div class="col-lg-8">
-						<h1 class="bold-title">Sandhills <span class="title-highlight">History</span></h1>
-						<p class="bold-description">From <?php echo shd_get_team_members_country_count(); ?> different countries around the world, we've slowly come <em>together</em> to create what we believe in, and what makes our customers' lives better.</p>
-						<p class="bold-description-secondary">Here's how we did it.</p>
+						<h1 class="bold-title">
+							<?php
+							$team_title = get_post_meta( get_the_ID(), 'history_section_title', true );
+							echo shd_title_with_highlight( 'History', $team_title );
+							?>
+						</h1>
+						<p class="bold-description"><?php echo get_post_meta( get_the_ID(), 'history_section_subtitle', true ); ?></p>
+						<p class="bold-description-secondary"><?php echo get_post_meta( get_the_ID(), 'history_section_timeline_leading_text', true ); ?></p>
 					</div>
 				</div>
 				<div class="sandhills-timeline-row row justify-content-around">
@@ -202,7 +227,7 @@ get_header();
 					</div>
 				</div>
 				<div class="timeline-end text-center">
-					<p>That's <?php echo shd_get_years_in_business(); ?> years and counting. Cheers! 🥂 Here's what to expect in the future.</p>
+					<p><?php echo get_post_meta( get_the_ID(), 'history_section_timeline_trailing_text', true ); ?></p>
 				</div>
 				<div class="sandhills-future-timeline">
 

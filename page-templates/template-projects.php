@@ -65,7 +65,7 @@ get_header();
 									<?php
 									/**
 									 * For whatever reason, standard repeater field looping isn't working here for ACF.
-									 * This is an extremely simple work around, grabbing the repeater field data using
+									 * This is an extremely simple work around, grabbing the field data using
 									 * get_post_meta. It achieves the same thing.
 									 */
 									$additional_urls = get_post_meta( $project->ID, 'additional_urls', true );
