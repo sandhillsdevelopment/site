@@ -45,96 +45,103 @@ input[type="submit"] {
 		}
 	}
 
-	& .wpforms-field,
-	.gfield {
-		padding-right: 0 !important;
-		margin: 0 0 30px !important;
+	& .gform_body {
 
-		& select {
-			padding: 8px 6px !important;
-
-			& option {
-				font-size: 16px;
-			}
+		& ul.gform_fields {
+			padding-left: 0 !important;
 		}
 
-		& input[type="checkbox"],
-		input[type="radio"] {
+		& .wpforms-field,
+		.gfield {
+			padding-right: 0 !important;
+			margin: 0 0 30px !important;
 
-			&:checked {
+			& select {
+				padding: 8px 6px !important;
 
-				& + label {
-					font-weight: 600 !important;
+				& option {
+					font-size: 16px;
 				}
-			}
-		}
-
-		& .wpforms-field-label,
-		.gfield_label {
-			.branding;
-			font-size: 1.2rem;
-			line-height: 1;
-			margin-bottom: 6px;
-
-			& .wpforms-required-label,
-			.gfield_required {
-				color: red;
-			}
-		}
-
-		& .wpforms-field-label-inline {
-			font-size: 16px;
-		}
-
-		& .wpforms-field-sublabel,
-		.wpforms-field-description {
-			color: @grayish_blue;
-		}
-
-		& .ginput_container {
-			margin: 0 !important;
-
-			& .gfield_checkbox,
-			.gfield_radio {
-				margin: 0 0 10px !important;
-
-				& li {
-					margin: 0 !important;
-				}
-			}
-
-			& input:not([type="checkbox"]):not([type="radio"]) + label {
-				color: @grayish_blue;
 			}
 
 			& input[type="checkbox"],
 			input[type="radio"] {
 
-				& + label {
-					font-size: 16px;
-					margin: 0 0 0 5px;
+				&:checked {
+
+					& + label {
+						font-weight: 600 !important;
+					}
 				}
 			}
 
-			& input[type="radio"] {
-				margin-top: 0 !important;
+			& .wpforms-field-label,
+			.gfield_label {
+				.branding;
+				font-size: 1.2rem;
+				line-height: 1;
+				margin-bottom: 6px;
 
-				& + label {
-					margin-left: 10px;
+				& .wpforms-required-label,
+				.gfield_required {
+					color: red;
 				}
 			}
-		}
 
-		& .gfield_description {
-			color: @grayish_blue;
-			padding: 0 !important;
-		}
+			& .wpforms-field-label-inline {
+				font-size: 16px;
+			}
 
-		& ul,
-		ol {
-			padding-left: 0;
-			margin-left: 0;
-			margin-bottom: 0;
+			& .wpforms-field-sublabel,
+			.wpforms-field-description {
+				color: @grayish_blue;
+			}
+
+			& .ginput_container {
+				margin: 0 !important;
+
+				& .gfield_checkbox,
+				.gfield_radio {
+					margin: 0 0 10px !important;
+
+					& li {
+						margin: 0 !important;
+					}
+				}
+
+				& input:not([type="checkbox"]):not([type="radio"]) + label {
+					color: @grayish_blue;
+				}
+
+				& input[type="checkbox"],
+				input[type="radio"] {
+
+					& + label {
+						font-size: 16px;
+						margin: 0 0 0 5px;
+					}
+				}
+
+				& input[type="radio"] {
+					margin-top: 0 !important;
+
+					& + label {
+						margin-left: 10px;
+					}
+				}
+			}
+
+			& .gfield_description {
+				color: @grayish_blue;
+				padding: 0 !important;
+			}
+
+			& ul,
+			ol {
+				padding-left: 0;
+				margin-left: 0;
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -253,10 +260,6 @@ input[type="submit"] {
 		textarea.form-control,
 		select {
 			background-color: #fff !important;
-		}
-
-		&:first-child {
-			padding-top: 0 !important;
 		}
 	}
 }
