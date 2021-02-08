@@ -56,7 +56,9 @@ p {
 a {
 	color: @blue;
 
-	&:hover {
+	&:hover,
+	&:active,
+	&:focus {
 		color: @blue;
 	}
 }
@@ -72,7 +74,9 @@ ol {
 	a {
 		text-decoration: underline;
 
-		&:hover {
+		&:hover,
+		&:active,
+		&:focus {
 			text-decoration: none;
 		}
 	}

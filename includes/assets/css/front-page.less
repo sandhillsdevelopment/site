@@ -27,7 +27,9 @@
 					color: @night_text;
 					transition: color .2s;
 
-					&:hover {
+					&:hover,
+					&:active,
+					&:focus {
 						color: #fff;
 						opacity: 1 !important;
 					}
@@ -61,7 +63,9 @@
 							border-bottom: 2px dotted rgba(255,255,255,.3);
 							transition: border-bottom-color .2s;
 
-							&:hover {
+							&:hover,
+							&:active,
+							&:focus {
 								border-bottom-color: rgba(255,255,255,.7);
 							}
 						}
@@ -181,7 +185,9 @@
 						border-bottom: 2px dotted rgba(255,255,255,.3);
 						transition: border-bottom-color .2s;
 
-						&:hover {
+						&:hover,
+						&:active,
+						&:focus {
 							border-bottom-color: rgba(255,255,255,.7);
 						}
 					}
@@ -270,7 +276,9 @@
 					}
 				}
 
-				&:hover {
+				&:hover,
+				&:active,
+				&:focus {
 					text-decoration: none;
 				}
 			}
@@ -330,6 +338,12 @@
 
 		& .shd-button {
 			background: @alt_purple;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background: darken( @alt_purple, 7.5% );
+			}
 		}
 	}
 
@@ -357,58 +371,21 @@
 			}
 
 			& .aside-split {
+				margin-top: 1.5rem;
+
+				@media all and ( min-width: 992px ) {
+					margin-top: 0;
+				}
 
 				& .aside-inner {
+					border-radius: 5px 5px 0 0;
 
-					&.lone-post-meta {
-						color: @grayish_blue;
-
-						& blockquote {
-							font-style: italic;
-							margin-bottom: .5rem;
-
-							@media all and ( min-width: 1200px ) {
-								font-size: 18px;
-								line-height: 1.5;
-								margin-bottom: 1.5rem;
-							}
-
-							& ~ p {
-								font-size: 14px;
-
-								@media all and ( min-width: 1200px ) {
-									font-size: 15px;
-								}
-
-								& span {
-									.branding;
-								}
-							}
-						}
-
-						& .blog-post-graphic {
-							display: none;
-
-							@media all and ( min-width: 1240px ) {
-								display: block;
-							}
-						}
+					@media all and ( min-width: 992px ) {
+						border-bottom: 4px solid @blue;
 					}
 
-					& .more-posts-graphic {
-						display: none;
-						position: absolute;
-						bottom: -20px;
-						right: -5px;
-						width: 100px;
-						height: auto;
-						background-color: @blue;
-						box-shadow: 0 0 0 2px @gray_border;
-						border-radius: 50%;
-
-						@media all and ( min-width: 1240px ) {
-							display: block;
-						}
+					& .aside-title {
+						display: block !important;
 					}
 				}
 			}

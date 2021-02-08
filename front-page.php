@@ -187,7 +187,7 @@ get_header();
 					foreach ( $last_post as $post ) {
 						setup_postdata( $post );
 						?>
-						<div class="col-lg-8 content-split">
+						<div class="col-lg-7 col-xl-8 content-split">
 							<div class="content-inner">
 								<span class="content-subtitle">The latest from Sandhills blog</span>
 								<a class="content-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -202,9 +202,9 @@ get_header();
 					$recent_posts = get_posts( array( 'numberposts' => 5, 'offset'=> 1 ) );
 					if ( ! empty( $recent_posts ) ) {
 						?>
-						<div class="col-lg-4 aside-split">
+						<div class="col-lg-5 col-xl-4 aside-split">
 							<div class="aside-inner d-flex flex-column">
-								<span class="aside-title">More from the blog</span>
+								<span class="aside-title feather-pen-icon"><i class="fad fa-feather-alt"></i>More from the blog</span>
 								<ul class="aside-links">
 									<?php
 									foreach ( $recent_posts as $recent_post ) {
@@ -217,9 +217,6 @@ get_header();
 								<div class="aside-cta mt-auto">
 									<a class="aside-link-cta" href="<?php echo home_url( '/blog/' ); ?>">Visit the blog &rarr;</a>
 								</div>
-								<a href="<?php echo home_url( '/blog/' ); ?>">
-									<img class="more-posts-graphic" src="<?php echo SHD_IMAGES . 'icons/writing-icon.svg'; ?>">
-								</a>
 							</div>
 						</div>
 						<?php

@@ -39,7 +39,9 @@
 					font-size: 4.4rem;
 				}
 
-				&:hover {
+				&:hover,
+				&:active,
+				&:focus {
 					opacity: .8;
 				}
 			}
@@ -66,7 +68,9 @@
 					color: @night_text;
 					transition: color .2s;
 
-					&:hover {
+					&:hover,
+					&:active,
+					&:focus {
 						color: #fff;
 						opacity: 1 !important;
 					}
@@ -86,16 +90,6 @@
 	& .did-you-know {
 		padding-top: 1rem;
 		margin-top: -1px;
-
-		& .feather-pen {
-
-			& .fad {
-				--fa-primary-color: #6B3D35;
-				--fa-secondary-color: #E0D3BB;
-				--fa-primary-opacity: 1;
-				--fa-secondary-opacity: 1;
-			}
-		}
 	}
 }
 
@@ -228,25 +222,28 @@
 						line-height: 1.3;
 						margin-bottom: 1rem;
 
-						&:hover {
-							color: @blue_title;
-							text-decoration: none;
-
-							--fa-primary-color: @blue;
-						}
-
 						& [class*="fad"] {
 							position: relative;
 							bottom: 2px;
 							font-size: 70%;
 							margin-left: 7px;
 							transition: color .2s;
+
+							--fa-primary-color: @blue_title;
+							--fa-secondary-color: @grayish_blue;
+							--fa-primary-opacity: 1;
+							--fa-secondary-opacity: .8;
 						}
 
-						--fa-primary-color: @blue_title;
-						--fa-secondary-color: @grayish_blue;
-						--fa-primary-opacity: 1;
-						--fa-secondary-opacity: .8;
+						&:hover,
+						&:active,
+						&:focus {
+							text-decoration: none;
+
+							& [class*="fad"] {
+								--fa-primary-color: @blue !important;
+							}
+						}
 					}
 
 					& > p {
@@ -268,7 +265,9 @@
 							color: @grayish_blue;
 							text-decoration: underline;
 
-							&:hover {
+							&:hover,
+							&:active,
+							&:focus {
 								text-decoration: none;
 							}
 
@@ -329,7 +328,9 @@
 			& a {
 				text-decoration: none;
 
-				&:hover {
+				&:hover,
+				&:active,
+				&:focus {
 					text-decoration: underline;
 				}
 			}
@@ -338,7 +339,9 @@
 		& .comment-reply-link {
 			.branding;
 
-			&:hover {
+			&:hover,
+			&:active,
+			&:focus {
 				color: @blue_hover;
 			}
 		}

@@ -6,17 +6,25 @@
 		@media all and ( min-width: 768px ) {
 			text-align: left;
 		}
-	}
 
-	& .shd-logo {
-		position: relative;
-		top: -9px;
-		width: 158px;
-		height: auto;
+		& .shd-logo-anchor {
 
-		&:hover {
-			opacity: .7;
-			transition: opacity .1s ease-in-out;
+			& .shd-logo {
+				position: relative;
+				top: -9px;
+				width: 158px;
+				height: auto;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+
+				& .shd-logo {
+					opacity: .7;
+					transition: opacity .1s ease-in-out;
+				}
+			}
 		}
 	}
 

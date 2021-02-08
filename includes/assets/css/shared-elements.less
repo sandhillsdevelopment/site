@@ -54,7 +54,9 @@ section[class*="-section"] {
 	border-radius: 1rem;
 	transition: background-color .2s ease-in-out;
 
-	&:hover {
+	&:hover,
+	&:active,
+	&:focus {
 		background: @blue_hover;
 		color: #fff !important;
 		text-decoration: none;
@@ -176,7 +178,9 @@ section[class*="-section"] {
 				}
 			}
 
-			&:hover {
+			&:hover,
+			&:active,
+			&:focus {
 				text-decoration: none;
 			}
 		}
@@ -233,10 +237,6 @@ section[class*="-section"] {
 					font-size: 2.25rem;
 				}
 
-				&:hover {
-					color: lighten( @blue_title, 8% );
-				}
-
 				& .external-content-link {
 					position: relative;
 					font-size: 45%;
@@ -248,7 +248,9 @@ section[class*="-section"] {
 					}
 				}
 
-				&:hover {
+				&:hover,
+				&:active,
+				&:focus {
 					color: lighten( @blue_title, 8% );
 					text-decoration: none;
 
@@ -318,7 +320,9 @@ section[class*="-section"] {
 					.branding;
 					text-decoration: underline;
 
-					&:hover {
+					&:hover,
+					&:active,
+					&:focus {
 						text-decoration: none;
 					}
 				}
@@ -329,7 +333,9 @@ section[class*="-section"] {
 				font-size: 15px;
 				text-decoration: underline;
 
-				&:hover {
+				&:hover,
+				&:active,
+				&:focus {
 					text-decoration: none;
 				}
 			}
@@ -388,5 +394,15 @@ section[class*="-section"] {
 				}
 			}
 		}
+	}
+}
+
+.feather-pen-icon {
+
+	& .fad {
+		--fa-primary-color: #6B3D35;
+		--fa-secondary-color: #E0D3BB;
+		--fa-primary-opacity: 1;
+		--fa-secondary-opacity: 1;
 	}
 }
