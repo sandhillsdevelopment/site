@@ -42,8 +42,6 @@ function shd_site_header() {
 		<?php
 		if ( is_front_page() ) {
 			get_template_part( 'template-parts/content', 'front-page-hero' );
-		} if ( is_home() ) {
-			get_template_part( 'template-parts/content', 'blog-hero' );
 		}
 		?>
 
@@ -60,7 +58,6 @@ add_action( 'themedd_site_header', 'shd_site_header', 20 );
  */
 function shd_site_branding() {
 	$classes    = array( 'site-title', 'mb-0' );
-	$logo_color = is_front_page() || is_home() ? 'light' : 'dark';
 	?>
 
 	<div class="site-branding<?php if ( ! display_header_text() ) { echo ' sr-only'; } ?>">
@@ -69,10 +66,56 @@ function shd_site_branding() {
 
 		<span class="<?php echo themedd_output_classes( $classes ); ?>">
 			<a class="shd-logo-anchor navbar-brand mr-0" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logos/shd-logo-' . $logo_color . '.svg'; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" data-fallback="<?php echo SHD_IMAGES . 'logos/shd-logo-' . $logo_color . '.png'; ?>">
+				<img class="shd-logo" src="<?php echo SHD_IMAGES . 'logos/shd-logo-light.svg'; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" data-fallback="<?php echo SHD_IMAGES . 'logos/shd-logo-light.png'; ?>">
 			</a>
 		</span>
 
 	</div>
 	<?php
 }
+
+
+/**
+ * Quick facts display below site header
+ */
+function shd_header_quick_facts() {
+
+	if ( is_single() || is_page( 'careers' ) ) {
+		return;
+	}
+	?>
+
+	<section class="quick-info site-wide">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-12">
+
+					<?php if ( is_home() || is_tag() || is_category() || is_page( 'subscribe' ) ) { ?>
+
+						<span class="quick-detail feather-pen-icon"><i class="fad fa-pen-nib"></i><strong>Did you know:</strong> We also publish project-specific content on our individual project sites. <a class="quick-info-link" href="<?php echo home_url( '/projects/' ); ?>">Check&nbsp;them&nbsp;out&nbsp;&rarr;</a></span>
+
+					<?php } elseif ( is_page( 'about' ) ) { ?>
+
+						<span class="quick-detail feather-pen-icon"><i class="fad fa-pen-nib"></i>Interested in learning more about what's happening at Sandhills Development? Read our most recent blog posts. <a class="quick-info-link" href="<?php echo home_url( '/blog/' ); ?>">Visit&nbsp;the&nbsp;blog&nbsp;&rarr;</a></span>
+
+					<?php } else { ?>
+
+						<span class="quick-detail shd-founded"><i class="fad fa-lightbulb"></i><strong>Founded in 2009</strong><span class="temp-hide"> by Pippin Williamson.</span></span>
+						<span class="quick-detail shd-global"><i class="fad fa-globe-americas"></i><span class="temp-hide"><?php echo shd_get_team_members_count(); ?> </span><strong>globally-distributed team</strong><span class="temp-hide"> members.</span></span>
+						<span class="quick-detail shd-headquarters"><i class="fad fa-map-marker-alt"></i><span class="temp-hide">Headquartered in </span><strong>Hutchinson, Kansas</strong>.</span>
+						<span class="quick-detail"><a class="quick-info-link" href="<?php echo home_url( '/about/' ); ?>">More<span class="temp-hide">&nbsp;about&nbsp;Sandhills</span>&nbsp;&rarr;</a></span>
+
+					<?php } ?>
+
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<?php
+}
+add_action( 'themedd_content_start', 'shd_header_quick_facts', 0 );

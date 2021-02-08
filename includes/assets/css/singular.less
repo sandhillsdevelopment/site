@@ -6,10 +6,10 @@
 	& .site-content {
 
 		& > header {
-			padding: 1rem 0 5rem !important;
+			padding: 2rem 0 2.5rem !important;
 
 			@media all and ( min-width: 768px ) {
-				padding: 3.8rem 0 5rem !important;
+				padding: 4.5rem 0 4rem !important;
 			}
 
 			& .post-title,
@@ -23,20 +23,6 @@
 
 				@media all and ( min-width: 1200px ) {
 					font-size: 4.4rem;
-				}
-			}
-
-			& .lead {
-				display: inline-block;
-				color: @grayish_blue;
-				font-weight: 400;
-				font-size: 18px;
-				line-height: 1.6;
-				max-width: 800px;
-				margin: 0 auto;
-
-				@media all and ( min-width: 1200px ) {
-					font-size: 22px;
 				}
 			}
 		}
@@ -60,42 +46,124 @@
 
 .single {
 
-	#masthead {
-		background: @gray;
-	}
-
 	& .site-content {
 
 		& > header {
 			background: @gray;
-			border-bottom: 1px solid @gray_border;
+
+			& .post-title {
+				font-size: 2.25rem;
+				line-height: 1.2;
+			}
+
+			& .lead {
+				font-size: 18px;
+
+				& [class*="fa-"] {
+					margin-right: 5px;
+				}
+			}
 		}
 
 		& #primary {
-			padding-top: 6rem;
+			padding-top: 2.5rem;
+
+			@media all and ( min-width: 768px ) {
+				padding-top: 6rem;
+			}
 
 			& .single-post-graphic {
 				position: absolute;
-				top: -50px;
+				top: -25px;
 				left: 50%;
-				background-color: @blue;
-				margin-left: -50px;
-				width: 100px;
+				margin-left: -25px;
+				width: 50px;
 				height: auto;
-				box-shadow: 0 0 0 2px @gray_border;
+				border: 3px solid @gray;
 				border-radius: 50%;
+
+				@media all and ( min-width: 768px ) {
+					top: -42px;
+					left: 50%;
+					margin-left: -42px;
+					width: 84px;
+				}
 			}
 
 			& #main {
 
-				& .post-thumbnail {
-					text-align: center;
-					margin: -9rem 0 2rem !important;
+				& .entry-content {
 
-					& img {
+					& .shd-featured-image {
+						text-align: center;
+						margin: 1rem 0 2rem !important;
 
-						@media all and ( min-width: 992px ) {
+						& img {
 							border-radius: 5px;
+						}
+					}
+				}
+
+				& #comments {
+					font-size: 1rem;
+
+					& .comments-title {
+						font-size: 1.2rem;
+					}
+
+					& .pingback {
+						display: none;
+					}
+
+					& .comment {
+
+						& .has-avatars {
+							position: relative;
+						}
+
+						& .avatar {
+							box-shadow: 0 0 0 2px @gray_border;
+						}
+
+						& .comment-metadata {
+							color: @grayish_blue;
+							.branding;
+
+							& a {
+								text-decoration: none;
+
+								&:hover,
+								&:active,
+								&:focus {
+									text-decoration: underline;
+								}
+							}
+						}
+
+						& .comment-reply-link {
+							.branding;
+
+							&:hover,
+							&:active,
+							&:focus {
+								color: @blue_hover;
+							}
+						}
+					}
+
+					& #commentform {
+
+						& p[class*="comment-"] {
+
+							& label {
+								.branding;
+								margin-bottom: 0;
+							}
+
+							& input,
+							textarea {
+								background: @gray;
+							}
 						}
 					}
 				}
@@ -172,7 +240,6 @@
 			}
 
 			& .lead {
-				color: @grayish_blue !important;
 
 				& .posted-on {
 					display: inline-block;
@@ -188,40 +255,18 @@
 					}
 				}
 			}
-
-			& + [class*="container"] {
-
-			}
 		}
 
 		@media all and ( min-width: 992px ) {
 
 			& .entry-content {
 				background: #fff;
-				padding: 2.4rem 2rem;
-				border: 1px solid @gray_border;
+				padding-top: 1rem;
 				border-radius: 5px;
 				margin-top: -50px;
-
-				& .wpforms-container,
-				.gform_wrapper {
-					background: #fff;
-					padding: 1rem 1rem 0;
-					border: none;
-
-					input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
-					textarea,
-					select {
-						background: @gray !important;
-					}
-				}
 			}
 		}
 	}
-}
-
-.archive {
-
 }
 
 .page.careers-page,
@@ -262,14 +307,14 @@
 				color: #fff !important;
 			}
 		}
-	}
-}
 
-.page.contact-page {
+		& .entry-content {
 
-	& .site-content {
-
-		& > header {
+			@media all and ( min-width: 992px ) {
+				padding: 2.4rem 2rem;
+				border: 1px solid darken( @gray, 2.5% );
+				box-shadow: 0 0 10px 5px rgba(28, 55, 82, .035);
+			}
 		}
 	}
 }

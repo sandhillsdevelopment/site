@@ -32,12 +32,27 @@ section[class*="-section"] {
 	color: @blue;
 }
 
-.bold-description {
+.bold-description,
+.lead {
+	display: inline-block;
+	font-weight: 400;
 	font-size: 18px;
-	margin-bottom: 1.5rem;
+	line-height: 1.6;
+	max-width: 800px;
+	margin: 0 auto;
 
 	@media all and ( min-width: 1200px ) {
 		font-size: 22px;
+	}
+
+	& a {
+		text-decoration: underline;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -90,10 +105,10 @@ section[class*="-section"] {
 }
 
 .hero {
-	padding: 1rem 0 2rem;
+	padding: 2rem 0;
 
 	@media all and ( min-width: 576px ) {
-		padding: 3.8rem 0 2rem;
+		padding: 4.5rem 0 2rem;
 	}
 
 	& .bold-description {
@@ -125,15 +140,7 @@ section[class*="-section"] {
 .quick-info {
 	background: @gray;
 	font-size: 15px;
-	padding: 1.3rem 0;
-
-	&.border-on-top {
-		border-top: 2px solid @gray_border;
-	}
-
-	&.border-on-bottom {
-		border-bottom: 2px solid @gray_border;
-	}
+	padding: 1.2rem 0 1.3rem;
 
 	& .quick-detail {
 		display: block;
@@ -278,12 +285,12 @@ section[class*="-section"] {
 
 			@media all and ( min-width: 992px ) {
 				background: @gray;
-				padding: 2rem;
+				padding: 1.75rem 2rem 2rem;
 				border-radius: 5px;
 			}
 
 			@media all and ( min-width: 1200px ) {
-				padding: 2.4rem;
+				padding: 2rem 2.4rem 2.4rem;
 			}
 
 			& .aside-title {
@@ -304,11 +311,7 @@ section[class*="-section"] {
 			}
 
 			& .aside-description {
-				display: none;
-
-				@media all and ( min-width: 992px ) {
-					display: block;
-				}
+				line-height: 1.45;
 			}
 
 			& .aside-links {
@@ -394,15 +397,5 @@ section[class*="-section"] {
 				}
 			}
 		}
-	}
-}
-
-.feather-pen-icon {
-
-	& .fad {
-		--fa-primary-color: #6B3D35;
-		--fa-secondary-color: #E0D3BB;
-		--fa-primary-opacity: 1;
-		--fa-secondary-opacity: 1;
 	}
 }

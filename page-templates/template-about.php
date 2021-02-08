@@ -72,7 +72,7 @@ get_header();
 		</div>
 	</section>
 
-	<section class="quick-info did-you-know border-on-top">
+	<section class="quick-info did-you-know">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -113,7 +113,7 @@ get_header();
 		</div>
 	</section>
 
-	<section class="quick-info did-you-know border-on-bottom">
+	<section class="quick-info did-you-know">
 		<div class="container">
 			<div class="row">
 				<div class="col">

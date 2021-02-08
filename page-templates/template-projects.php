@@ -60,7 +60,7 @@ get_header();
 						<div class="col-lg-4 <?php echo $project->post_name . '-actions-col'; ?> aside-split">
 							<div class="aside-inner d-flex flex-column">
 								<span class="aside-title"><i class="fad fa-info-circle"></i>Quick details</span>
-								<p class="aside-description"><?php echo $project->post_excerpt; ?></p>
+								<p class="d-none d-lg-block aside-description"><?php echo $project->post_excerpt; ?></p>
 								<ul class="aside-links">
 									<?php
 									/**

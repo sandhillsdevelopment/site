@@ -1,14 +1,12 @@
 .front-page {
 
 	& #masthead {
-		background-color: @night;
 		background-image: url( 'includes/assets/images/shapes/sandhills.svg' ),
 		url( 'includes/assets/images/shapes/stars.svg' ),
 		url( 'includes/assets/images/shapes/moon-light.svg' );
 		background-repeat: no-repeat, repeat, no-repeat;
 		background-size: 102% auto, 1440px auto, 800px auto;
 		background-position: center bottom, center top, -300px -190px;
-		color: #fff;
 		padding-bottom: 6rem;
 
 		@media all and ( min-width: 576px ) {
@@ -197,92 +195,7 @@
 	}
 
 	& .quick-info {
-		background: @gray;
-		font-size: 15px;
-
-		&.about-info {
-			padding: 1.2rem 0 1.3rem;
-			border-bottom: 2px solid @gray_border;
-			margin-top: -1px;
-
-			& .shd-founded {
-				--fa-primary-color: silver;
-				--fa-secondary-color: #CFC13A;
-			}
-
-			& .shd-global {
-				--fa-primary-color: @green;
-				--fa-secondary-color: #4CBBEE;
-			}
-
-			& .shd-headquarters {
-				--fa-secondary-color: #DF4E4E;
-				--fa-primary-opacity: 0.00;
-				--fa-secondary-opacity: 1;
-			}
-		}
-
-		&.projects-info {
-			padding: 1.3rem 0;
-			border-top: 2px solid @gray_border;
-
-			& .email-us {
-				--fa-primary-color: #649ACE;
-				--fa-secondary-color: #C2B4B4;
-				--fa-secondary-opacity: 1;
-			}
-		}
-
-		& .quick-detail {
-			display: block;
-			text-align: center;
-			margin-right: 1rem;
-
-			@media all and ( min-width: 768px ) {
-				display: inline-block;
-				text-align: left;
-			}
-
-			& [class*="fa-"] {
-				display: none;
-				font-size: 120%;
-				margin-right: 8px;
-
-				@media all and ( min-width: 768px ) {
-					display: inline;
-				}
-			}
-
-			& > .temp-hide {
-				display: inline;
-
-				@media all and ( min-width: 768px ) and ( max-width: 1199px ) {
-					display: none;
-				}
-
-				@media all and ( min-width: 1200px ) {
-					display: inline;
-				}
-			}
-
-			& .quick-info-link {
-				text-decoration: underline;
-
-				& .temp-hide {
-					display: inline;
-
-					@media all and ( min-width: 768px ) and ( max-width: 991px ) {
-						display: none;
-					}
-				}
-
-				&:hover,
-				&:active,
-				&:focus {
-					text-decoration: none;
-				}
-			}
-		}
+		margin-top: -1px;
 	}
 
 	/* Projects CSS in projects.less */
@@ -386,6 +299,13 @@
 
 					& .aside-title {
 						display: block !important;
+
+						& [class*="fad"] {
+							--fa-primary-color: @alt_blue;
+							--fa-secondary-color: @alt_gold;
+							--fa-primary-opacity: 1;
+							--fa-secondary-opacity: 1;
+						}
 					}
 				}
 			}
