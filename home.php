@@ -10,7 +10,7 @@ get_header();
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<span class="quick-detail feather-pen"><i class="fad fa-feather-alt"></i><strong>Did you know:</strong> We also publish project-specific content on our individual product sites. <a class="quick-info-link" href="<?php echo home_url( '/projects/' ); ?>">Check&nbsp;them&nbsp;out&nbsp;&rarr;</a></span>
+				<span class="quick-detail feather-pen-icon"><i class="fad fa-feather-alt"></i><strong>Did you know:</strong> We also publish project-specific content on our individual product sites. <a class="quick-info-link" href="<?php echo home_url( '/projects/' ); ?>">Check&nbsp;them&nbsp;out&nbsp;&rarr;</a></span>
 			</div>
 		</div>
 	</div>
@@ -33,7 +33,7 @@ get_header();
 						<div class="blog-row row content-item-wrap">
 							<div class="col-lg-2 content-item-graphic">
 								<div class="content-item-graphic-inner">
-									<a class="content-item-title" href="<?php the_permalink(); ?>"><span class="item-graphic-placeholder"></span></a>
+									<a class="content-item-title" href="<?php the_permalink(); ?>" title="Read <?php echo get_the_title(); ?>"><span class="item-graphic-placeholder"></span></a>
 								</div>
 							</div>
 							<div class="col-lg-10 content-item-text">
