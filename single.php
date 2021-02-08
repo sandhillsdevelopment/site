@@ -14,7 +14,7 @@ $post_author_name = get_the_author_meta( 'display_name', $post_author_id );
 			<div class="row justify-content-center text-center">
 				<div class="col-12 col-md-10">
 					<h1 class="post-title"><?php echo get_the_title(); ?></h1>
-					<span class="lead">by <?php echo $post_author_name; ?></span>
+					<span class="lead"><i class="fad fa-pen-nib"></i> Written by <?php echo $post_author_name; ?></span>
 				</div>
 			</div>
 		</div>

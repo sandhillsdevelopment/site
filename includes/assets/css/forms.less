@@ -5,9 +5,8 @@ select {
 	color: @night_light;
 	background-color: @gray;
 	padding: 8px 14px;
-	border: none;
 	height: unset;
-	border: 2px solid @gray_border;
+	border: 2px solid darken( @gray, 2.5% );
 	border-radius: 3px;
 }
 
@@ -244,24 +243,6 @@ input[type="submit"] {
 
 	& .wpforms-container,
 	.gform_wrapper {
-		background: @gray;
-		border-width: 2px 0;
-		border-style: solid;
-		border-color: @gray_border;
-		padding: 1.5rem 1rem;
 		margin: 0 !important;
-
-		@media all and ( min-width: 576px ) {
-			padding: 2rem;
-			border-width: 2px;
-			border-radius: 5px;
-		}
-
-		& input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
-		textarea,
-		textarea.form-control,
-		select {
-			background-color: #fff !important;
-		}
 	}
 }

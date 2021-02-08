@@ -5,19 +5,6 @@
 get_header();
 ?>
 
-	<section class="quick-info about-info border-on-bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<span class="quick-detail shd-founded"><i class="fad fa-lightbulb"></i><strong>Founded in 2009</strong><span class="temp-hide"> by Pippin Williamson.</span></span>
-					<span class="quick-detail shd-global"><i class="fad fa-globe-americas"></i><span class="temp-hide"><?php echo shd_get_team_members_count(); ?> </span><strong>globally-distributed team</strong><span class="temp-hide"> members.</span></span>
-					<span class="quick-detail shd-headquarters"><i class="fad fa-map-marker-alt"></i><span class="temp-hide">Headquartered in </span><strong>Hutchinson, Kansas</strong>.</span>
-					<span class="quick-detail"><a class="quick-info-link" href="<?php echo home_url( '/about/' ); ?>">More<span class="temp-hide">&nbsp;about&nbsp;Sandhills</span>&nbsp;&rarr;</a></span>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<section class="projects-section">
 		<div class="container">
 			<div class="projects-header row justify-content-around text-center">
@@ -126,7 +113,7 @@ get_header();
 		</div>
 	</section>
 
-	<section class="quick-info projects-info border-on-top">
+	<section class="quick-info projects-info">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -204,7 +191,7 @@ get_header();
 						?>
 						<div class="col-lg-5 col-xl-4 aside-split">
 							<div class="aside-inner d-flex flex-column">
-								<span class="aside-title feather-pen-icon"><i class="fad fa-feather-alt"></i>More from the blog</span>
+								<span class="aside-title feather-pen-icon"><i class="fad fa-pen-nib"></i>More from the blog</span>
 								<ul class="aside-links">
 									<?php
 									foreach ( $recent_posts as $recent_post ) {

@@ -46,69 +46,6 @@ function shd_get_years_in_business() {
 
 
 /**
- * Modify queries
- *
- * @param $query
- */
-function shd_modify_queries( $query ) {
-
-	if ( ! is_admin() && $query->is_home() ) {
-
-		if ( $query->is_main_query() ) {
-
-			$query->set( 'posts_per_page', 1 );
-			$query->set( 'ignore_sticky_posts', true );
-
-		// modify blog home queries - part 1
-		// https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
-		} elseif ( ! $query->is_main_query() && 'notices' !== $query->get('post_type') ) {
-
-			if ( is_front_page() ) {
-				return;
-			}
-
-			$offset        = 1;
-			$post_per_page = 15;
-
-			if ( $query->is_paged ) {
-
-				$blog_offset = $offset + ( ( $query->query_vars['paged']-1 ) * $post_per_page );
-				$query->set( 'offset', $blog_offset );
-
-			} else {
-
-				$query->set( 'offset', $offset );
-
-			}
-		}
-	}
-}
-add_action( 'pre_get_posts', 'shd_modify_queries', 99999999 );
-
-
-/**
- * Modify blog home queries - part 2
- * https://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
- *
- * @param $found_posts
- * @param $query
- *
- * @return int
- */
-function shd_adjust_offset_pagination( $found_posts, $query ) {
-
-	$offset = 1;
-
-	if ( ! $query->is_main_query() && $query->is_home() ) {
-		return $found_posts - $offset;
-	}
-
-	return $found_posts;
-}
-add_filter( 'found_posts', 'shd_adjust_offset_pagination', 1, 2 );
-
-
-/**
  * Control the blog post excerpt length
  *
  * @param $length
@@ -116,14 +53,53 @@ add_filter( 'found_posts', 'shd_adjust_offset_pagination', 1, 2 );
  * @return int
  */
 function shd_excerpt_length( $length ) {
-
-	if ( is_front_page() ) {
-		return 50;
-	}
-
-	return 25;
+	return 50;
 }
 add_filter( 'excerpt_length', 'shd_excerpt_length', 999 );
+
+
+/**
+ * Remove the post excerpt More Link
+ */
+function shd_post_excerpt_more_link() {
+	return ' ...';
+}
+add_filter( 'excerpt_more', 'shd_post_excerpt_more_link' );
+
+
+/**
+ * Get the terms for a post, full HTML output. Used at the bottom of post content.
+ */
+function shd_get_post_terms() {
+
+	ob_start();
+	?>
+
+	<span class="entry-terms">
+
+		<?php
+		$categories = get_the_category_list( ', ' );
+		$tags = get_the_tag_list( '', ', ' );
+
+		if ( $categories ) :
+			?>
+			<span class="entry-categories">Filed under <?php echo $categories; echo $tags ? '' : '.'; ?></span>
+		<?php
+		endif;
+
+		if ( $tags ) :
+			?>
+			<span class="entry-tags"> with focus on <?php echo $tags; ?></span>.
+		<?php
+		endif;
+		?>
+
+	</span>
+
+	<?php
+	return ob_get_clean();
+}
+remove_action( 'themedd_entry_article_end', 'themedd_show_entry_footer' );
 
 
 /**

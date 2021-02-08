@@ -37,6 +37,7 @@ function shd_theme_setup() {
 
 	// Specialized functions
 	include( SHD_INCLUDES . 'general.php' );
+	include( SHD_INCLUDES . 'singular.php' );
 	include( SHD_INCLUDES . 'projects.php' );
 	include( SHD_INCLUDES . 'people.php' );
 	include( SHD_INCLUDES . 'events.php' );
