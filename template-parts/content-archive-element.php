@@ -16,7 +16,7 @@ $post_author_name = get_the_author_meta( 'display_name', $post_author_id );
 	</div>
 	<div class="col-lg-4 aside-split">
 		<div class="aside-inner d-flex flex-column">
-			<span class="aside-title d-block"><i class="fad fa-info-circle"></i>About this post</span>
+			<span class="aside-title d-none d-lg-block"><i class="fad fa-info-circle"></i>About this post</span>
 			<div class="aside-description">
 				<p>Published on <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a> by <?php echo '<strong>', $post_author_name, '</strong>. ', shd_get_post_terms(); ?></p>
 			</div>
