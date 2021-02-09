@@ -4,20 +4,8 @@
  */
 
 get_header();
+themedd_header();
 ?>
-
-	<div class="about-hero">
-		<div class="container">
-			<div class="hero">
-				<header class="row justify-content-around text-center">
-					<div class="col-lg-10">
-						<h1 class="bold-title"><?php echo shd_title_with_highlight( 'Sandhills', get_the_title() ); ?></h1>
-						<p class="bold-description"><?php echo get_field( '_subtitle' ); ?></p>
-					</div>
-				</header>
-			</div>
-		</div>
-	</div>
 
 	<section class="about-section">
 		<div class="container">

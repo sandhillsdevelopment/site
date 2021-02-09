@@ -28,7 +28,8 @@ foreach ( $team_members as $member ) {
 }
 ?>
 
-<!--
+<!-- Extra grid for interested applicants linking to careers page. Keep just in case.
+
 <div class="col-xl-3 col-lg-4 col-md-6">
 	<div class="sandhills-member row no-gutters">
 		<div class="col">
@@ -44,6 +45,7 @@ foreach ( $team_members as $member ) {
 		</div>
 	</div>
 </div>
+
 -->
 
 <?php

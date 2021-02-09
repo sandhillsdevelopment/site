@@ -41,31 +41,26 @@
 				padding-bottom: 8rem;
 			}
 
-			& .tagline-container {
-				margin: 0 auto;
+			& .front-page-header {
 
-				& .tagline-heading {
+				& .bold-title {
 					color: #fff;
 				}
 
-				& .tagline {
-					margin-bottom: 1rem;
+				& .bold-description {
+					color: @night_text;
+					margin: 0 auto 2rem;
 
-					& .bold-description {
-						color: @night_text;
-						margin: 0 auto 2rem;
+					& a {
+						color: #fff;
+						text-decoration: none;
+						border-bottom: 2px dotted rgba(255,255,255,.3);
+						transition: border-bottom-color .2s;
 
-						& a {
-							color: #fff;
-							text-decoration: none;
-							border-bottom: 2px dotted rgba(255,255,255,.3);
-							transition: border-bottom-color .2s;
-
-							&:hover,
-							&:active,
-							&:focus {
-								border-bottom-color: rgba(255,255,255,.7);
-							}
+						&:hover,
+						&:active,
+						&:focus {
+							border-bottom-color: rgba(255,255,255,.7);
 						}
 					}
 				}

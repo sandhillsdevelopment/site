@@ -4,20 +4,22 @@
  */
 
 get_header();
+
+$blog_id = get_option( 'page_for_posts', true );
 ?>
 
-	<div class="blog-hero">
-		<div class="container">
-			<div class="hero">
-				<header class="row justify-content-around text-center">
-					<div class="col-12">
-						<h1 class="bold-title">Sandhills <span class="title-highlight">Blog</span></h1>
-						<p class="bold-description">Never miss an update! Sign up for our <a href="<?php echo home_url( 'subscribe' );?>">email newsletter</a>. 📥</p>
-					</div>
-				</header>
-			</div>
+<div class="blog-hero">
+	<div class="container">
+		<div class="hero">
+			<header class="row justify-content-around text-center">
+				<div class="col-12">
+					<h1 class="bold-title"><?php echo shd_get_the_title( $blog_id ); ?></h1>
+					<p class="bold-description"><?php echo shd_get_the_subtitle( $blog_id ); ?></p>
+				</div>
+			</header>
 		</div>
 	</div>
+</div>
 
 <section class="older-posts-section">
 	<div class="container">

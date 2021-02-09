@@ -2,8 +2,6 @@
 /**
  * Front page hero section content
  */
-
-
 ?>
 
 <div class="container">
@@ -11,30 +9,19 @@
 	<div class="hero">
 		<div class="row justify-content-around text-center">
 
-			<div class="tagline-container col-lg-8">
+			<div class="front-page-header col-lg-8 mb-3">
 
-				<h1 class="tagline-heading bold-title">
-					<?php
-					$blog_description = get_bloginfo( 'description' );
-					echo shd_title_with_highlight( 'Ingenuity', $blog_description );
-					?>
-				</h1>
+				<h1 class="bold-title"><?php echo shd_get_the_title(); ?></h1>
+				<p class="bold-description"><?php echo shd_get_the_subtitle(); ?></p>
 
 				<?php
 				if ( have_rows( 'hero_section' ) ) {
-
 					while ( have_rows( 'hero_section' ) ) {
 						the_row();
 						?>
-						<div class="tagline">
-							<div class="bold-description">
-								<?php echo get_sub_field( 'tagline' ); ?>
-							</div>
-							<p><a class="shd-button" href="<?php echo get_sub_field( 'button_url' ); ?>"><?php echo get_sub_field( 'button_text' ); ?></a></p>
-						</div>
+						<p><a class="shd-button" href="<?php echo get_sub_field( 'button_url' ); ?>"><?php echo get_sub_field( 'button_text' ); ?></a></p>
 						<?php
 					}
-
 					reset_rows();
 				}
 				?>

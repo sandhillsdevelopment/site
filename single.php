@@ -4,9 +4,6 @@
  */
 
 get_header();
-
-$post_author_id   = get_post_field( 'post_author', get_the_ID() );
-$post_author_name = get_the_author_meta( 'display_name', $post_author_id );
 ?>
 
 	<header class="py-5 py-lg-10">
@@ -14,7 +11,7 @@ $post_author_name = get_the_author_meta( 'display_name', $post_author_id );
 			<div class="row justify-content-center text-center">
 				<div class="col-12 col-md-10">
 					<h1 class="post-title"><?php echo get_the_title(); ?></h1>
-					<span class="lead"><i class="fad fa-pen-nib"></i> Written by <?php echo $post_author_name; ?></span>
+					<span class="lead"><i class="fad fa-pen-nib"></i><?php echo shd_get_written_by(); ?></span>
 				</div>
 			</div>
 		</div>

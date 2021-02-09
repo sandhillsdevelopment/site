@@ -57,7 +57,8 @@
 			}
 
 			& .lead {
-				font-size: 18px;
+				font-size: 1rem;
+				line-height: 1.45;
 
 				& [class*="fa-"] {
 					margin-right: 5px;
@@ -79,7 +80,7 @@
 				margin-left: -25px;
 				width: 50px;
 				height: auto;
-				border: 3px solid @gray;
+				border: 6px solid @gray;
 				border-radius: 50%;
 
 				@media all and ( min-width: 768px ) {
@@ -256,21 +257,11 @@
 				}
 			}
 		}
-
-		@media all and ( min-width: 992px ) {
-
-			& .entry-content {
-				background: #fff;
-				padding-top: 1rem;
-				border-radius: 5px;
-				margin-top: -50px;
-			}
-		}
 	}
 }
 
-.page.careers-page,
-.page.contact-page {
+/* Shared modified page template styles */
+.page.careers-page {
 
 	& .site-content {
 
@@ -288,9 +279,22 @@
 				margin-bottom: 0;
 			}
 		}
+
+		@media all and ( min-width: 992px ) {
+
+			& .entry-content {
+				background: #fff;
+				padding: 2.4rem 2rem;
+				border: 1px solid darken( @gray, 2.5% );
+				border-radius: 5px;
+				margin-top: -50px;
+				box-shadow: 0 0 10px 5px rgba(28, 55, 82, .035);
+			}
+		}
 	}
 }
 
+/* Specific modified page template styles */
 .page.careers-page {
 
 	& .site-content {
@@ -305,15 +309,6 @@
 			& .page-title,
 			& .lead {
 				color: #fff !important;
-			}
-		}
-
-		& .entry-content {
-
-			@media all and ( min-width: 992px ) {
-				padding: 2.4rem 2rem;
-				border: 1px solid darken( @gray, 2.5% );
-				box-shadow: 0 0 10px 5px rgba(28, 55, 82, .035);
 			}
 		}
 	}

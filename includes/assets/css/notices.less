@@ -5,7 +5,7 @@
 	background: @blue;
 	font-size: 18px;
 	padding: 1.8rem 0 2rem;
-	border-bottom: 3px dashed #fff;
+	border-bottom: 3px dashed @night;
 	width: 100%;
 	vertical-align: middle;
 	position: relative;
@@ -127,20 +127,5 @@
 }
 
 .logged-in #notification-area.snp-hidden {
-	display: block;
-}
-
-/* Special styles for certain pages */
-.has-stars-hero {
-
-	#notification-area {
-		border-bottom-color: @night;
-	}
-}
-
-.single-post {
-
-	#notification-area {
-		border-bottom-color: @gray;
-	}
+	display: block !important;
 }
