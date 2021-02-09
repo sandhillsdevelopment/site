@@ -7,7 +7,7 @@ get_header();
 themedd_header();
 ?>
 
-	<section class="about-section">
+	<section class="about-area">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-xl-4 col-lg-5">
