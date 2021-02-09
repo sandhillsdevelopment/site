@@ -19,7 +19,12 @@ themedd_header(
 			<div class="row justify-content-around">
 				<div class="col-lg-12">
 					<?php
-					get_template_part( 'template-parts/content', 'archive-element' );
+					if ( have_posts() ) :
+						while ( have_posts() ) :
+							the_post();
+							get_template_part( 'template-parts/content', 'archive-element' );
+						endwhile;
+					endif;
 					?>
 				</div>
 			</div>
