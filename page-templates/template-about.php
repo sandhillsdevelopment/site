@@ -174,7 +174,7 @@ themedd_header();
 											foreach ( $primary_events as $p_event ) {
 												?>
 												<div class="single-event-wrap">
-													<p class="event-description"><?php echo $p_event->post_content; ?></p>
+													<div class="event-description"><?php echo $p_event->post_content; ?></div>
 												</div>
 												<?php
 											}
@@ -190,7 +190,7 @@ themedd_header();
 											foreach ( $secondary_events as $s_event ) {
 												?>
 												<div class="additional-event">
-													<p class="event-description"><?php echo $s_event->post_content; ?></p>
+													<div class="event-description"><?php echo $s_event->post_content; ?></div>
 												</div>
 												<?php
 											}
