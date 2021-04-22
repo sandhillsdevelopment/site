@@ -4,6 +4,14 @@
  */
 
 /**
+ * Add the media namespace to the RSS feed header
+ */
+function shd_add_media_namespace() {
+	echo 'xmlns:media="http://search.yahoo.com/mrss/"';
+}
+add_action( 'rss2_ns', 'shd_add_media_namespace' );
+
+/**
  * Add rss image
  */
 function shd_rss_featured_image() {
