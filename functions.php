@@ -36,6 +36,7 @@ define( 'BEER', 'https://sandhillsbrewing.com/' );
 function shd_theme_setup() {
 
 	// Specialized functions
+	include( SHD_INCLUDES . 'general.php' );
 	include( SHD_INCLUDES . 'hooks.php' );
 	include( SHD_INCLUDES . 'template-tags.php' );
 	include( SHD_INCLUDES . 'projects.php' );
