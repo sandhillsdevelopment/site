@@ -116,7 +116,7 @@ get_header();
 	<section class="quick-info projects-info">
 		<div class="container">
 			<div class="row">
-				<div class="col">
+				<div class="col text-center">
 					<span class="quick-detail email-us"><i class="fad fa-inbox-in"></i>Need to <strong>contact us</strong> directly, or inquire about one of our projects? <a class="quick-info-link" href="<?php echo home_url( '/contact/' ); ?>">Get&nbsp;in&nbsp;touch&nbsp;&rarr;</a></span>
 				</div>
 			</div>
@@ -124,34 +124,20 @@ get_header();
 	</section>
 
 	<?php
-	if ( have_rows( 'team_careers_section' ) ) {
+	if ( have_rows( 'company_section' ) ) {
 
-		while ( have_rows( 'team_careers_section' ) ) {
+		while ( have_rows( 'company_section' ) ) {
 			the_row();
 			?>
 
-			<section class="team-section">
+			<section class="company-section">
 				<div class="container">
 					<div class="row justify-content-around text-center">
 						<div class="col-md-9">
 							<div class="our-people">
-								<span class="generic-heading"><?php echo get_sub_field( 'team_title' ); ?></span>
-								<p><?php echo get_sub_field( 'team_content' ); ?></p>
-								<p><a class="shd-button" href="<?php echo get_sub_field( 'team_button_url' ); ?>"><?php echo get_sub_field( 'team_button_text' ); ?></a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="apply-section">
-				<div class="container">
-					<div class="row justify-content-around text-center">
-						<div class="col-md-9">
-							<div class="our-commitment">
-								<span class="generic-heading"><?php echo get_sub_field( 'careers_title' ); ?></span>
-								<p><?php echo get_sub_field( 'careers_content' ); ?></p>
-								<p><a class="shd-button" href="<?php echo get_sub_field( 'careers_button_url' ); ?>"><?php echo get_sub_field( 'careers_button_text' ); ?></a></p>
+								<span class="generic-heading"><?php echo get_sub_field( 'company_title' ); ?></span>
+								<p><?php echo get_sub_field( 'company_content' ); ?></p>
+								<p><a class="shd-button" href="<?php echo get_sub_field( 'company_button_url' ); ?>"><?php echo get_sub_field( 'company_button_text' ); ?></a></p>
 							</div>
 						</div>
 					</div>

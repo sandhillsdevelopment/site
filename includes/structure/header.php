@@ -90,7 +90,7 @@ function shd_header_quick_facts() {
 
 			<div class="row">
 
-				<div class="col-12">
+				<div class="col-12 text-center">
 
 					<?php if ( is_home() || is_tag() || is_category() || is_page( 'subscribe' ) ) { ?>
 
@@ -98,12 +98,11 @@ function shd_header_quick_facts() {
 
 					<?php } elseif ( is_page( 'about' ) ) { ?>
 
-						<span class="quick-detail feather-pen-icon"><i class="fad fa-pen-nib"></i>Interested in learning more about what's happening at Sandhills Development? Read our most recent blog posts. <a class="quick-info-link" href="<?php echo home_url( '/blog/' ); ?>">Visit&nbsp;the&nbsp;blog&nbsp;&rarr;</a></span>
+						<span class="quick-detail nature"><i class="fad fa-trees"></i><strong>Did you know:</strong> Sandhills owns 3 acres of open land in a popular Hutch neighborhood simply to preserve nature as a communal space for people and animals alike.</span>
 
 					<?php } else { ?>
 
 						<span class="quick-detail shd-founded"><i class="fad fa-lightbulb"></i><strong>Founded in 2009</strong><span class="temp-hide"> by Pippin Williamson.</span></span>
-						<span class="quick-detail shd-global"><i class="fad fa-globe-americas"></i><span class="temp-hide"><?php echo shd_get_team_members_count(); ?> </span><strong>globally-distributed team</strong><span class="temp-hide"> members.</span></span>
 						<span class="quick-detail shd-headquarters"><i class="fad fa-map-marker-alt"></i><span class="temp-hide">Headquartered in </span><strong>Hutchinson, Kansas</strong>.</span>
 						<span class="quick-detail"><a class="quick-info-link" href="<?php echo home_url( '/about/' ); ?>">More<span class="temp-hide">&nbsp;about&nbsp;Sandhills</span>&nbsp;&rarr;</a></span>
 

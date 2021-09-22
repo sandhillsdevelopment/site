@@ -43,7 +43,7 @@
 					if ( have_rows( 'goals' ) ) {
 
 						// To reduce code, use this handy-dandy array to loop through the created goals.
-						$goal_count = array( 'one', 'two', 'three' );
+						$goal_count = array( 'one', 'two' );
 
 						while ( have_rows( 'goals' ) ) {
 							the_row();
@@ -56,7 +56,7 @@
 									while ( have_rows( 'goal_' . $goal ) ) {
 										the_row();
 										?>
-										<div class="col-lg-4">
+										<div class="col-lg-6">
 											<div class="sandhills-goal">
 												<img alt="" class="goal-icon" src="<?php echo get_sub_field( 'icon' ); ?>">
 												<h3 class="goal-title title-border"><?php echo get_sub_field( 'title' ); ?></h3>
