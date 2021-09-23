@@ -94,7 +94,7 @@ function shd_header_quick_facts() {
 
 					<?php if ( is_home() || is_tag() || is_category() || is_page( 'subscribe' ) ) { ?>
 
-						<span class="quick-detail feather-pen-icon"><i class="fad fa-pen-nib"></i><strong>Did you know:</strong> We also publish project-specific content on our individual project sites. <a class="quick-info-link" href="<?php echo home_url( '/projects/' ); ?>">Check&nbsp;them&nbsp;out&nbsp;&rarr;</a></span>
+						<span class="quick-detail feather-pen-icon"><i class="fad fa-pen-nib"></i><strong>Did you know:</strong> We work on many different projects, including nature conservation, beer production, and more. <a class="quick-info-link" href="<?php echo home_url( '/projects/' ); ?>">Check&nbsp;them&nbsp;out&nbsp;&rarr;</a></span>
 
 					<?php } elseif ( is_page( 'about' ) ) { ?>
 
