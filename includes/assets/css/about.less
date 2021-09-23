@@ -58,10 +58,6 @@
 
 		& .timeline-background-wrap {
 			background-color: #fff;
-			background-image: url( 'includes/assets/images/shapes/world-map.svg' );
-			background-repeat: no-repeat;
-			background-position: center 8rem;
-			background-size: 90% auto;
 			padding: 3.5rem 0;
 			margin: 0 auto;
 			max-width: 1200px;
@@ -71,37 +67,17 @@
 			@media all and ( min-width: 768px ) {
 				padding: 5rem 0;
 			}
-
-			@media all and ( min-width: 992px ) {
-				background-image: url( 'includes/assets/images/shapes/world-map-team-markers-only.svg' ),
-				url( 'includes/assets/images/shapes/world-map.svg' );
-				background-repeat: no-repeat, no-repeat;
-				background-position: center 7.5rem, center 7.5rem;
-				background-size: 100% auto, 100% auto;
-			}
-
-			@media all and ( min-width: 1200px ) {
-				background-position: center 10rem, center 10rem;
-			}
-
-			@media all and ( min-width: 1440px ) {
-				background-position: center 7rem, center 7rem;
-				max-width: 1440px;
-			}
 		}
 
 		& .sandhills-history-row {
 			margin-bottom: 2rem;
 
+			@media all and ( min-width: 992px ) {
+				margin-bottom: 3rem;
+			}
+
 			& .bold-description {
-
-				@media all and ( min-width: 576px ) {
-					margin-bottom: 30%;
-				}
-
-				@media all and ( min-width: 992px ) {
-					margin-bottom: 50%;
-				}
+				margin-bottom: 2rem;
 			}
 
 			& .bold-description-secondary {
