@@ -14,7 +14,11 @@ themedd_header();
 		foreach ( $projects as $project ) {
 			$project_type    = get_field( 'project_type', $project->ID );
 			$project_status  = get_field( 'project_status', $project->ID );
-			$project_url     = get_field( 'project_url', $project->ID );
+			$project_desc    = get_field( 'project_description', $project->ID );
+			$project_url     = get_the_permalink( $project->ID );
+			if ( 'Acquired' === $project_status ) {
+				$project_url = get_field( 'project_url', $project->ID );
+			}
 			?>
 
 			<section id="<?php echo $project->post_name; ?>" class="<?php echo $project->post_name . '-section project-section'; ?>">
@@ -34,13 +38,13 @@ themedd_header();
 											<?php if ( 'Acquired' === $project_status ) { ?>
 												<span class="project-status generic-heading">(Project <?php echo $project_status; ?>)</span>
 											<?php } ?>
-											<a class="content-title" href="<?php echo $project_url; ?>"><?php echo $project->post_title; ?>&nbsp;<i class="fad fa-external-link"></i></a>
+											<a class="content-title" href="<?php echo $project_url; ?>"><?php echo $project->post_title; ?>&nbsp;<i class="fad fa-link"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col">
-										<?php echo $project->post_content; ?>
+										<?php echo $project_desc; ?>
 									</div>
 								</div>
 							</div>

@@ -313,3 +313,64 @@
 		}
 	}
 }
+
+.single-project {
+
+	& .project-status-notice {
+		background: @alt_purple;
+		color: #fff;
+		padding: 1rem 0;
+	}
+
+	& .site-content {
+
+		& header {
+
+			& .lead {
+				margin-bottom: 1rem;
+
+				@media all and ( min-width: 768px ) {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		& #primary {
+			padding-top: 4.5rem;
+
+			@media all and ( min-width: 768px ) {
+				padding-top: 6rem;
+			}
+
+			& article {
+
+				& > .project-logo-wrap {
+					background: @gray;
+					position: absolute;
+					top: -55px;
+					left: 50%;
+					margin-left: -55px;
+					width: 110px;
+					height: 110px;
+					border-radius: 50%;
+					padding: 18px;
+
+					& [class*="-post-thumbnail"] {
+						max-height: 74px;
+						width: auto;
+						margin: 0 auto;
+						display: inherit;
+					}
+				}
+
+				& .single-project-footer {
+					margin-top: 10px;
+
+					@media all and ( min-width: 992px ) {
+						margin-top: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+}

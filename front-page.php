@@ -54,7 +54,7 @@ get_header();
 								?>
 
 								<div class="<?php echo $project->post_name . '-col'; ?> project-col col-lg-6">
-									<a class="<?php echo $project->post_name . '-url'; ?>" href="<?php echo $project_url; ?>">
+									<a class="<?php echo $project->post_name . '-url'; ?>" href="<?php echo get_the_permalink( $project->ID ); ?>">
 										<div class="<?php echo $project->post_name . '-project'; ?> project">
 											<div class="row">
 												<div class="col-sm-3 <?php echo $project->post_name . '-mascot-col'; ?>">
@@ -65,7 +65,7 @@ get_header();
 													<?php if ( 'Acquired' === $project_status ) { ?>
 														<span class="project-status generic-heading">(Project <?php echo $project_status; ?>)</span>
 													<?php } ?>
-													<span class="project-title generic-heading"><?php echo $project->post_title; ?><span class="external-project-link"><i class="fad fa-external-link"></i></span></span>
+													<span class="project-title generic-heading"><?php echo $project->post_title; ?><span class="external-project-link"><i class="fad fa-link"></i></span></span>
 													<p class="project-description"><?php echo $project->post_excerpt; ?></p>
 												</div>
 											</div>
