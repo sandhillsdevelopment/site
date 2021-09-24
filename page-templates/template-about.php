@@ -27,6 +27,10 @@ themedd_header();
 								);
 								$title   = get_post_meta( get_the_ID(), 'quick_facts_fact_' . $fact . '_title', true );
 								$content = get_post_meta( get_the_ID(), 'quick_facts_fact_' . $fact . '_content', true );
+
+								if ( empty( $content ) ) {
+									continue;
+								}
 								?>
 								<div class="small-content-aside-split row justify-content-between">
 									<div class="col-lg-3 col-sm-2 col-3 small-aside-split">
@@ -63,48 +67,7 @@ themedd_header();
 	<section class="quick-info did-you-know">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<span class="quick-detail nature"><i class="fad fa-trees"></i><strong>Did you know:</strong> Sandhills owns 3 acres of open land in a popular Hutch neighborhood simply to preserve nature as a communal space for people and animals alike.</span>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="team-section stars">
-		<div class="container">
-			<div class="row text-center justify-content-around">
-				<div class="col-lg-8">
-					<div class="team-sandhills section-header">
-						<span class="our-people-title bold-title">
-							<?php
-							$team_title = get_post_meta( get_the_ID(), 'team_section_title', true );
-							echo shd_title_with_highlight( 'Team', $team_title );
-							?>
-						</span>
-						<p class="bold-description"><?php echo get_post_meta( get_the_ID(), 'team_section_subtitle', true ); ?></p>
-					</div>
-				</div>
-			</div>
-			<div class="our-people-row row mb-lg-3">
-				<?php get_template_part( 'template-parts/content', 'team-members' ); ?>
-			</div>
-			<div class="submit-an-app-row row justify-content-around text-center">
-				<div class="col-lg-4">
-					<?php
-					$join_button_text  = get_post_meta( get_the_ID(), 'team_section_button_text', true );
-					$join_button_url   = get_post_meta( get_the_ID(), 'team_section_button_url' );
-					?>
-					<p class="member-name"><?php echo get_post_meta( get_the_ID(), 'team_section_join_our_team', true ); ?></p>
-					<a class="shd-button" href="<?php echo $join_button_url[0]['url']; ?>"><?php echo $join_button_text; ?></a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="quick-info did-you-know">
-		<div class="container">
-			<div class="row">
-				<div class="col">
+				<div class="col text-center">
 					<span class="quick-detail camera"><i class="fad fa-camera-retro"></i><strong>Did you know:</strong> Our microbrewery, Sandhills Brewing, has an awesome Instagram profile full of beer and good times. <a class="quick-info-link" href="https://www.instagram.com/sandhillsbrewing/" target="_blank">Check&nbsp;it&nbsp;out&nbsp;&rarr;</a></span>
 				</div>
 			</div>

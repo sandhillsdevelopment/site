@@ -195,26 +195,8 @@
 
 	/* Projects CSS in projects.less */
 
-	& .team-section,
-	& .apply-section {
-
-		& .generic-heading {
-			font-size: 1.5rem;
-			line-height: 1;
-
-			@media all and ( min-width: 576px ) {
-				font-size: 2rem;
-			}
-
-			@media all and ( min-width: 992px ) {
-				font-size: 3rem;
-			}
-		}
-	}
-
-	& .team-section {
-		background: @night url( 'includes/assets/images/shapes/world-map-bg.svg' ) no-repeat center 2.5rem;
-		background-size: 87% auto;
+	& .company-section {
+		background: @night;
 		color: @night_text;
 
 		@media all and ( min-width: 576px ) {
@@ -233,24 +215,15 @@
 
 		& .generic-heading {
 			color: #fff;
-		}
-	}
+			font-size: 1.5rem;
+			line-height: 1;
 
-	& .apply-section {
-		background-color: @gray;
-		background-image: url( 'includes/assets/images/icons/skills-icon-bg-light.svg' );
-		background-repeat: repeat;
-		background-position: -20px 10px;
-		background-size: 204px auto;
-		border-bottom: 1px solid @gray_border;
+			@media all and ( min-width: 576px ) {
+				font-size: 2rem;
+			}
 
-		& .shd-button {
-			background: @alt_purple;
-
-			&:hover,
-			&:active,
-			&:focus {
-				background: darken( @alt_purple, 7.5% );
+			@media all and ( min-width: 992px ) {
+				font-size: 3rem;
 			}
 		}
 	}

@@ -54,7 +54,7 @@ get_header();
 								?>
 
 								<div class="<?php echo $project->post_name . '-col'; ?> project-col col-lg-6">
-									<a class="<?php echo $project->post_name . '-url'; ?>" href="<?php echo $project_url; ?>">
+									<a class="<?php echo $project->post_name . '-url'; ?>" href="<?php echo get_the_permalink( $project->ID ); ?>">
 										<div class="<?php echo $project->post_name . '-project'; ?> project">
 											<div class="row">
 												<div class="col-sm-3 <?php echo $project->post_name . '-mascot-col'; ?>">
@@ -65,7 +65,7 @@ get_header();
 													<?php if ( 'Acquired' === $project_status ) { ?>
 														<span class="project-status generic-heading">(Project <?php echo $project_status; ?>)</span>
 													<?php } ?>
-													<span class="project-title generic-heading"><?php echo $project->post_title; ?><span class="external-project-link"><i class="fad fa-external-link"></i></span></span>
+													<span class="project-title generic-heading"><?php echo $project->post_title; ?><span class="external-project-link"><i class="fad fa-link"></i></span></span>
 													<p class="project-description"><?php echo $project->post_excerpt; ?></p>
 												</div>
 											</div>
@@ -116,7 +116,7 @@ get_header();
 	<section class="quick-info projects-info">
 		<div class="container">
 			<div class="row">
-				<div class="col">
+				<div class="col text-center">
 					<span class="quick-detail email-us"><i class="fad fa-inbox-in"></i>Need to <strong>contact us</strong> directly, or inquire about one of our projects? <a class="quick-info-link" href="<?php echo home_url( '/contact/' ); ?>">Get&nbsp;in&nbsp;touch&nbsp;&rarr;</a></span>
 				</div>
 			</div>
@@ -124,34 +124,20 @@ get_header();
 	</section>
 
 	<?php
-	if ( have_rows( 'team_careers_section' ) ) {
+	if ( have_rows( 'company_section' ) ) {
 
-		while ( have_rows( 'team_careers_section' ) ) {
+		while ( have_rows( 'company_section' ) ) {
 			the_row();
 			?>
 
-			<section class="team-section">
+			<section class="company-section">
 				<div class="container">
 					<div class="row justify-content-around text-center">
 						<div class="col-md-9">
 							<div class="our-people">
-								<span class="generic-heading"><?php echo get_sub_field( 'team_title' ); ?></span>
-								<p><?php echo get_sub_field( 'team_content' ); ?></p>
-								<p><a class="shd-button" href="<?php echo get_sub_field( 'team_button_url' ); ?>"><?php echo get_sub_field( 'team_button_text' ); ?></a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="apply-section">
-				<div class="container">
-					<div class="row justify-content-around text-center">
-						<div class="col-md-9">
-							<div class="our-commitment">
-								<span class="generic-heading"><?php echo get_sub_field( 'careers_title' ); ?></span>
-								<p><?php echo get_sub_field( 'careers_content' ); ?></p>
-								<p><a class="shd-button" href="<?php echo get_sub_field( 'careers_button_url' ); ?>"><?php echo get_sub_field( 'careers_button_text' ); ?></a></p>
+								<span class="generic-heading"><?php echo get_sub_field( 'company_title' ); ?></span>
+								<p><?php echo get_sub_field( 'company_content' ); ?></p>
+								<p><a class="shd-button" href="<?php echo get_sub_field( 'company_button_url' ); ?>"><?php echo get_sub_field( 'company_button_text' ); ?></a></p>
 							</div>
 						</div>
 					</div>
